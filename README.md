@@ -32,6 +32,28 @@ Every 6 hours: BBC Health, PubMed, EFSA and ClinicalTrials are scanned for relev
 **AI video pipeline**
 Health topics are turned into short-form social videos via Heygen (AI presenter) + fal.ai (Veo/Sora) and distributed across platforms. The whole pipeline from topic to published video runs without manual intervention.
 
+Self-improving AI brain — This is the one that's different. Every week, 10 synthetic patients run through the production pipeline. A second AI agent scores each report on 4 dimensions. Gaps are automatically converted into PubMed research queries, facts are extracted and stored in the knowledge base. Every report generated after Wednesday is smarter than the one from the week before — without a single manual step. Cost: max €0.60/week.
+
+
+Wednesday 03:00  Synthetic Patients Agent
+  ├── 10 fake patient profiles (5 conditions × 2 archetypes)
+  ├── Runs real reports through the production pipeline
+  ├── Haiku agent scores: protocol depth / personalization / legal safety
+  └── Legal flag → triggers compliance agent immediately
+
+Wednesday 04:00  Auto-KB Agent
+  ├── PubMed abstracts fetched automatically
+  └── Facts → knowledge base → next report is smarter
+
+Tuesday 03:30  Developer Tools Radar
+  ├── GitHub Trending + dev.to scanned weekly
+  └── Relevant tools summarized → admin UI
+
+Monday 07:00  Weekly digest → my inbox
+
+Agent Orchestrator (always active)
+  └── All agents report here → triggers downstream actions
+Psychological profiling — €0 extra — Every report detects the patient's psychological archetype from existing intake answers (no new questions, no extra LLM call) and adapts tone: overwhelmed patients get small steps and validation first, skeptics get the biological mechanism before the advice, beginners get warmth and simplicity.
 ---
 
 ## Open source tools I've built
