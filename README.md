@@ -63,7 +63,7 @@ Psychological profiling — €0 extra — Every report detects the patient's ps
 
 **[claude-memory-trim](https://github.com/holistis/claude-memory-trim)** — keeps Claude Code's context window lean by automatically rotating session logs between hot and cold storage. Cuts token cost at session start by 60-80%. 99 lines of vanilla Node.js.
 
-**[muraqib](https://github.com/holistis/muraqib)** — a nightly QA guardian for solo SaaS founders. 118 Playwright tests run against your live app every night. When something breaks, Claude Code automatically writes a fix, opens a PR, and merges it when CI passes. You get one weekly email. Zero-maintenance production monitoring for one-person teams.
+**[muraqib](https://github.com/holistis/muraqib)** — a nightly QA guardian for solo SaaS founders. 130 Playwright tests run against your live app every night. When something breaks, Claude Code automatically writes a fix, opens a PR, and merges it when CI passes. You get one weekly email. Zero-maintenance production monitoring for one-person teams.
 
 ---
 
