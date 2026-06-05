@@ -53,6 +53,7 @@ Monday 07:00  Weekly digest → my inbox
 
 
 Agent Orchestrator (always active)
+
   └── All agents report here → triggers downstream actions
 
   
