@@ -32,7 +32,7 @@ Every 6 hours: BBC Health, PubMed, EFSA and ClinicalTrials are scanned for relev
 **AI video pipeline**
 Health topics are turned into short-form social videos via Heygen (AI presenter) + fal.ai (Veo/Sora) and distributed across platforms. The whole pipeline from topic to published video runs without manual intervention.
 
-Self-improving AI brain — This is the one that's different. Every week, 10 synthetic patients run through the production pipeline. A second AI agent scores each report on 4 dimensions. Gaps are automatically converted into PubMed research queries, facts are extracted and stored in the knowledge base. Every report generated after Wednesday is smarter than the one from the week before — without a single manual step. Cost: max €0.60/week.
+<strong style="color: #e65c00">Self-improving AI brain</strong> — This is the one that's dhifferent. Every week, 10 synthetic patients run through the production pipeline. A second AI agent scores each report on 4 dimensions. Gaps are automatically converted into PubMed research queries, facts are extracted and stored in the knowledge base. Every report generated after Wednesday is smarter than the one from the week before — without a single manual step. Cost: max €0.60/week.
 
 
 Wednesday 03:00  Synthetic Patients Agent
