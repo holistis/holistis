@@ -38,8 +38,11 @@ Health topics are turned into short-form social videos via Heygen (AI presenter)
 Wednesday 03:00  Synthetic Patients Agent
 
   ├── 10 fake patient profiles (5 conditions × 2 archetypes)
+  
   ├── Runs real reports through the production pipeline
+  
   ├── Haiku agent scores: protocol depth / personalization / legal safety
+  
   └── Legal flag → triggers compliance agent immediately
 
 Wednesday 04:00  Auto-KB Agent
