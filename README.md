@@ -24,7 +24,7 @@ Currently live and in active development. **~149,000 lines of code. Built solo.*
 I don't manually write blog posts, monitor the app, or push hotfixes at 2am. Three machines handle that:
 
 **Nightly QA + auto-fix loop**
-118 Playwright tests run against the live app every night. When something breaks, Claude Code automatically writes a fix, opens a PR, and merges it when CI passes. I get one weekly email. Zero-maintenance production monitoring for a one-person team.
+130 Playwright tests run against the live app every night. When something breaks, Claude Code automatically writes a fix, opens a PR, and merges it when CI passes. I get one weekly email. Zero-maintenance production monitoring for a one-person team.
 
 **Autonomous marketing machine**
 Every 6 hours: BBC Health, PubMed, EFSA and ClinicalTrials are scanned for relevant publications. Matching items are automatically turned into trilingual (NL/EN/FR) blog posts — EFSA-checked claims, internal links, AI-generated cover images — and published directly to longevityai.nl/blog. No editor needed.
