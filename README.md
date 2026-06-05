@@ -53,8 +53,10 @@ Monday 07:00  Weekly digest → my inbox
 
 Agent Orchestrator (always active)
   └── All agents report here → triggers downstream actions
-Psychological profiling — €0 extra — Every report detects the patient's psychological archetype from existing intake answers (no new questions, no extra LLM call) and adapts tone: overwhelmed patients get small steps and validation first, skeptics get the biological mechanism before the advice, beginners get warmth and simplicity.
----
+
+  
+Psychological profiling — €0 extra — Every report detects the patient's psychological archetype from existing intake answers (no new questions, no extra LLM call) and adapts tone: overwhelmed patients get small steps and validation first, skeptics get the biological mechanism before the advice, beginners get warmth and simplicity.-
+--
 
 ## Open source tools I've built
 
