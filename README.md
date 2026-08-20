@@ -1,77 +1,39 @@
-# Hey, I'm the person behind @holistis 👋
+# Hey, I'm Abdellah 👋
 
-I build AI-powered health tools — specifically for people stuck between "nothing's wrong" and "I don't know what to do about my body."
-
----
-
-## What I'm building
-
-**[Longevity AI](https://longevityai.nl)** — an AI-driven health platform for the Dutch market.
-
-You answer 28 questions. The system cross-references 10+ organ systems, identifies patterns, and generates a personal 6-month nutrition and lifestyle plan. No diagnoses, no medication advice — just clarity, direction, and something you can actually act on.
-
-Built for:
-- People with chronic symptoms but no clear diagnosis (fatigue, hormonal, gut, etc.)
-- HR teams running employee wellness checks at scale
-- Holistic practitioners who want their own client portal
-
-Currently live and in active development. **~149,000 lines of code. Built solo.**
+I build tools that make AI agents more reliable and more secure. Bug bounty analysis, DeFi bot signals, QA automation, browser automation reliability. On the side, I also run an AI health platform.
 
 ---
 
-## Autonomous systems running 24/7
+## Security and reliability tooling
 
-I don't manually write blog posts, monitor the app, or push hotfixes at 2am. Three machines handle that:
+#### [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp)
+MCP server that scans a public Solidity repo through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives. Free pattern search from 1,032 reconciled Sherlock findings, paid full scan via x402. Benchmarked against Slither, including a fix that went upstream.
 
-**Nightly QA + auto-fix loop**
-130 Playwright tests run against the live app every night. When something breaks, Claude Code automatically writes a fix, opens a PR, and merges it when CI passes. I get one weekly email. Zero-maintenance production monitoring for a one-person team.
+#### [al-mizaan-judge](https://github.com/holistis/al-mizaan-judge)
+A CLI that judges a smart contract bug finding against real platform rules before you spend a submission on Sherlock, Immunefi, or Cantina. Runs deterministic gates plus a Defender vs Attacker vs Judge debate. Built from real audit work, not a generic prompt, and honest about where its own calibration is still unproven.
 
-**Autonomous marketing machine**
-Every 6 hours: BBC Health, PubMed, EFSA and ClinicalTrials are scanned for relevant publications. Matching items are automatically turned into trilingual (NL/EN/FR) blog posts — EFSA-checked claims, internal links, AI-generated cover images — and published directly to longevityai.nl/blog. No editor needed.
+#### [3ilm-mcp](https://github.com/holistis/3ilm-mcp)
+MCP server that returns Sherlock acceptance rates for 12 vulnerability patterns, built from 1,032 reconciled real audit findings across 10 contests. Every number traces back to an actual contest outcome, not an estimate.
 
-**AI video pipeline**
-Health topics are turned into short-form social videos via Heygen (AI presenter) + fal.ai (Veo/Sora) and distributed across platforms. The whole pipeline from topic to published video runs without manual intervention.
+#### [automation-guardrails](https://github.com/holistis/automation-guardrails)
+Two small guardrails for Playwright and Puppeteer: verify you are still on the right page before acting, and fill contenteditable rich text editors without the silent double write bug. Fixes two failure modes I hit in production, backed by real issue reports.
 
-**Multi-agent/Self-improving AI brain** — This is the one that's different. Every week, 10 synthetic patients run through the production pipeline. A second AI agent scores each report on 4 dimensions. Gaps are automatically converted into PubMed research queries, facts are extracted and stored in the knowledge base. Every report generated after Wednesday is smarter than the one from the week before — without a single manual step. Cost: max €0.60/week.
+#### [claude-memory-trim](https://github.com/holistis/claude-memory-trim)
+Keeps Claude Code's session memory lean by rotating logs between a hot recent file and a cold archive. Cuts token cost at session start by roughly 60 to 80 percent. 99 lines of vanilla Node.js, no dependencies.
 
+I also write up the failures, not just the wins: [postmortems](https://github.com/holistis/postmortems).
 
-Wednesday 03:00  Synthetic Patients Agent
+---
 
-  ├── 10 fake patient profiles (5 conditions × 2 archetypes)
-  
-  ├── Runs real reports through the production pipeline
-  
-  ├── Haiku agent scores: protocol depth / personalization / legal safety
-  
-  └── Legal flag → triggers compliance agent immediately
+## Longevity AI
 
-Wednesday 04:00  Auto-KB Agent
+[Longevity AI](https://longevityai.nl) is an AI-driven health platform for the Dutch market. You answer 28 questions, the system cross-references 10+ organ systems, and generates a personal 6-month nutrition and lifestyle plan. No diagnoses, no medication advice, just direction and something concrete to act on.
 
-  ├── PubMed abstracts fetched automatically
-  └── Facts → knowledge base → next report is smarter
+Built for people with chronic symptoms but no clear diagnosis, HR teams running wellness checks at scale, and holistic practitioners who want their own client portal. Currently live, roughly 149,000 lines of code, built solo.
 
-Tuesday 03:30  Developer Tools Radar
+It runs with a fair amount of automation behind it: nightly QA that writes and merges its own fixes when tests break, a content pipeline that turns new health research into trilingual blog posts every few hours, and a weekly self-improvement loop where synthetic patient runs get scored and gaps get converted into research queries that make the next report smarter. All of it costs a few cents a week to run.
 
-  ├── GitHub Trending + dev.to scanned weekly
-  └── Relevant tools summarized → admin UI
-
-Monday 07:00  Weekly digest → my inbox
-
-
-Agent Orchestrator (always active)
-
-  └── All agents report here → triggers downstream actions
-
-  
-**Psychological profiling — €0 extra** — Every report detects the patient's psychological archetype from existing intake answers (no new questions, no extra LLM call) and adapts tone: overwhelmed patients get small steps and validation first, skeptics get the biological mechanism before the advice, beginners get warmth and simplicity.-
-  
---
-
-## Open source tools I've built
-
-**[claude-memory-trim](https://github.com/holistis/claude-memory-trim)** — keeps Claude Code's context window lean by automatically rotating session logs between hot and cold storage. Cuts token cost at session start by 60-80%. 99 lines of vanilla Node.js.
-
-**[muraqib](https://github.com/holistis/muraqib)** — a nightly QA guardian for solo SaaS founders. 130 Playwright tests run against your live app every night. When something breaks, Claude Code automatically writes a fix, opens a PR, and merges it when CI passes. You get one weekly email. Zero-maintenance production monitoring for one-person teams.
+The stack is TypeScript end to end, CI/CD on Railway, GDPR compliant. Most of the platform repos are private while it is in early access.
 
 ---
 
@@ -92,15 +54,7 @@ Agent Orchestrator (always active)
 
 ---
 
-## A bit more context
-
-Most health apps either hand you a generic advice PDF or push you toward a doctor's waiting room. I wanted to build something in between — a tool that actually listens to the full picture (sleep, stress, nutrition, hormones, gut, energy) and gives you something concrete to work with.
-
-The whole stack is TypeScript end-to-end. CI/CD on Railway, AVG/GDPR-compliant. Most repos are private while the platform is in early access.
-
----
-
 ## Links
 
-🌐 **Platform:** [longevityai.nl](https://longevityai.nl)
-📬 **Contact:** info@holistischadviseur.nl
+🌐 Platform: [longevityai.nl](https://longevityai.nl)
+📬 Contact: info@holistischadviseur.nl
