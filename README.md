@@ -6,6 +6,9 @@ I build tools that make AI agents more reliable and more secure. Bug bounty anal
 
 ## Security and reliability tooling
 
+#### [al-yad](https://github.com/holistis/al-yad): Yad, a browser agent
+Free and open-source browser agent, in your own real Chrome, on your own computer. Two parts: a Chrome extension and a local Companion app, no cloud copy of your accounts. The API key is encrypted at rest with Windows DPAPI, capped and stoppable with one click, and the security code went through an 18-agent adversarial review plus live attack testing (checkout-bypass attempts, DNS-rebinding, wire-protocol fuzzing) before it shipped, [written up in full](https://wazir-x402.duckdns.org/yad-security). [Add it to Chrome](https://chromewebstore.google.com/detail/dacfhekkemkiikecbjffmbdcohddodea).
+
 #### [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp)
 MCP server that scans a public Solidity repo through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives. Free pattern search from 1,032 reconciled Sherlock findings, paid full scan via x402. Benchmarked against Slither, including a fix that went upstream.
 
