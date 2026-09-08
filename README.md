@@ -34,6 +34,16 @@ I also write up the failures, not just the wins: [postmortems](https://github.co
 
 ---
 
+## Open source CI security fixes
+
+I check GitHub Actions workflows across popular open source AI-agent frameworks for the bug class that leaks secrets or lets a broken security check pass silently: actions pinned to a mutable tag instead of a commit hash, PR-controlled values interpolated straight into a shell command, and checks that can never fail. Wrote up the pattern with real examples on [dev.to](https://dev.to/holistis/i-spent-a-day-auditing-github-actions-across-a-dozen-ai-agent-frameworks-5fg6).
+
+Open PRs: [autogen](https://github.com/microsoft/autogen/pull/8205), [semantic-kernel](https://github.com/microsoft/semantic-kernel/pull/14397), [letta-code](https://github.com/letta-ai/letta-code/pull/4279), [adk-python](https://github.com/google/adk-python/pull/7052), [smolagents](https://github.com/huggingface/smolagents/pull/2770), [promptflow](https://github.com/microsoft/promptflow/pull/4221), [langflow](https://github.com/langflow-ai/langflow/pull/14982), [E2B](https://github.com/e2b-dev/E2B/pull/1846), [griptape](https://github.com/griptape-ai/griptape/pull/2307).
+
+Open issues: [mem0](https://github.com/mem0ai/mem0/issues/7260), [camel](https://github.com/camel-ai/camel/issues/4322), [goose](https://github.com/aaif-goose/goose/issues/11914), [mastra](https://github.com/mastra-ai/mastra/issues/23298), [n8n](https://github.com/n8n-io/n8n/issues/38018).
+
+---
+
 ## Longevity AI
 
 [Longevity AI](https://longevityai.nl) is an AI-driven health platform for the Dutch market. You answer 28 questions, the system cross-references 10+ organ systems, and generates a personal 6-month nutrition and lifestyle plan. No diagnoses, no medication advice, just direction and something concrete to act on.
