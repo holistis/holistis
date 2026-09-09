@@ -44,6 +44,10 @@ Open PRs: [autogen](https://github.com/microsoft/autogen/pull/8205), [semantic-k
 
 Open issues: [mem0](https://github.com/mem0ai/mem0/issues/7260), [camel](https://github.com/camel-ai/camel/issues/4322), [goose](https://github.com/aaif-goose/goose/issues/11914), [mastra](https://github.com/mastra-ai/mastra/issues/23298), [n8n](https://github.com/n8n-io/n8n/issues/38018).
 
+## Working together
+
+Open to paid work on CI/CD supply-chain security and AI-agent hardening. The findings above were found on my own initiative, in passing. If you want that kind of review done deliberately across your own setup, email info@holistischadviseur.nl.
+
 ---
 
 ## Longevity AI
