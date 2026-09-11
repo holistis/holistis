@@ -1,6 +1,6 @@
 # Hey, I'm Abdellah 👋
 
-I build tools that make AI agents more reliable and more secure. Bug bounty analysis, DeFi bot signals, QA automation, browser automation reliability. On the side, I also run an AI health platform.
+I direct AI agents to do real engineering work: research a problem, build the fix, verify it actually holds, and get it through a real maintainer's review. I apply that same loop across different domains rather than one narrow specialty, security research, browser automation, agent-commerce infrastructure, smart contract auditing, and a health platform I run solo.
 
 **Currently active in:**
 - **AI-agent security research** — 22+ vulnerabilities found across major open source AI tools this year, including one in GitHub's own infrastructure. [Details below](#open-source-ci-security-fixes).
