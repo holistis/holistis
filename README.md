@@ -2,35 +2,26 @@
 
 I build tools that make AI agents more reliable and more secure. Bug bounty analysis, DeFi bot signals, QA automation, browser automation reliability. On the side, I also run an AI health platform.
 
+**Currently active in:**
+- **AI-agent security research** — 22+ vulnerabilities found across major open source AI tools this year, including one in GitHub's own infrastructure. [Details below](#open-source-ci-security-fixes).
+- **Open source tooling** — 215+ merged pull requests across dozens of repositories, plus my own tools: [al-yad](https://github.com/holistis/al-yad) (browser agent) and [muraqib](https://github.com/holistis/muraqib) (self-healing QA).
+- **Agent-commerce trust infrastructure** — [tokenizen](https://github.com/holistis/tokenizen), signed delivery receipts for AI agents, live on Base mainnet via ERC-8004.
+- **Smart contract security** — [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp) and [al-mizaan-judge](https://github.com/holistis/al-mizaan-judge), built from real Sherlock/Immunefi audit work.
+- **AI-driven health platform** — [Longevity AI](https://longevityai.nl), solo-built, live for the Dutch market.
+
 ---
 
-## Security and reliability tooling
+## Projects
 
-#### [al-yad](https://github.com/holistis/al-yad): Yad, a browser agent
-Free and open-source browser agent, in your own real Chrome, on your own computer. Two parts: a Chrome extension and a local Companion app, no cloud copy of your accounts. The API key is encrypted at rest with Windows DPAPI, capped and stoppable with one click, and the security code went through an 18-agent adversarial review plus live attack testing (checkout-bypass attempts, DNS-rebinding, wire-protocol fuzzing) before it shipped, [written up in full](https://wazir-x402.duckdns.org/yad-security). [Add it to Chrome](https://chromewebstore.google.com/detail/dacfhekkemkiikecbjffmbdcohddodea).
-
-#### [muraqib](https://github.com/holistis/muraqib): self-healing nightly QA
-Free, self-hosted GitHub Action. Runs your Playwright tests every night, and when one breaks, has Claude read the failure and open a fix PR, for the cost of infrastructure you likely already pay for. Live in production on Longevity AI for months before I open-sourced it. Before making it public I audited it end to end and found, then fixed, three real defects: a script-injection hole, a YAML bug that had silently disabled the auto-fix path since the first commit, and a bug that meant the fix-PR's failure context was always empty. Every fix verified with a reproduction, not a read-through. [Security writeup](https://github.com/holistis/muraqib/blob/main/SECURITY.md). Running it also surfaced a gap in Playwright itself: a CI job timeout kills a run rather than failing it, so no report is written and no alert fires. Reported as [playwright#42533](https://github.com/microsoft/playwright/issues/42533), and the maintainers changed both the [docs](https://github.com/microsoft/playwright/pull/42563) and the [project scaffolding](https://github.com/microsoft/create-playwright/pull/181), so every new Playwright project now gets the safe default. [Write-up](https://dev.to/holistis/a-ci-timeout-is-a-kill-not-a-failure-playwrights-defaults-changed-because-of-it-318j).
-
-#### [tokenizen](https://github.com/holistis/tokenizen): capacity-attest, signed delivery receipts for AI agents
-An MCP server for x402 agent commerce. After one agent pays another for capacity (GPU-hours, storage, API credits, bandwidth), the paying agent leaves a signed, factual claim of whether what was promised actually arrived, so the next agent can check a seller's history before paying. No reputation score, no token, no lending, just a signed receipt anyone can verify offline. When a reviewer from the x402 Foundation ([x402#3379](https://github.com/x402-foundation/x402/issues/3379)) asked the two hard questions, can a host hide claims and how does a buyer find claims recorded on another installation, each became working, tested code: a per-buyer signed chain that makes a hidden middle claim detectable, and trustless cross-installation discovery that re-verifies every claim locally. The discovery path was proven live on Base mainnet via the Ethereum Attestation Service, with public attestations anyone can open. Two runnable fixtures let you check the guarantees yourself, and the decision log is honest about what it does not solve (completeness, and demand). Live on [npm](https://www.npmjs.com/package/capacity-attest) and [tokenizen.nl](https://tokenizen.nl).
-
-#### [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp)
-MCP server that scans a public Solidity repo through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives. Free pattern search from 1,032 reconciled Sherlock findings, paid full scan via x402. Benchmarked against Slither, including a fix that went upstream.
-
-#### [al-mizaan-judge](https://github.com/holistis/al-mizaan-judge)
-A CLI that judges a smart contract bug finding against real platform rules before you spend a submission on Sherlock, Immunefi, or Cantina. Runs deterministic gates plus a Defender vs Attacker vs Judge debate. Built from real audit work, not a generic prompt, and honest about where its own calibration is still unproven.
-
-#### [3ilm-mcp](https://github.com/holistis/3ilm-mcp)
-MCP server that returns Sherlock acceptance rates for 12 vulnerability patterns, built from 1,032 reconciled real audit findings across 10 contests. Every number traces back to an actual contest outcome, not an estimate.
-
-#### [automation-guardrails](https://github.com/holistis/automation-guardrails)
-Two small guardrails for Playwright and Puppeteer: verify you are still on the right page before acting, and fill contenteditable rich text editors without the silent double write bug. Fixes two failure modes I hit in production, backed by real issue reports.
-
-#### [claude-memory-trim](https://github.com/holistis/claude-memory-trim)
-Keeps Claude Code's session memory lean by rotating logs between a hot recent file and a cold archive. Cuts token cost at session start by roughly 60 to 80 percent. 99 lines of vanilla Node.js, no dependencies.
-
-I also write up the failures, not just the wins: [postmortems](https://github.com/holistis/postmortems).
+- **[al-yad](https://github.com/holistis/al-yad)**: Yad, a free open-source browser agent that runs in your own Chrome. API key encrypted at rest, capped, stoppable with one click. Security-reviewed with 18 adversarial agents plus live attack testing before shipping. [Security writeup](https://wazir-x402.duckdns.org/yad-security) · [Add to Chrome](https://chromewebstore.google.com/detail/dacfhekkemkiikecbjffmbdcohddodea).
+- **[muraqib](https://github.com/holistis/muraqib)**: self-healing nightly QA. Runs your Playwright tests every night, has Claude open a fix PR when one breaks. Audited before release (3 real defects found and fixed), and reporting it surfaced a real Playwright bug the maintainers fixed upstream. [Write-up](https://dev.to/holistis/a-ci-timeout-is-a-kill-not-a-failure-playwrights-defaults-changed-because-of-it-318j).
+- **[tokenizen](https://github.com/holistis/tokenizen)**: capacity-attest, signed delivery receipts for AI-agent commerce over x402. No reputation score, no token, just a receipt anyone can verify offline. Cross-installation discovery proven live on Base mainnet. Live on [npm](https://www.npmjs.com/package/capacity-attest) and [tokenizen.nl](https://tokenizen.nl).
+- **[bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp)**: MCP server that scans Solidity repos through a 7-gate framework to cut LLM false positives. Free pattern search from 1,032 reconciled Sherlock findings, paid full scan via x402.
+- **[al-mizaan-judge](https://github.com/holistis/al-mizaan-judge)**: judges a smart contract bug finding against real platform rules before you spend a submission on Sherlock, Immunefi, or Cantina.
+- **[3ilm-mcp](https://github.com/holistis/3ilm-mcp)**: Sherlock acceptance rates for 12 vulnerability patterns, built from 1,032 reconciled real audit findings.
+- **[automation-guardrails](https://github.com/holistis/automation-guardrails)**: two small Playwright/Puppeteer guardrails, fixing failure modes I hit in production.
+- **[claude-memory-trim](https://github.com/holistis/claude-memory-trim)**: keeps Claude Code's session memory lean, cuts token cost at session start by 60 to 80 percent.
+- **[postmortems](https://github.com/holistis/postmortems)**: I write up the failures too, not just the wins.
 
 ---
 
@@ -57,13 +48,9 @@ Open to paid work on CI/CD supply-chain security and AI-agent hardening. The fin
 
 ## Longevity AI
 
-[Longevity AI](https://longevityai.nl) is an AI-driven health platform for the Dutch market. You answer 28 questions, the system cross-references 10+ organ systems, and generates a personal 6-month nutrition and lifestyle plan. No diagnoses, no medication advice, just direction and something concrete to act on.
+[Longevity AI](https://longevityai.nl) is an AI-driven health platform for the Dutch market: 28 questions in, a personal 6-month nutrition and lifestyle plan out, no diagnoses or medication advice. Built for people with chronic symptoms but no clear diagnosis, HR wellness programs, and holistic practitioners who want their own client portal. Live, roughly 149,000 lines of code, built solo, TypeScript end to end, GDPR compliant.
 
-Built for people with chronic symptoms but no clear diagnosis, HR teams running wellness checks at scale, and holistic practitioners who want their own client portal. Currently live, roughly 149,000 lines of code, built solo.
-
-It runs with a fair amount of automation behind it: [muraqib](https://github.com/holistis/muraqib) watches it every night and writes and merges its own fixes when tests break, a content pipeline turns new health research into trilingual blog posts every few hours, and a weekly self-improvement loop scores synthetic patient runs and turns the gaps into research queries that make the next report smarter. All of it costs a few cents a week to run.
-
-The stack is TypeScript end to end, CI/CD on Railway, GDPR compliant. Most of the platform repos are private while it is in early access.
+Runs on its own automation: [muraqib](https://github.com/holistis/muraqib) watches it nightly and merges its own fixes, a content pipeline turns new health research into trilingual posts every few hours, and a weekly self-improvement loop scores synthetic patient runs to sharpen the next report. All of it costs a few cents a week.
 
 ---
 
