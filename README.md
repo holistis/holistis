@@ -42,6 +42,8 @@ That grew into a specific, more serious bug class: AI CLIs (Claude Code, Copilot
 
 Fixed and published: [pymc-marketing](https://github.com/pymc-labs/pymc-marketing/security/advisories/GHSA-72xh-gfpr-v9hx), a public GitHub Security Advisory, severity High, reported by email, fixed within a day, credited as reporter. [Write-up](https://dev.to/holistis/pymc-labs-has-1256-stars-a-github-issue-title-could-still-steal-their-api-key-1hd6).
 
+Also found and reported by email, also fixed: [sheepworrier/BilliardsScorer](https://github.com/sheepworrier/BilliardsScorer/commit/734b5e3), a stacked script-injection plus missing-author-check bug in a `claude-agent.yml` workflow, both fixed exactly as reported within two days.
+
 Open PRs: [autogen](https://github.com/microsoft/autogen/pull/8205), [semantic-kernel](https://github.com/microsoft/semantic-kernel/pull/14397), [letta-code](https://github.com/letta-ai/letta-code/pull/4279), [adk-python](https://github.com/google/adk-python/pull/7052), [smolagents](https://github.com/huggingface/smolagents/pull/2770), [promptflow](https://github.com/microsoft/promptflow/pull/4221), [langflow](https://github.com/langflow-ai/langflow/pull/14982), [E2B](https://github.com/e2b-dev/E2B/pull/1846), [griptape](https://github.com/griptape-ai/griptape/pull/2307).
 
 Open issues: [mem0](https://github.com/mem0ai/mem0/issues/7260), [camel](https://github.com/camel-ai/camel/issues/4322), [goose](https://github.com/aaif-goose/goose/issues/11914), [mastra](https://github.com/mastra-ai/mastra/issues/23298), [n8n](https://github.com/n8n-io/n8n/issues/38018).
