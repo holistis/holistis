@@ -3,11 +3,11 @@
 I direct AI agents to do real engineering work: research a problem, build the fix, verify it actually holds, and get it through a real maintainer's review. I apply that same loop across different domains rather than one narrow specialty, security research, browser automation, agent-commerce infrastructure, smart contract auditing, and a health platform I run solo.
 
 **Currently active in:**
-- **AI-agent security research** — 22+ vulnerabilities found across major open source AI tools this year, including one in GitHub's own infrastructure. [Details below](#open-source-ci-security-fixes).
-- **Open source tooling** — 215+ merged pull requests across dozens of repositories, plus my own tools: [al-yad](https://github.com/holistis/al-yad) (browser agent) and [muraqib](https://github.com/holistis/muraqib) (self-healing QA).
-- **Agent-commerce trust infrastructure** — [tokenizen](https://github.com/holistis/tokenizen), signed delivery receipts for AI agents, live on Base mainnet via ERC-8004.
-- **Smart contract security** — [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp) and [al-mizaan-judge](https://github.com/holistis/al-mizaan-judge), built from real Sherlock/Immunefi audit work.
-- **AI-driven health platform** — [Longevity AI](https://longevityai.nl), solo-built, live for the Dutch market.
+- **AI-agent security research**: 22+ vulnerabilities found across major open source AI tools this year, including a High-severity one in GitHub's own infrastructure. [Details below](#open-source-ci-security-fixes).
+- **Open source tooling**: 215+ merged pull requests across dozens of repositories, plus my own tools: [al-yad](https://github.com/holistis/al-yad) (browser agent) and [muraqib](https://github.com/holistis/muraqib) (self-healing QA).
+- **Agent-commerce trust infrastructure**: [tokenizen](https://github.com/holistis/tokenizen), signed delivery receipts for AI agents, live on Base mainnet via ERC-8004.
+- **Smart contract security**: [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp) and [al-mizaan-judge](https://github.com/holistis/al-mizaan-judge), built from real Sherlock/Immunefi audit work.
+- **AI-driven health platform**: [Longevity AI](https://longevityai.nl), solo-built, live for the Dutch market.
 
 ---
 
@@ -35,6 +35,7 @@ Background: [the original CI-hygiene piece](https://dev.to/holistis/i-spent-a-da
 
 - [pymc-marketing](https://github.com/pymc-labs/pymc-marketing/security/advisories/GHSA-72xh-gfpr-v9hx): public GitHub Security Advisory, severity High, reported by email, fixed within a day, credited as reporter. [Write-up](https://dev.to/holistis/pymc-labs-has-1256-stars-a-github-issue-title-could-still-steal-their-api-key-1hd6).
 - [sheepworrier/BilliardsScorer](https://github.com/sheepworrier/BilliardsScorer/commit/734b5e3): script-injection plus missing-author-check in a `claude-agent.yml` workflow, reported by email, both fixed exactly as reported within two days.
+- `github/request-marketplace-action`: unquoted shell variable in a self-hosted-runner workflow allowed argument injection into a git clone call next to a live privileged token, reported through GitHub's private vulnerability disclosure process, severity High, credited as reporter (accepted), fix verified live in the current code. Advisory itself is not yet public, so no link here.
 
 **Open PRs**: [autogen](https://github.com/microsoft/autogen/pull/8205), [semantic-kernel](https://github.com/microsoft/semantic-kernel/pull/14397), [letta-code](https://github.com/letta-ai/letta-code/pull/4279), [adk-python](https://github.com/google/adk-python/pull/7052), [smolagents](https://github.com/huggingface/smolagents/pull/2770), [promptflow](https://github.com/microsoft/promptflow/pull/4221), [langflow](https://github.com/langflow-ai/langflow/pull/14982), [E2B](https://github.com/e2b-dev/E2B/pull/1846), [griptape](https://github.com/griptape-ai/griptape/pull/2307).
 
