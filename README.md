@@ -5,7 +5,7 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 **Currently active in:**
 - **AI-agent security research**: 22+ vulnerabilities found across major open source AI tools this year, including a High-severity one in GitHub's own infrastructure. [Details below](#open-source-ci-security-fixes).
 - **Open source tooling**: 215+ merged pull requests across dozens of repositories, plus my own tools: [al-yad](https://github.com/holistis/al-yad) (browser agent) and [muraqib](https://github.com/holistis/muraqib) (self-healing QA).
-- **Agent-commerce trust infrastructure**: [tokenizen](https://github.com/holistis/tokenizen), signed delivery receipts for AI agents, live on Base mainnet via ERC-8004.
+- **Agent-commerce trust infrastructure**: [tokenizen](https://github.com/holistis/tokenizen), signed delivery receipts for AI agents, live on Base mainnet via ERC-8004. Independently reimplemented from scratch in a separate stack (7/7 match, including adversarial cases) and now used as a permanent regression check in another published project. [Details](https://github.com/holistis/tokenizen/blob/main/packages/capacity-attest/README.md#onafhankelijk-gecontroleerd-niet-alleen-beweerd).
 - **Smart contract security**: [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp) and [al-mizaan-judge](https://github.com/holistis/al-mizaan-judge), built from real Sherlock/Immunefi audit work.
 - **AI-driven health platform**: [Longevity AI](https://longevityai.nl), solo-built, live for the Dutch market.
 
