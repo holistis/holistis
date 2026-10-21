@@ -1,23 +1,23 @@
 # Hey, I'm Abdellah 👋
 
-I direct AI agents to do real engineering work: research a problem, build the fix, verify it actually holds, and get it through a real maintainer's review. I apply that same loop across different domains rather than one narrow specialty, security research, browser automation, agent-commerce infrastructure, smart contract auditing, and a health platform I run solo.
+I direct AI agents to do real engineering work: research a problem, build the fix, verify it actually holds, and get it through a real maintainer's review. 375 merged pull requests across dozens of repositories prove the loop works at scale.
 
 **Currently active in:**
-- **AI-agent security research**: 22+ vulnerabilities found across major open source AI tools this year, including a High-severity one in GitHub's own infrastructure. [Details below](#open-source-ci-security-fixes).
-- **Open source tooling**: 215+ merged pull requests across dozens of repositories, plus my own tools: [al-yad](https://github.com/holistis/al-yad) (browser agent) and [muraqib](https://github.com/holistis/muraqib) (self-healing QA).
-- **Agent-commerce trust infrastructure**: [tokenizen](https://github.com/holistis/tokenizen), signed delivery receipts for AI agents, live on Base mainnet. The format is cited as the source of truth in an ERC-8004 feedback proposal. Independently reimplemented from scratch in a separate stack (7/7 match, including adversarial cases) and now used as a permanent regression check in another published project. [Details](https://github.com/holistis/tokenizen/blob/main/packages/capacity-attest/README.md#onafhankelijk-gecontroleerd-niet-alleen-beweerd).
-- **x402 receipt verification**: [agent-receipt-verify](https://github.com/holistis/agent-receipt-verify), one line to check whether a paid endpoint asks for money the way x402 says, with no account and no key. It also carries the conformance vectors for two separate specs, in the maintainers' own layouts. Measured against 60 real sellers from the Coinbase index on 18 October 2026: our own checker was wrongly failing 38 of the 59 that do ask for payment, and after the fix that is zero.
-- **Smart contract security**: [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp) and [al-mizaan-judge](https://github.com/holistis/al-mizaan-judge), built from real Sherlock/Immunefi audit work.
-- **AI-driven health platform**: [Longevity AI](https://longevityai.nl), solo-built, live for the Dutch market.
+- **Agent-commerce trust infrastructure**: [tokenizen](https://github.com/holistis/tokenizen), signed delivery receipts for AI agents, live on Base mainnet (chain eip155:8453, verified directly off the live payment header). Independently rebuilt from scratch in a separate stack by two different engineers, 7/7 and 12/12 match on the test vectors including adversarial cases. Cited as the source of truth in a draft ERC-8004 feedback convention, and a third protocol linked our verifier in its own official docs. [Details](https://github.com/holistis/tokenizen/blob/main/packages/capacity-attest/README.md#onafhankelijk-gecontroleerd-niet-alleen-beweerd).
+- **x402 receipt verification**: [agent-receipt-verify](https://github.com/holistis/agent-receipt-verify), one command checks whether a paid endpoint follows the x402 spec, no account, no key. Measured against 60 real sellers from the Coinbase index on 18 October 2026: caught 38 false failures in our own first version, now zero.
+- **AI agents running real infrastructure**: [al-yad](https://github.com/holistis/al-yad) drives a browser autonomously, reviewed by 18 adversarial agents plus live attack testing before shipping. [muraqib](https://github.com/holistis/muraqib) opens its own fix PRs when nightly tests break and once surfaced a real bug in Playwright itself.
+- **AI-agent security research**: 22+ vulnerabilities found across major open source AI tools, including a High-severity one in GitHub's own infrastructure. [Details below](#open-source-ci-security-fixes).
+- **Smart contract security**: [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp) and [al-mizaan-judge](https://github.com/holistis/al-mizaan-judge), built from real Sherlock/Immunefi audit work on 1,032 reconciled findings.
+- **AI-driven health platform**: [Longevity AI](https://longevityai.nl), solo-built, live for the Dutch market, 149,000 lines of code.
 
 ---
 
 ## Projects
 
-- **[al-yad](https://github.com/holistis/al-yad)**: Yad, a free open-source browser agent that runs in your own Chrome. API key encrypted at rest, capped, stoppable with one click. Security-reviewed with 18 adversarial agents plus live attack testing before shipping. [Security writeup](https://x402.tokenizen.nl/yad-security) · [Add to Chrome](https://chromewebstore.google.com/detail/dacfhekkemkiikecbjffmbdcohddodea).
-- **[muraqib](https://github.com/holistis/muraqib)**: self-healing nightly QA. Runs your Playwright tests every night, has Claude open a fix PR when one breaks. Audited before release (3 real defects found and fixed), and reporting it surfaced a real Playwright bug the maintainers fixed upstream. [Write-up](https://dev.to/holistis/a-ci-timeout-is-a-kill-not-a-failure-playwrights-defaults-changed-because-of-it-318j).
-- **[tokenizen](https://github.com/holistis/tokenizen)**: capacity-attest, signed delivery receipts for AI-agent commerce over x402. No reputation score, no token, just a receipt anyone can verify offline. Cross-installation discovery proven live on Base mainnet. Live on [npm](https://www.npmjs.com/package/capacity-attest) and [tokenizen.nl](https://tokenizen.nl).
+- **[tokenizen](https://github.com/holistis/tokenizen)**: capacity-attest, signed delivery receipts for AI-agent commerce over x402. No reputation score, no token, just a receipt anyone can verify offline. Live on Base mainnet, on [npm](https://www.npmjs.com/package/capacity-attest) and [tokenizen.nl](https://tokenizen.nl).
 - **[agent-receipt-verify](https://github.com/holistis/agent-receipt-verify)**: `npx -y agent-receipt-verify <url>` checks a paid endpoint before you pay, offline, no account. Carries 19 conformance vectors for x402 spec section 5.5 and 12 receipt-to-settlement vectors in another project's own layout. Four maintainers of related specs have adopted the four-outcome vocabulary it uses, including the split between a failed check and a check that could not run.
+- **[al-yad](https://github.com/holistis/al-yad)**: Yad, a free open-source browser agent that runs in your own Chrome. API key encrypted at rest, capped, stoppable with one click. Security-reviewed with 18 adversarial agents plus live attack testing before shipping. [Security writeup](https://x402.tokenizen.nl/yad-security) · [Add to Chrome](https://chromewebstore.google.com/detail/dacfhekkemkiikecbjffmbdcohddodea).
+- **[muraqib](https://github.com/holistis/muraqib)**: self-healing nightly QA. Runs your Playwright tests every night, has Claude open a fix PR when one breaks. Reviewed before release (3 real defects found and fixed), and reporting it surfaced a real Playwright bug the maintainers fixed upstream. [Write-up](https://dev.to/holistis/a-ci-timeout-is-a-kill-not-a-failure-playwrights-defaults-changed-because-of-it-318j).
 - **[bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp)**: MCP server that scans Solidity repos through a 7-gate framework to cut LLM false positives. Free pattern search from 1,032 reconciled Sherlock findings, paid full scan via x402.
 - **[al-mizaan-judge](https://github.com/holistis/al-mizaan-judge)**: judges a smart contract bug finding against real platform rules before you spend a submission on Sherlock, Immunefi, or Cantina.
 - **[3ilm-mcp](https://github.com/holistis/3ilm-mcp)**: Sherlock acceptance rates for 12 vulnerability patterns, built from 1,032 reconciled real audit findings.
@@ -45,7 +45,7 @@ Background: [the original CI-hygiene piece](https://dev.to/holistis/i-spent-a-da
 
 ## Working together
 
-Open to paid work on CI/CD supply-chain security and AI-agent hardening. The findings above were found on my own initiative, in passing. If you want that kind of review done deliberately across your own setup, email info@holistischadviseur.nl.
+Open to roles and freelance work in AI agent infrastructure and orchestration, plus CI/CD supply-chain security and AI-agent hardening. The security findings above were found on my own initiative, in passing. Email info@holistischadviseur.nl.
 
 ---
 
@@ -67,7 +67,15 @@ Runs on its own automation: [muraqib](https://github.com/holistis/muraqib) watch
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL_9-4479A1?style=flat-square&logo=mysql&logoColor=white)
 ![Drizzle](https://img.shields.io/badge/Drizzle_ORM-C5F74F?style=flat-square&logo=drizzle&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Solidity](https://img.shields.io/badge/Solidity-363636?style=flat-square&logo=solidity&logoColor=white)
+![Foundry](https://img.shields.io/badge/Foundry-000000?style=flat-square)
+![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
 ![Claude API](https://img.shields.io/badge/Claude_API-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![Claude Agent SDK](https://img.shields.io/badge/Claude_Agent_SDK-D97757?style=flat-square)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square)
+![Base](https://img.shields.io/badge/Base-0052FF?style=flat-square)
+![Solana](https://img.shields.io/badge/Solana-9945FF?style=flat-square&logo=solana&logoColor=white)
 ![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white)
 ![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=flat-square&logo=railway&logoColor=white)
 ![Clerk](https://img.shields.io/badge/Clerk_Auth-6C47FF?style=flat-square&logo=clerk&logoColor=white)
