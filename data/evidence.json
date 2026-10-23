@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-10-23T09:32:44Z",
+  "date": "2026-10-23",
+  "account": "holistis",
+  "source": "GitHub search API, counted by hand with gh api on the date above",
+  "queries": {
+    "upstreamMergedPrs": "author:holistis is:pr is:merged -user:holistis",
+    "upstreamBugFixes": "author:holistis is:pr is:merged -user:holistis fix in:title",
+    "ownRepoMergedPrs": "author:holistis is:pr is:merged user:holistis"
+  },
+  "upstream": {
+    "mergedPrs": 24,
+    "projects": 16,
+    "bugFixes": 5,
+    "bugFixProjects": ["x402", "windmill", "activepieces", "cloud foundry", "open design"]
+  },
+  "ownRepos": {
+    "mergedPrs": 361,
+    "countedAsCredit": false
+  }
+}

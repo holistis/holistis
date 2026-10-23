@@ -1,6 +1,10 @@
+<div align="center">
+<img src="./assets/hero.svg" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. 24 merged pull requests in 16 projects owned by others, 5 of them bug fixes, counted from GitHub on 2026-10-23." />
+</div>
+
 # Hey, I'm Abdellah 👋
 
-I direct AI agents to do real engineering work: research a problem, build the fix, verify it actually holds, and get it through a real maintainer's review. 375 merged pull requests across dozens of repositories prove the loop works at scale.
+I direct AI agents to do real engineering work: research a problem, build the fix, verify it actually holds, and send it to the maintainers. 24 of my pull requests are merged in other people's projects (16 projects, 5 of them bug fixes, one in the x402 core library). The rest of my merged pull requests sit in my own repositories, which I do not count as proof. Check the numbers yourself: [all 24](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis&type=pullrequests) and [the 5 bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle&type=pullrequests).
 
 **Currently active in:**
 - **Agent-commerce trust infrastructure**: [tokenizen](https://github.com/holistis/tokenizen), signed delivery receipts for AI agents, live on Base mainnet (chain eip155:8453, verified directly off the live payment header). Independently rebuilt from scratch in a separate stack by two different engineers, 7/7 and 12/12 match on the test vectors including adversarial cases. Cited as the source of truth in a draft ERC-8004 feedback convention, and a third protocol linked our verifier in its own official docs. [Details](https://github.com/holistis/tokenizen/blob/main/packages/capacity-attest/README.md#onafhankelijk-gecontroleerd-niet-alleen-beweerd).
