@@ -1,21 +1,165 @@
 {
-  "generatedAt": "2026-10-23T09:32:44Z",
-  "date": "2026-10-23",
+  "schema": 2,
   "account": "holistis",
-  "source": "GitHub search API, counted by hand with gh api on the date above",
+  "date": "2026-10-23",
   "queries": {
-    "upstreamMergedPrs": "author:holistis is:pr is:merged -user:holistis",
-    "upstreamBugFixes": "author:holistis is:pr is:merged -user:holistis fix in:title",
-    "ownRepoMergedPrs": "author:holistis is:pr is:merged user:holistis"
+    "upstream": "author:holistis is:pr is:merged -user:holistis",
+    "bugFixes": "author:holistis is:pr is:merged -user:holistis fix in:title",
+    "own": "author:holistis is:pr is:merged user:holistis"
   },
   "upstream": {
     "mergedPrs": 24,
     "projects": 16,
     "bugFixes": 5,
-    "bugFixProjects": ["x402", "windmill", "activepieces", "cloud foundry", "open design"]
+    "bugFixProjects": [
+      "x402",
+      "cloudfoundry",
+      "open design",
+      "activepieces",
+      "windmill"
+    ],
+    "latestFixes": [
+      {
+        "repo": "x402-foundation/x402",
+        "number": 3826,
+        "title": "fix(core): do not mutate the extensions object while building a 402",
+        "url": "https://github.com/x402-foundation/x402/pull/3826",
+        "mergedAt": "2026-10-22"
+      },
+      {
+        "repo": "cloudfoundry/terraform-provider-cloudfoundry",
+        "number": 592,
+        "title": "fix(provider): guard nil MaintenanceInfo on managed service instance create",
+        "url": "https://github.com/cloudfoundry/terraform-provider-cloudfoundry/pull/592",
+        "mergedAt": "2026-09-10"
+      },
+      {
+        "repo": "nexu-io/open-design",
+        "number": 5078,
+        "title": "fix(amr): normalize Vela JSON catalog ids on the live fetchModels path (fixes #4410)",
+        "url": "https://github.com/nexu-io/open-design/pull/5078",
+        "mergedAt": "2026-07-03"
+      },
+      {
+        "repo": "activepieces/activepieces",
+        "number": 13806,
+        "title": "fix(cal-com): migrate webhook registration from decommissioned API v1…",
+        "url": "https://github.com/activepieces/activepieces/pull/13806",
+        "mergedAt": "2026-06-24"
+      },
+      {
+        "repo": "windmill-labs/windmill",
+        "number": 9680,
+        "title": "fix(home): preserve URL filter state on page refresh",
+        "url": "https://github.com/windmill-labs/windmill/pull/9680",
+        "mergedAt": "2026-06-19"
+      }
+    ]
   },
   "ownRepos": {
     "mergedPrs": 361,
     "countedAsCredit": false
-  }
+  },
+  "projects": [
+    {
+      "name": "tokenizen",
+      "url": "https://github.com/holistis/tokenizen",
+      "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
+      "homepage": "https://tokenizen.nl",
+      "updated": "2026-10-23",
+      "release": {
+        "tag": "v0.5.0",
+        "date": "2026-09-06",
+        "url": "https://github.com/holistis/tokenizen/releases/tag/v0.5.0"
+      }
+    },
+    {
+      "name": "agent-receipt-verify",
+      "url": "https://github.com/holistis/agent-receipt-verify",
+      "description": "MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'...",
+      "homepage": null,
+      "updated": "2026-10-19",
+      "release": {
+        "tag": "v0.2.1",
+        "date": "2026-10-17",
+        "url": "https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1"
+      }
+    },
+    {
+      "name": "al-yad",
+      "url": "https://github.com/holistis/al-yad",
+      "description": "Yad: a free, open-source, local-first browser agent. Chrome extension (Part A, the hand) + local Companion (Part B, the brain). Your API key is encrypted on your...",
+      "homepage": "https://yadagent.com",
+      "updated": "2026-10-11",
+      "release": {
+        "tag": "v0.1.2-companion-npm-standin",
+        "date": "2026-09-11",
+        "url": "https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin"
+      }
+    },
+    {
+      "name": "muraqib",
+      "url": "https://github.com/holistis/muraqib",
+      "description": "Nightly Playwright QA that tells you when it stops watching. npx muraqib doctor finds the silent-cancel bug in any existing setup. Claude opens the fix PR. MIT, no...",
+      "homepage": "https://www.npmjs.com/package/muraqib",
+      "updated": "2026-09-29",
+      "release": {
+        "tag": "v0.3.4",
+        "date": "2026-09-29",
+        "url": "https://github.com/holistis/muraqib/releases/tag/v0.3.4"
+      }
+    },
+    {
+      "name": "bug-bounty-intelligence-mcp",
+      "url": "https://github.com/holistis/bug-bounty-intelligence-mcp",
+      "description": "MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search...",
+      "homepage": null,
+      "updated": "2026-09-19",
+      "release": {
+        "tag": "v1.0.3",
+        "date": "2026-07-29",
+        "url": "https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3"
+      }
+    },
+    {
+      "name": "claude-memory-trim",
+      "url": "https://github.com/holistis/claude-memory-trim",
+      "description": "Keeps Claude Code session memory lean by rotating session logs between hot and cold storage. Cuts token cost at session start by 60-80%.",
+      "homepage": null,
+      "updated": "2026-09-08",
+      "release": null
+    },
+    {
+      "name": "al-mizaan-judge",
+      "url": "https://github.com/holistis/al-mizaan-judge",
+      "description": "Strict 7-gate validity judge for a smart-contract bug bounty finding, a second opinion before you spend a Sherlock/Immunefi/Cantina submission.",
+      "homepage": null,
+      "updated": "2026-09-08",
+      "release": null
+    },
+    {
+      "name": "3ilm-mcp",
+      "url": "https://github.com/holistis/3ilm-mcp",
+      "description": "MCP server: 1,032 verified smart contract vulnerability findings from 10 Sherlock audit contests",
+      "homepage": null,
+      "updated": "2026-09-08",
+      "release": null
+    },
+    {
+      "name": "postmortems",
+      "url": "https://github.com/holistis/postmortems",
+      "description": "Short technical postmortems: what looked right, what turned out wrong",
+      "homepage": null,
+      "updated": "2026-08-24",
+      "release": null
+    },
+    {
+      "name": "automation-guardrails",
+      "url": "https://github.com/holistis/automation-guardrails",
+      "description": "Two small guardrails for Playwright/Puppeteer: verify you're on the right page, and fill contenteditable/rich-text editors without the silent double-write bug",
+      "homepage": null,
+      "updated": "2026-08-03",
+      "release": null
+    }
+  ]
 }

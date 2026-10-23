@@ -102,7 +102,7 @@
       <line x1="72" y1="338" x2="640" y2="338" stroke="#22372E"/>
       <circle class="live" cx="78" cy="362" r="5" fill="#34D399"/>
       <text x="94" y="366" fill="#B4C6BC" font-size="12.5" letter-spacing=".5">MERGED IN OTHER PEOPLE'S PROJECTS · 24 PRS · 16 PROJECTS</text>
-      <text x="94" y="387" fill="#B4C6BC" font-size="12" letter-spacing=".4">5 BUG FIXES IN X402 · WINDMILL · ACTIVEPIECES · CLOUD FOUNDRY · OPEN DESIGN</text>
+      <text x="94" y="387" fill="#B4C6BC" font-size="12" letter-spacing=".1">5 BUG FIXES IN X402 · CLOUDFOUNDRY · OPEN DESIGN · ACTIVEPIECES · WINDMILL</text>
       <text x="94" y="410" fill="#7C998B" font-size="11" letter-spacing=".8">OWN REPOSITORIES NOT COUNTED · COUNTED FROM GITHUB 2026-10-23 UTC</text>
     </g>
   </g>

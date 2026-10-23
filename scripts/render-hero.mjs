@@ -71,6 +71,22 @@ const card = `
         <circle cx="8" cy="4.5" r="3.2" fill="#F5C26B"/>
       </g>`;
 
+// The project names must fit on one line of the hero; extra ones become "+N".
+export function fitNames(names, maxChars = 60) {
+  const upper = names.map((n) => String(n).toUpperCase());
+  const all = upper.join(" · ");
+  if (all.length <= maxChars) return all;
+  const shown = [];
+  for (const n of upper) {
+    const left = upper.length - shown.length - 1;
+    const candidate = [...shown, n].join(" · ") + (left > 0 ? ` · +${left}` : "");
+    if (candidate.length > maxChars) break;
+    shown.push(n);
+  }
+  const rest = upper.length - shown.length;
+  return shown.join(" · ") + (rest > 0 ? `${shown.length ? " · " : ""}+${rest}` : "");
+}
+
 export function renderHero(ev) {
   const up = ev?.upstream;
   for (const k of ["mergedPrs", "projects", "bugFixes"]) {
@@ -78,7 +94,8 @@ export function renderHero(ev) {
   }
   if (up.bugFixes > up.mergedPrs) throw new Error("bugFixes cannot exceed mergedPrs");
   if (!/^\d{4}-\d{2}-\d{2}$/.test(ev.date ?? "")) throw new Error("evidence.date must be YYYY-MM-DD");
-  const fixNames = (up.bugFixProjects ?? []).map((s) => esc(String(s).toUpperCase())).join(" · ");
+  const fixNames = esc(fitNames(up.bugFixProjects ?? []));
+  const fixLine = `${up.bugFixes} BUG ${up.bugFixes === 1 ? "FIX" : "FIXES"}${fixNames ? ` IN ${fixNames}` : ""}`;
 
   const desc =
     `Abdellah Ouadoudi directs AI agents that ship real fixes and keep the receipts. ` +
@@ -178,7 +195,7 @@ export function renderHero(ev) {
       <line x1="72" y1="338" x2="640" y2="338" stroke="#22372E"/>
       <circle class="live" cx="78" cy="362" r="5" fill="#34D399"/>
       <text x="94" y="366" fill="#B4C6BC" font-size="12.5" letter-spacing=".5">MERGED IN OTHER PEOPLE'S PROJECTS · ${up.mergedPrs} PRS · ${up.projects} PROJECTS</text>
-      <text x="94" y="387" fill="#B4C6BC" font-size="12" letter-spacing=".4">${up.bugFixes} BUG FIXES IN ${fixNames}</text>
+      <text x="94" y="387" fill="#B4C6BC" font-size="12" letter-spacing=".1">${fixLine}</text>
       <text x="94" y="410" fill="#7C998B" font-size="11" letter-spacing=".8">OWN REPOSITORIES NOT COUNTED · COUNTED FROM GITHUB ${esc(ev.date)} UTC</text>
     </g>
   </g>

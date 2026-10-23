@@ -1,10 +1,24 @@
 <div align="center">
-<img src="./assets/hero.svg" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. 24 merged pull requests in 16 projects owned by others, 5 of them bug fixes, counted from GitHub on 2026-10-23." />
+<img src="./assets/hero.svg" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
 
 # Hey, I'm Abdellah 👋
 
-I direct AI agents to do real engineering work: research a problem, build the fix, verify it actually holds, and send it to the maintainers. 24 of my pull requests are merged in other people's projects (16 projects, 5 of them bug fixes, one in the x402 core library). The rest of my merged pull requests sit in my own repositories, which I do not count as proof. Check the numbers yourself: [all 24](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis&type=pullrequests) and [the 5 bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle&type=pullrequests).
+<!-- profile:summary:start -->
+I direct AI agents to do real engineering work: research a problem, build the fix, verify it actually holds, and send it to the maintainers. 24 of my pull requests are merged in other people's projects (16 projects, 5 of them bug fixes). The rest of my merged pull requests sit in my own repositories, which I do not count as proof. Check the numbers yourself: [all 24](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis&type=pullrequests) and [the 5 with fix in the title](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle&type=pullrequests).
+<!-- profile:summary:end -->
+
+<!-- profile:fixes:start -->
+Bug fixes merged by other maintainers, newest first:
+
+- 2026-10-22 [x402-foundation/x402#3826](https://github.com/x402-foundation/x402/pull/3826) fix(core): do not mutate the extensions object while building a 402
+- 2026-09-10 [cloudfoundry/terraform-provider-cloudfoundry#592](https://github.com/cloudfoundry/terraform-provider-cloudfoundry/pull/592) fix(provider): guard nil MaintenanceInfo on managed service instance create
+- 2026-07-03 [nexu-io/open-design#5078](https://github.com/nexu-io/open-design/pull/5078) fix(amr): normalize Vela JSON catalog ids on the live fetchModels path (fixes #4410)
+- 2026-06-24 [activepieces/activepieces#13806](https://github.com/activepieces/activepieces/pull/13806) fix(cal-com): migrate webhook registration from decommissioned API v1…
+- 2026-06-19 [windmill-labs/windmill#9680](https://github.com/windmill-labs/windmill/pull/9680) fix(home): preserve URL filter state on page refresh
+<!-- profile:fixes:end -->
+
+<sub>The text above and the project list below refresh by themselves from GitHub, see [data/evidence.json](data/evidence.json).</sub>
 
 **Currently active in:**
 - **Agent-commerce trust infrastructure**: [tokenizen](https://github.com/holistis/tokenizen), signed delivery receipts for AI agents, live on Base mainnet (chain eip155:8453, verified directly off the live payment header). Independently rebuilt from scratch in a separate stack by two different engineers, 7/7 and 12/12 match on the test vectors including adversarial cases. Cited as the source of truth in a draft ERC-8004 feedback convention, and a third protocol linked our verifier in its own official docs. [Details](https://github.com/holistis/tokenizen/blob/main/packages/capacity-attest/README.md#onafhankelijk-gecontroleerd-niet-alleen-beweerd).
@@ -19,16 +33,18 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 
 ## Projects
 
-- **[tokenizen](https://github.com/holistis/tokenizen)**: capacity-attest, signed delivery receipts for AI-agent commerce over x402. No reputation score, no token, just a receipt anyone can verify offline. Live on Base mainnet, on [npm](https://www.npmjs.com/package/capacity-attest) and [tokenizen.nl](https://tokenizen.nl).
-- **[agent-receipt-verify](https://github.com/holistis/agent-receipt-verify)**: `npx -y agent-receipt-verify <url>` checks a paid endpoint before you pay, offline, no account. Carries 19 conformance vectors for x402 spec section 5.5 and 12 receipt-to-settlement vectors in another project's own layout. Four maintainers of related specs have adopted the four-outcome vocabulary it uses, including the split between a failed check and a check that could not run.
-- **[al-yad](https://github.com/holistis/al-yad)**: Yad, a free open-source browser agent that runs in your own Chrome. API key encrypted at rest, capped, stoppable with one click. Security-reviewed with 18 adversarial agents plus live attack testing before shipping. [Security writeup](https://x402.tokenizen.nl/yad-security) · [Add to Chrome](https://chromewebstore.google.com/detail/dacfhekkemkiikecbjffmbdcohddodea).
-- **[muraqib](https://github.com/holistis/muraqib)**: self-healing nightly QA. Runs your Playwright tests every night, has Claude open a fix PR when one breaks. Reviewed before release (3 real defects found and fixed), and reporting it [surfaced a real Playwright bug](https://github.com/microsoft/playwright/issues/42533) [the maintainers fixed upstream](https://github.com/microsoft/playwright/pull/42563). [Write-up](https://dev.to/holistis/a-ci-timeout-is-a-kill-not-a-failure-playwrights-defaults-changed-because-of-it-318j).
-- **[bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp)**: MCP server that scans Solidity repos through a 7-gate framework to cut LLM false positives. Free pattern search from 1,032 reconciled Sherlock findings, paid full scan via x402.
-- **[al-mizaan-judge](https://github.com/holistis/al-mizaan-judge)**: judges a smart contract bug finding against real platform rules before you spend a submission on Sherlock, Immunefi, or Cantina.
-- **[3ilm-mcp](https://github.com/holistis/3ilm-mcp)**: Sherlock acceptance rates for 12 vulnerability patterns, built from 1,032 reconciled real audit findings.
-- **[automation-guardrails](https://github.com/holistis/automation-guardrails)**: two small Playwright/Puppeteer guardrails, fixing failure modes I hit in production.
-- **[claude-memory-trim](https://github.com/holistis/claude-memory-trim)**: keeps Claude Code's session memory lean, cuts token cost at session start by 60 to 80 percent.
-- **[postmortems](https://github.com/holistis/postmortems)**: I write up the failures too, not just the wins.
+<!-- profile:projects:start -->
+- [tokenizen](https://github.com/holistis/tokenizen): Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it... Latest release [v0.5.0](https://github.com/holistis/tokenizen/releases/tag/v0.5.0), 2026-09-06. [Website](https://tokenizen.nl). Updated 2026-10-23.
+- [agent-receipt-verify](https://github.com/holistis/agent-receipt-verify): MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'... Latest release [v0.2.1](https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1), 2026-10-17. Updated 2026-10-19.
+- [al-yad](https://github.com/holistis/al-yad): Yad: a free, open-source, local-first browser agent. Chrome extension (Part A, the hand) + local Companion (Part B, the brain). Your API key is encrypted on your... Latest release [v0.1.2-companion-npm-standin](https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin), 2026-09-11. [Website](https://yadagent.com). Updated 2026-10-11.
+- [muraqib](https://github.com/holistis/muraqib): Nightly Playwright QA that tells you when it stops watching. npx muraqib doctor finds the silent-cancel bug in any existing setup. Claude opens the fix PR. MIT, no... Latest release [v0.3.4](https://github.com/holistis/muraqib/releases/tag/v0.3.4), 2026-09-29. [Website](https://www.npmjs.com/package/muraqib). Updated 2026-09-29.
+- [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp): MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search... Latest release [v1.0.3](https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3), 2026-07-29. Updated 2026-09-19.
+- [claude-memory-trim](https://github.com/holistis/claude-memory-trim): Keeps Claude Code session memory lean by rotating session logs between hot and cold storage. Cuts token cost at session start by 60-80%. Updated 2026-09-08.
+- [al-mizaan-judge](https://github.com/holistis/al-mizaan-judge): Strict 7-gate validity judge for a smart-contract bug bounty finding, a second opinion before you spend a Sherlock/Immunefi/Cantina submission. Updated 2026-09-08.
+- [3ilm-mcp](https://github.com/holistis/3ilm-mcp): MCP server: 1,032 verified smart contract vulnerability findings from 10 Sherlock audit contests Updated 2026-09-08.
+- [postmortems](https://github.com/holistis/postmortems): Short technical postmortems: what looked right, what turned out wrong Updated 2026-08-24.
+- [automation-guardrails](https://github.com/holistis/automation-guardrails): Two small guardrails for Playwright/Puppeteer: verify you're on the right page, and fill contenteditable/rich-text editors without the silent double-write bug Updated 2026-08-03.
+<!-- profile:projects:end -->
 
 ---
 

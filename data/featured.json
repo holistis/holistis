@@ -1,0 +1,17 @@
+{
+  "seed": [
+    "tokenizen",
+    "agent-receipt-verify",
+    "al-yad",
+    "muraqib",
+    "bug-bounty-intelligence-mcp",
+    "al-mizaan-judge",
+    "3ilm-mcp",
+    "automation-guardrails",
+    "claude-memory-trim",
+    "postmortems"
+  ],
+  "topic": "profile-featured",
+  "hideTopic": "profile-hidden",
+  "max": 12
+}
