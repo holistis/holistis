@@ -3,12 +3,18 @@
 // Anything unexpected throws, so the caller keeps the last verified evidence.
 const API = "https://api.github.com";
 const MAX_FIXES_LISTED = 5;
+const MAX_OPEN_LISTED = 6;
 const MAX_QUERY_RESULTS = 900; // the search API stops at 1000, refuse before it silently truncates
 
+// Every query is public-only on purpose: a stranger can open the same search logged out and see
+// the same number, whatever token (and so whatever private access) this script runs with.
 export const queries = (account) => ({
-  upstream: `author:${account} is:pr is:merged -user:${account}`,
-  bugFixes: `author:${account} is:pr is:merged -user:${account} fix in:title`,
-  own: `author:${account} is:pr is:merged user:${account}`,
+  total: `author:${account} is:pr is:merged is:public`,
+  upstream: `author:${account} is:pr is:merged -user:${account} is:public`,
+  bugFixes: `author:${account} is:pr is:merged -user:${account} fix in:title is:public`,
+  own: `author:${account} is:pr is:merged user:${account} is:public`,
+  sent: `author:${account} is:pr -user:${account} is:public`,
+  open: `author:${account} is:pr is:open -user:${account} is:public`,
 });
 
 export const searchLink = (q) => `https://github.com/search?q=${encodeURIComponent(q).replace(/%20/g, "+")}&type=pullrequests`;
@@ -82,7 +88,19 @@ function toPr(item, api_prefix = `${API}/repos/`) {
   return { repo, number: item.number, title: clean(item.title, 140), url, mergedAt: isoDay(item.closed_at) };
 }
 
+// An open pull request has no merge date; it carries the day it was opened.
+function toOpenPr(item) {
+  const { mergedAt, ...rest } = toPr({ ...item, closed_at: item.created_at });
+  return { ...rest, openedAt: mergedAt };
+}
+
+// Adding a tool to someone's "awesome" directory list is real, but it is not an engineering change.
+// Such pull requests stay in every count and out of the short "open now" list. Only the repository
+// name decides, never the title, so a real "add retry to the client" change is never hidden.
+export const isListing = (p) => /(^|[-_])awesome([-_]|$)/i.test(p.repo.split("/")[1]);
+
 const newestFirst = (a, b) => b.mergedAt.localeCompare(a.mergedAt) || b.number - a.number;
+const newestOpened = (a, b) => b.openedAt.localeCompare(a.openedAt) || b.number - a.number;
 const keyOf = (p) => `${p.repo}#${p.number}`;
 
 // Short display name: the repository name, or the owner when the name is long.
@@ -133,7 +151,14 @@ export async function collectEvidence({ fetchFn = fetch, token, account = "holis
   const q = queries(account);
   const upstream = (await searchAll(fetchFn, token, q.upstream)).map((i) => toPr(i)).sort(newestFirst);
   const fixes = (await searchAll(fetchFn, token, q.bugFixes)).map((i) => toPr(i)).sort(newestFirst);
+  const open = (await searchAll(fetchFn, token, q.open)).map((i) => toOpenPr(i)).sort(newestOpened);
   const ownTotal = await searchCount(fetchFn, token, q.own);
+  const total = await searchCount(fetchFn, token, q.total);
+  const sent = await searchCount(fetchFn, token, q.sent);
+
+  // The parts must add up to the whole, or one of the searches saw a different moment.
+  if (total !== upstream.length + ownTotal) throw new Error(`merged total ${total} is not ${upstream.length} upstream plus ${ownTotal} own`);
+  if (sent < upstream.length + open.length) throw new Error(`sent ${sent} is smaller than merged ${upstream.length} plus open ${open.length}`);
 
   const known = new Set(upstream.map(keyOf));
   for (const f of fixes) if (!known.has(keyOf(f))) throw new Error(`bug fix ${keyOf(f)} is missing from the upstream set`);
@@ -145,18 +170,22 @@ export async function collectEvidence({ fetchFn = fetch, token, account = "holis
   }
 
   return {
-    schema: 2,
+    schema: 3,
     account,
     date: isoDay(today),
     queries: q,
+    totals: { mergedPrs: total },
     upstream: {
       mergedPrs: upstream.length,
       projects: new Set(upstream.map((p) => p.repo)).size,
       bugFixes: fixes.length,
       bugFixProjects: fixProjects,
       latestFixes: fixes.slice(0, MAX_FIXES_LISTED),
+      sent,
+      open: open.length,
+      openLatest: open.filter((p) => !isListing(p)).slice(0, MAX_OPEN_LISTED),
     },
-    ownRepos: { mergedPrs: ownTotal, countedAsCredit: false },
+    ownRepos: { mergedPrs: ownTotal },
     projects: await collectProjects(fetchFn, token, account, featured),
   };
 }

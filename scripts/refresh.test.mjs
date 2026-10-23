@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, cpSync } from "node:fs";
+import { mkdtempSync, mkdirSync, writeFileSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { refresh, assertSane } from "./refresh.mjs";
@@ -10,6 +10,7 @@ const README = [
   "# Hey",
   "<!-- profile:summary:start -->\n<!-- profile:summary:end -->",
   "<!-- profile:fixes:start -->\n<!-- profile:fixes:end -->",
+  "<!-- profile:open:start -->\n<!-- profile:open:end -->",
   "<!-- profile:projects:start -->\n<!-- profile:projects:end -->",
 ].join("\n");
 
@@ -22,13 +23,14 @@ function sandbox() {
   return root;
 }
 const read = (root, f) => readFileSync(join(root, f), "utf8");
+const snapshot = (root) => read(root, "README.md") + read(root, "assets/hero.svg") + read(root, "data/evidence.json");
 
 test("first run writes the evidence, the hero and the README", async () => {
   const root = sandbox();
   const r = await refresh({ root, fetchFn: fakeFetch(), today: "2026-10-23" });
   assert.equal(r.changed, true);
-  assert.match(read(root, "README.md"), /5 of my pull requests are merged/);
-  assert.match(read(root, "assets/hero.svg"), /5 PRS · 5 PROJECTS/);
+  assert.match(read(root, "README.md"), /\[205 pull requests merged\]/);
+  assert.match(read(root, "assets/hero.svg"), /205 PRS MERGED · 5 IN OTHER PEOPLE'S PROJECTS · 2 OPEN NOW/);
   assert.equal(JSON.parse(read(root, "data/evidence.json")).upstream.mergedPrs, 5);
 });
 
@@ -38,19 +40,19 @@ test("a new merge shows up in the numbers, the hero and the list", async () => {
   const merged = pr("new-org/new-repo", 7, "fix: something real", "2026-10-24");
   const r = await refresh({ root, fetchFn: fakeFetch({ upstream: [merged, ...UPSTREAM], fixes: [merged, ...FIXES] }), today: "2026-10-24" });
   assert.equal(r.changed, true);
-  assert.match(read(root, "README.md"), /6 of my pull requests are merged/);
+  assert.match(read(root, "README.md"), /\[206 pull requests merged\]/);
   assert.match(read(root, "README.md"), /new-org\/new-repo#7/);
-  assert.match(read(root, "assets/hero.svg"), /6 PRS · 6 PROJECTS/);
+  assert.match(read(root, "assets/hero.svg"), /206 PRS MERGED · 6 IN OTHER PEOPLE'S PROJECTS/);
   assert.match(read(root, "assets/hero.svg"), /4 BUG FIXES IN NEW REPO/);
 });
 
 test("nothing is rewritten when nothing changed on the same day", async () => {
   const root = sandbox();
   await refresh({ root, fetchFn: fakeFetch(), today: "2026-10-23" });
-  const before = read(root, "README.md") + read(root, "assets/hero.svg") + read(root, "data/evidence.json");
+  const before = snapshot(root);
   const r = await refresh({ root, fetchFn: fakeFetch(), today: "2026-10-23" });
   assert.equal(r.changed, false);
-  assert.equal(read(root, "README.md") + read(root, "assets/hero.svg") + read(root, "data/evidence.json"), before);
+  assert.equal(snapshot(root), before);
 });
 
 test("on a new day only the date moves, at most one commit a day", async () => {
@@ -64,17 +66,25 @@ test("on a new day only the date moves, at most one commit a day", async () => {
 test("a lower count than before is refused and nothing is written", async () => {
   const root = sandbox();
   await refresh({ root, fetchFn: fakeFetch(), today: "2026-10-23" });
-  const before = read(root, "README.md") + read(root, "assets/hero.svg") + read(root, "data/evidence.json");
+  const before = snapshot(root);
   await assert.rejects(refresh({ root, fetchFn: fakeFetch({ upstream: UPSTREAM.slice(0, 2), fixes: [UPSTREAM[0]] }), today: "2026-10-24" }), /went down/);
-  assert.equal(read(root, "README.md") + read(root, "assets/hero.svg") + read(root, "data/evidence.json"), before);
+  assert.equal(snapshot(root), before);
+});
+
+test("a lower grand total than before is refused too", async () => {
+  const root = sandbox();
+  await refresh({ root, fetchFn: fakeFetch(), today: "2026-10-23" });
+  const before = snapshot(root);
+  await assert.rejects(refresh({ root, fetchFn: fakeFetch({ ownTotal: 150 }), today: "2026-10-24" }), /total merged went down/);
+  assert.equal(snapshot(root), before);
 });
 
 test("a failing GitHub leaves the last verified profile exactly as it was", async () => {
   const root = sandbox();
   await refresh({ root, fetchFn: fakeFetch(), today: "2026-10-23" });
-  const before = read(root, "README.md") + read(root, "assets/hero.svg") + read(root, "data/evidence.json");
+  const before = snapshot(root);
   await assert.rejects(refresh({ root, fetchFn: fakeFetch({ failRepos: true }), today: "2026-10-24" }), /GitHub answered 500/);
-  assert.equal(read(root, "README.md") + read(root, "assets/hero.svg") + read(root, "data/evidence.json"), before);
+  assert.equal(snapshot(root), before);
 });
 
 test("a README without markers fails before anything is written", async () => {
@@ -85,9 +95,13 @@ test("a README without markers fails before anything is written", async () => {
 });
 
 test("sanity gate: impossible shapes", () => {
-  const base = { upstream: { mergedPrs: 5, projects: 3, bugFixes: 2, latestFixes: [1, 2] }, projects: [] };
-  assert.throws(() => assertSane(null, { ...base, upstream: { ...base.upstream, bugFixes: 9, latestFixes: new Array(5) } }), /more bug fixes/);
-  assert.throws(() => assertSane(null, { ...base, upstream: { ...base.upstream, projects: 9 } }), /more projects/);
-  assert.throws(() => assertSane(null, { ...base, upstream: { ...base.upstream, latestFixes: [1] } }), /does not match/);
+  const base = { totals: { mergedPrs: 9 }, upstream: { mergedPrs: 5, projects: 3, bugFixes: 2, latestFixes: [1, 2], open: 1, openLatest: [1] }, projects: [] };
+  const withUp = (over) => ({ ...base, upstream: { ...base.upstream, ...over } });
+  assert.throws(() => assertSane(null, withUp({ bugFixes: 9, latestFixes: new Array(5) })), /more bug fixes/);
+  assert.throws(() => assertSane(null, withUp({ projects: 9 })), /more projects/);
+  assert.throws(() => assertSane(null, withUp({ latestFixes: [1] })), /does not match/);
+  assert.throws(() => assertSane(null, withUp({ openLatest: [1, 2, 3] })), /longer than the open count/);
+  assert.doesNotThrow(() => assertSane(null, withUp({ openLatest: [] })), "a list can be shorter when open pull requests are only directory listings");
+  assert.throws(() => assertSane(null, { ...base, totals: { mergedPrs: 4 } }), /smaller than merged upstream/);
   assert.doesNotThrow(() => assertSane(null, base));
 });

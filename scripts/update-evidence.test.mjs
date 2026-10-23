@@ -1,30 +1,57 @@
 // node --test scripts/*.test.mjs
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { collectEvidence, searchLink, queries, shortName, clean } from "./update-evidence.mjs";
-import { fakeFetch, pr, repo, FEATURED, UPSTREAM } from "./fixtures.mjs";
+import { collectEvidence, searchLink, queries, shortName, clean, isListing } from "./update-evidence.mjs";
+import { fakeFetch, pr, openPr, repo, FEATURED, UPSTREAM, OPEN } from "./fixtures.mjs";
 
 const run = (fetchFn, featured = FEATURED) => collectEvidence({ fetchFn, today: "2026-10-23", featured });
 
 test("counts, distinct projects and bug fixes come from the search results", async () => {
   const ev = await run(fakeFetch());
+  assert.equal(ev.totals.mergedPrs, 205);
   assert.equal(ev.upstream.mergedPrs, 5);
   assert.equal(ev.upstream.projects, 5);
   assert.equal(ev.upstream.bugFixes, 3);
   assert.deepEqual(ev.upstream.bugFixProjects, ["x402", "cloudfoundry", "windmill"]); // newest first, long repo names fall back to the owner
   assert.equal(ev.upstream.latestFixes[0].number, 3826);
-  assert.equal(ev.ownRepos.mergedPrs, 361);
-  assert.equal(ev.ownRepos.countedAsCredit, false);
+  assert.equal(ev.ownRepos.mergedPrs, 200);
+});
+
+test("open and sent pull requests are counted and the newest open ones are listed", async () => {
+  const ev = await run(fakeFetch());
+  assert.equal(ev.upstream.open, 2);
+  assert.equal(ev.upstream.sent, 10);
+  assert.equal(ev.upstream.openLatest[0].repo, "google/adk-python", "newest opened first");
+  assert.equal(ev.upstream.openLatest[0].openedAt, "2026-10-02");
+});
+
+test("directory listings count as open pull requests but stay out of the short list", async () => {
+  const listing = openPr("someone/awesome-mcp-servers", 1, "Add tool to Finance", "2026-10-10");
+  const realAdd = openPr("org/client", 2, "Add retry to the HTTP client", "2026-10-09");
+  const ev = await run(fakeFetch({ open: [...OPEN, listing, realAdd] }));
+  assert.equal(ev.upstream.open, 4);
+  assert.deepEqual(ev.upstream.openLatest.map((p) => p.repo), ["org/client", "google/adk-python", "microsoft/autogen"], "newest opened first, listing skipped");
+  assert.equal(isListing({ repo: "someone/awesome-mcp-servers", title: "Add tool to Finance" }), true);
+  assert.equal(isListing({ repo: "org/client", title: "Add retry to the HTTP client" }), false, "the title never decides");
+});
+
+test("every query is public-only, so a stranger sees the same number logged out", () => {
+  for (const [name, q] of Object.entries(queries("holistis"))) assert.match(q, /is:public$/, name);
 });
 
 test("the search link shows the same query the numbers come from", () => {
   const q = queries("holistis");
-  assert.equal(searchLink(q.upstream), "https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis&type=pullrequests");
-  assert.equal(searchLink(q.bugFixes), "https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle&type=pullrequests");
+  assert.equal(searchLink(q.upstream), "https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests");
+  assert.equal(searchLink(q.bugFixes), "https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests");
 });
 
 test("incomplete search results are refused, never counted", async () => {
   await assert.rejects(run(fakeFetch({ incomplete: true })), /incomplete/);
+});
+
+test("the parts must add up to the whole, or the run is refused", async () => {
+  await assert.rejects(run(fakeFetch({ total: 999 })), /merged total 999 is not 5 upstream plus 200 own/);
+  await assert.rejects(run(fakeFetch({ sent: 1 })), /sent 1 is smaller/);
 });
 
 test("a bug fix that is not in the upstream set means the data is inconsistent", async () => {

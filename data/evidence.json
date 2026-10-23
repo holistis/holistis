@@ -1,11 +1,17 @@
 {
-  "schema": 2,
+  "schema": 3,
   "account": "holistis",
   "date": "2026-10-23",
   "queries": {
-    "upstream": "author:holistis is:pr is:merged -user:holistis",
-    "bugFixes": "author:holistis is:pr is:merged -user:holistis fix in:title",
-    "own": "author:holistis is:pr is:merged user:holistis"
+    "total": "author:holistis is:pr is:merged is:public",
+    "upstream": "author:holistis is:pr is:merged -user:holistis is:public",
+    "bugFixes": "author:holistis is:pr is:merged -user:holistis fix in:title is:public",
+    "own": "author:holistis is:pr is:merged user:holistis is:public",
+    "sent": "author:holistis is:pr -user:holistis is:public",
+    "open": "author:holistis is:pr is:open -user:holistis is:public"
+  },
+  "totals": {
+    "mergedPrs": 227
   },
   "upstream": {
     "mergedPrs": 24,
@@ -54,13 +60,66 @@
         "url": "https://github.com/windmill-labs/windmill/pull/9680",
         "mergedAt": "2026-06-19"
       }
+    ],
+    "sent": 113,
+    "open": 54,
+    "openLatest": [
+      {
+        "repo": "x402-foundation/x402",
+        "number": 3830,
+        "title": "spec(offer-receipt): add the svm-memo authorization method",
+        "url": "https://github.com/x402-foundation/x402/pull/3830",
+        "openedAt": "2026-10-16"
+      },
+      {
+        "repo": "x402-foundation/x402",
+        "number": 3604,
+        "title": "specs: propose Buyer Delivery Claim extension",
+        "url": "https://github.com/x402-foundation/x402/pull/3604",
+        "openedAt": "2026-09-28"
+      },
+      {
+        "repo": "inercia/MCPShell",
+        "number": 54,
+        "title": "Fix shell-quote injection in the weather example, add a shellQuote template helper",
+        "url": "https://github.com/inercia/MCPShell/pull/54",
+        "openedAt": "2026-09-15"
+      },
+      {
+        "repo": "cnosuke/mcp-command-exec",
+        "number": 1,
+        "title": "Validate arguments, not just the program name, in IsCommandAllowed",
+        "url": "https://github.com/cnosuke/mcp-command-exec/pull/1",
+        "openedAt": "2026-09-15"
+      },
+      {
+        "repo": "blazickjp/shell-mcp-server",
+        "number": 9,
+        "title": "Fix path-containment bypass (prefix match + missing symlink resolution) in is_path_allowed()",
+        "url": "https://github.com/blazickjp/shell-mcp-server/pull/9",
+        "openedAt": "2026-09-14"
+      },
+      {
+        "repo": "camel-ai/camel",
+        "number": 4329,
+        "title": "ci: pin the four remaining unpinned action references to commit SHAs",
+        "url": "https://github.com/camel-ai/camel/pull/4329",
+        "openedAt": "2026-09-12"
+      }
     ]
   },
   "ownRepos": {
-    "mergedPrs": 361,
-    "countedAsCredit": false
+    "mergedPrs": 203
   },
   "projects": [
+    {
+      "name": "muraqib-agent-watch",
+      "url": "https://github.com/holistis/muraqib-agent-watch",
+      "description": "Free, instant capability check for any MCP server: what can it actually do, and does it say so",
+      "homepage": null,
+      "updated": "2026-10-23",
+      "release": null
+    },
     {
       "name": "tokenizen",
       "url": "https://github.com/holistis/tokenizen",

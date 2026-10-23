@@ -1,17 +1,18 @@
 // node --test scripts/render-hero.test.mjs
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
-import { renderHero } from "./render-hero.mjs";
+import { renderHero, fitNames } from "./render-hero.mjs";
+import { collectEvidence } from "./update-evidence.mjs";
+import { fakeFetch, FEATURED } from "./fixtures.mjs";
 
-const ev = JSON.parse(readFileSync(new URL("../data/evidence.json", import.meta.url), "utf8"));
+// Built from the fake GitHub, never from the live data file, so a schema change cannot lock the tests out.
+const ev = await collectEvidence({ fetchFn: fakeFetch(), today: "2026-10-23", featured: FEATURED });
 
 test("the hero shows exactly the counted numbers from the evidence file", () => {
   const svg = renderHero(ev);
-  assert.match(svg, new RegExp(`${ev.upstream.mergedPrs} PRS · ${ev.upstream.projects} PROJECTS`));
-  assert.match(svg, new RegExp(`${ev.upstream.bugFixes} BUG FIXES IN `));
-  assert.match(svg, new RegExp(`GITHUB ${ev.date} UTC`));
-  assert.doesNotMatch(svg, new RegExp(String(ev.ownRepos.mergedPrs)), "own-repo count must never appear on the hero");
+  assert.match(svg, new RegExp(`${ev.totals.mergedPrs} PRS MERGED · ${ev.upstream.mergedPrs} IN OTHER PEOPLE'S PROJECTS · ${ev.upstream.open} OPEN NOW`));
+  assert.match(svg, new RegExp(`${ev.upstream.bugFixes} BUG FIXES? IN `));
+  assert.match(svg, new RegExp(`COUNTED FROM PUBLIC GITHUB DATA · ${ev.date} UTC`));
 });
 
 test("the svg is safe for GitHub: no script, no external resource, no event handlers", () => {
@@ -35,7 +36,15 @@ test("text from the evidence file is XML-escaped", () => {
 });
 
 test("impossible evidence is refused instead of drawn", () => {
-  assert.throws(() => renderHero({ ...ev, upstream: { ...ev.upstream, bugFixes: 99 } }), /cannot exceed/);
+  assert.throws(() => renderHero({ ...ev, upstream: { ...ev.upstream, bugFixes: 999999 } }), /cannot exceed/);
   assert.throws(() => renderHero({ ...ev, upstream: { ...ev.upstream, mergedPrs: -1 } }), /non-negative/);
+  assert.throws(() => renderHero({ ...ev, totals: { mergedPrs: 0 } }), /at least upstream/);
   assert.throws(() => renderHero({ ...ev, date: "yesterday" }), /YYYY-MM-DD/);
+});
+
+test("many project names are cut to what fits on one line", () => {
+  assert.equal(fitNames(["a", "b"]), "A · B");
+  const long = fitNames(["x402", "windmill", "activepieces", "cloudfoundry", "open design", "another one", "and more"]);
+  assert.ok(long.length <= 60, long);
+  assert.match(long, /\+\d+$/);
 });

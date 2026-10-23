@@ -5,7 +5,11 @@
 # Hey, I'm Abdellah 👋
 
 <!-- profile:summary:start -->
-I direct AI agents to do real engineering work: research a problem, build the fix, verify it actually holds, and send it to the maintainers. 24 of my pull requests are merged in other people's projects (16 projects, 5 of them bug fixes). The rest of my merged pull requests sit in my own repositories, which I do not count as proof. Check the numbers yourself: [all 24](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis&type=pullrequests) and [the 5 with fix in the title](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle&type=pullrequests).
+I direct AI agents to do real engineering work: research a problem, build the fix, verify it holds, and ship it.
+
+[227 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 203 in my own repositories, where the tools below live, and [24 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 16 projects, [5 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [113 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [54 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
+
+<sub>Counted from public GitHub data on 2026-10-23.</sub>
 <!-- profile:summary:end -->
 
 <!-- profile:fixes:start -->
@@ -18,22 +22,34 @@ Bug fixes merged by other maintainers, newest first:
 - 2026-06-19 [windmill-labs/windmill#9680](https://github.com/windmill-labs/windmill/pull/9680) fix(home): preserve URL filter state on page refresh
 <!-- profile:fixes:end -->
 
-<sub>The text above and the project list below refresh by themselves from GitHub, see [data/evidence.json](data/evidence.json).</sub>
+<!-- profile:open:start -->
+Open now in other people's projects, code and spec changes, newest first:
 
-**Currently active in:**
-- **Agent-commerce trust infrastructure**: [tokenizen](https://github.com/holistis/tokenizen), signed delivery receipts for AI agents, live on Base mainnet (chain eip155:8453, verified directly off the live payment header). Independently rebuilt from scratch in a separate stack by two different engineers, 7/7 and 12/12 match on the test vectors including adversarial cases. Cited as the source of truth in a draft ERC-8004 feedback convention, and a third protocol linked our verifier in its own official docs. [Details](https://github.com/holistis/tokenizen/blob/main/packages/capacity-attest/README.md#onafhankelijk-gecontroleerd-niet-alleen-beweerd).
-- **x402 protocol itself**: found and fixed a bug where `createPaymentRequiredResponse` silently dropped part of its own extensions declaration. [Merged by the maintainer](https://github.com/x402-foundation/x402/pull/3826).
-- **x402 receipt verification**: [agent-receipt-verify](https://github.com/holistis/agent-receipt-verify), one command checks whether a paid endpoint follows the x402 spec, no account, no key. Measured against 60 real sellers from the Coinbase index on 18 October 2026: caught 38 false failures in our own first version, now zero.
-- **AI agents running real infrastructure**: [al-yad](https://github.com/holistis/al-yad) drives a browser autonomously, reviewed by 18 adversarial agents plus live attack testing before shipping. [muraqib](https://github.com/holistis/muraqib) opens its own fix PRs when nightly tests break and once [surfaced a real bug in Playwright itself](https://github.com/microsoft/playwright/issues/42533), [fixed by their own maintainers](https://github.com/microsoft/playwright/pull/42563).
-- **AI-agent security research**: 22+ vulnerabilities found across major open source AI tools, including a High-severity one in GitHub's own infrastructure. [Details below](#open-source-ci-security-fixes).
-- **Smart contract security**: [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp) and [al-mizaan-judge](https://github.com/holistis/al-mizaan-judge), built from real Sherlock/Immunefi audit work on 1,032 reconciled findings.
-- **AI-driven health platform**: [Longevity AI](https://longevityai.nl), solo-built, live for the Dutch market, 149,000 lines of code.
+- 2026-10-16 [x402-foundation/x402#3830](https://github.com/x402-foundation/x402/pull/3830) spec(offer-receipt): add the svm-memo authorization method
+- 2026-09-28 [x402-foundation/x402#3604](https://github.com/x402-foundation/x402/pull/3604) specs: propose Buyer Delivery Claim extension
+- 2026-09-15 [inercia/MCPShell#54](https://github.com/inercia/MCPShell/pull/54) Fix shell-quote injection in the weather example, add a shellQuote template helper
+- 2026-09-15 [cnosuke/mcp-command-exec#1](https://github.com/cnosuke/mcp-command-exec/pull/1) Validate arguments, not just the program name, in IsCommandAllowed
+- 2026-09-14 [blazickjp/shell-mcp-server#9](https://github.com/blazickjp/shell-mcp-server/pull/9) Fix path-containment bypass (prefix match + missing symlink resolution) in is\_path\_allowed()
+- 2026-09-12 [camel-ai/camel#4329](https://github.com/camel-ai/camel/pull/4329) ci: pin the four remaining unpinned action references to commit SHAs
+<!-- profile:open:end -->
+
+<sub>The numbers, the two lists above and the project list below refresh on their own from public GitHub data, see [data/evidence.json](data/evidence.json).</sub>
+
+### Currently active in
+- Agent-commerce trust infrastructure: [tokenizen](https://github.com/holistis/tokenizen), signed delivery receipts for AI agents over x402, live on Base mainnet. Other engineers have checked it from the outside: a clean-room Python verifier by [goun7](https://github.com/x402-foundation/x402/issues/2887#issuecomment-5687398497) matched all 7 test vectors and now runs on every push in Tamga, [StelarDigital](https://github.com/x402-foundation/x402/issues/2833#issuecomment-5680708467) ran the metered vector 12 of 12 green, a protocol maintainer linked our verifier in his [official docs](https://github.com/inamprotocol/inam-protocol/pull/143), and two developers built on the claim format in [asm-spec](https://github.com/YE-YI7/asm-spec/pull/18) and [again](https://github.com/YE-YI7/asm-spec/pull/19). A draft ERC-8004 convention takes its metered delivery block from [our spec](https://github.com/predgeAI/erc8004-outcome-validator/blob/2c4d745f1205ba91f3aabded221b5b5acdbcb5ed/grounded-feedback/README.md). [All the evidence](https://github.com/holistis/tokenizen/blob/main/packages/capacity-attest/README.md#independently-checked-not-just-claimed).
+- x402 protocol itself: found and fixed a bug in the core library where building a 402 response overwrote part of a route's own extensions declaration. [Merged by the maintainers](https://github.com/x402-foundation/x402/pull/3826).
+- x402 receipt verification: [agent-receipt-verify](https://github.com/holistis/agent-receipt-verify), one command checks whether a paid endpoint follows the x402 spec, no account, no key. Benchmarked against 60 real sellers from the Coinbase index, with the [method in the repo](https://github.com/holistis/agent-receipt-verify/blob/main/bench/methodefout.mjs).
+- AI agents running real infrastructure: [al-yad](https://github.com/holistis/al-yad) is a free open-source browser agent for your own Chrome, put through an 18-agent adversarial code review and attack runs against the real running code before release ([write-up](https://x402.tokenizen.nl/yad-security)). [muraqib](https://github.com/holistis/muraqib) opens its own fix PRs when nightly tests break, and its work surfaced a gap in Playwright's [CI guidance](https://github.com/microsoft/playwright/issues/42533) that a Playwright maintainer [fixed the next day](https://github.com/microsoft/playwright/pull/42563).
+- AI-agent security research: flagged 22 AI-agent repositories for a CI bug class that leaks secrets. 3 confirmed and fixed, among them a High-severity [GitHub Security Advisory](https://github.com/pymc-labs/pymc-marketing/security/advisories/GHSA-72xh-gfpr-v9hx) with credit, plus a High-severity report accepted by GitHub for its own infrastructure. [Details below](#open-source-ci-security-fixes).
+- Smart contract security: [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp) and [al-mizaan-judge](https://github.com/holistis/al-mizaan-judge), built on [1,032 findings from 10 Sherlock audit contests](https://github.com/holistis/3ilm-mcp).
+- AI-driven health platform: [Longevity AI](https://longevityai.nl), live for the Dutch market, built solo, roughly 190,000 lines of code.
 
 ---
 
 ## Projects
 
 <!-- profile:projects:start -->
+- [muraqib-agent-watch](https://github.com/holistis/muraqib-agent-watch): Free, instant capability check for any MCP server: what can it actually do, and does it say so Updated 2026-10-23.
 - [tokenizen](https://github.com/holistis/tokenizen): Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it... Latest release [v0.5.0](https://github.com/holistis/tokenizen/releases/tag/v0.5.0), 2026-09-06. [Website](https://tokenizen.nl). Updated 2026-10-23.
 - [agent-receipt-verify](https://github.com/holistis/agent-receipt-verify): MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'... Latest release [v0.2.1](https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1), 2026-10-17. Updated 2026-10-19.
 - [al-yad](https://github.com/holistis/al-yad): Yad: a free, open-source, local-first browser agent. Chrome extension (Part A, the hand) + local Companion (Part B, the brain). Your API key is encrypted on your... Latest release [v0.1.2-companion-npm-standin](https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin), 2026-09-11. [Website](https://yadagent.com). Updated 2026-10-11.
@@ -54,15 +70,15 @@ I check GitHub Actions workflows across popular open source AI-agent frameworks 
 
 Background: [the original CI-hygiene piece](https://dev.to/holistis/i-spent-a-day-auditing-github-actions-across-a-dozen-ai-agent-frameworks-5fg6) and [the full 22-repository breakdown](https://dev.to/holistis/a-github-comment-can-steal-your-secrets-i-found-22-repositories-where-it-could-1doh).
 
-**Confirmed and fixed**
+### Confirmed and fixed
 
 - [pymc-marketing](https://github.com/pymc-labs/pymc-marketing/security/advisories/GHSA-72xh-gfpr-v9hx): public GitHub Security Advisory, severity High, reported by email, fixed within a day, credited as reporter. [Write-up](https://dev.to/holistis/pymc-labs-has-1256-stars-a-github-issue-title-could-still-steal-their-api-key-1hd6).
 - [sheepworrier/BilliardsScorer](https://github.com/sheepworrier/BilliardsScorer/commit/734b5e3): script-injection plus missing-author-check in a `claude-agent.yml` workflow, reported by email, both fixed exactly as reported within two days.
 - `github/request-marketplace-action`: unquoted shell variable in a self-hosted-runner workflow allowed argument injection into a git clone call next to a live privileged token, reported through GitHub's private vulnerability disclosure process, severity High, credited as reporter (accepted), fix verified live in the current code. Advisory itself is not yet public, so no link here.
 
-**Open PRs**: [autogen](https://github.com/microsoft/autogen/pull/8205), [semantic-kernel](https://github.com/microsoft/semantic-kernel/pull/14397), [letta-code](https://github.com/letta-ai/letta-code/pull/4279), [adk-python](https://github.com/google/adk-python/pull/7052), [smolagents](https://github.com/huggingface/smolagents/pull/2770), [promptflow](https://github.com/microsoft/promptflow/pull/4221), [langflow](https://github.com/langflow-ai/langflow/pull/14982), [E2B](https://github.com/e2b-dev/E2B/pull/1846), [griptape](https://github.com/griptape-ai/griptape/pull/2307).
+Open PRs: [autogen](https://github.com/microsoft/autogen/pull/8205), [semantic-kernel](https://github.com/microsoft/semantic-kernel/pull/14397), [letta-code](https://github.com/letta-ai/letta-code/pull/4279), [adk-python](https://github.com/google/adk-python/pull/7052), [smolagents](https://github.com/huggingface/smolagents/pull/2770), [promptflow](https://github.com/microsoft/promptflow/pull/4221), [langflow](https://github.com/langflow-ai/langflow/pull/14982), [E2B](https://github.com/e2b-dev/E2B/pull/1846), [griptape](https://github.com/griptape-ai/griptape/pull/2307).
 
-**Open issues**: [mem0](https://github.com/mem0ai/mem0/issues/7260), [camel](https://github.com/camel-ai/camel/issues/4322), [goose](https://github.com/aaif-goose/goose/issues/11914), [mastra](https://github.com/mastra-ai/mastra/issues/23298), [n8n](https://github.com/n8n-io/n8n/issues/38018).
+Open issues: [mem0](https://github.com/mem0ai/mem0/issues/7260), [camel](https://github.com/camel-ai/camel/issues/4322), [goose](https://github.com/aaif-goose/goose/issues/11914), [mastra](https://github.com/mastra-ai/mastra/issues/23298), [n8n](https://github.com/n8n-io/n8n/issues/38018).
 
 ## Working together
 
@@ -72,7 +88,7 @@ Open to roles and freelance work in AI agent infrastructure and orchestration, p
 
 ## Longevity AI
 
-[Longevity AI](https://longevityai.nl) is an AI-driven health platform for the Dutch market: 28 questions in, a personal 6-month nutrition and lifestyle plan out, no diagnoses or medication advice. Built for people with chronic symptoms but no clear diagnosis, HR wellness programs, and holistic practitioners who want their own client portal. Live, roughly 149,000 lines of code, built solo, TypeScript end to end, GDPR compliant.
+[Longevity AI](https://longevityai.nl) is an AI-driven health platform for the Dutch market: 28 questions in, a personal 6-month nutrition and lifestyle plan out, no diagnoses or medication advice. Built for people with chronic symptoms but no clear diagnosis, HR wellness programs, and holistic practitioners who want their own client portal. Live, roughly 190,000 lines of code, built solo, TypeScript end to end.
 
 Runs on its own automation: [muraqib](https://github.com/holistis/muraqib) watches it nightly and merges its own fixes, a content pipeline turns new health research into trilingual posts every few hours, and a weekly self-improvement loop scores synthetic patient runs to sharpen the next report. All of it costs a few cents a week.
 

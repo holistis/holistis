@@ -31,15 +31,26 @@ const safeHttps = (u) => {
 
 const plural = (n, one, many = `${one}s`) => (n === 1 ? one : many);
 
+// Every number is a link to the public GitHub search that produces it.
 export function summaryMd(ev) {
-  const { mergedPrs: n, projects: p, bugFixes: f } = ev.upstream;
+  const u = ev.upstream;
+  const total = ev.totals.mergedPrs;
+  const link = (text, q) => `[${text}](${safeSearch(searchLink(q))})`;
   return (
-    `I direct AI agents to do real engineering work: research a problem, build the fix, verify it actually holds, and send it to the maintainers. ` +
-    `${n} of my pull ${plural(n, "request")} ${n === 1 ? "is" : "are"} merged in other people's projects ` +
-    `(${p} ${plural(p, "project")}, ${f} of them bug ${plural(f, "fix", "fixes")}). ` +
-    `The rest of my merged pull requests sit in my own repositories, which I do not count as proof. ` +
-    `Check the numbers yourself: [all ${n}](${safeSearch(searchLink(ev.queries.upstream))}) and [the ${f} with fix in the title](${safeSearch(searchLink(ev.queries.bugFixes))}).`
+    `I direct AI agents to do real engineering work: research a problem, build the fix, verify it holds, and ship it.\n\n` +
+    `${link(`${total} pull ${plural(total, "request")} merged`, ev.queries.total)}: ${ev.ownRepos.mergedPrs} in my own repositories, where the tools below live, ` +
+    `and ${link(`${u.mergedPrs} in other people's projects`, ev.queries.upstream)} across ${u.projects} ${plural(u.projects, "project")}, ` +
+    `${link(`${u.bugFixes} of them bug ${plural(u.bugFixes, "fix", "fixes")}`, ev.queries.bugFixes)}. ` +
+    `I have sent ${link(`${u.sent} to other projects`, ev.queries.sent)} so far, ${link(`${u.open} still open`, ev.queries.open)}.\n\n` +
+    `<sub>Counted from public GitHub data on ${ev.date}.</sub>`
   );
+}
+
+export function openMd(ev) {
+  const list = ev.upstream.openLatest;
+  if (!list.length) return "";
+  const lines = list.map((x) => `- ${x.openedAt} [${x.repo}#${x.number}](${safeUrl(x.url)}) ${mdText(x.title)}`);
+  return `Open now in other people's projects, code and spec changes, newest first:\n\n${lines.join("\n")}`;
 }
 
 export function fixesMd(ev) {
@@ -73,6 +84,7 @@ export function replaceBlock(text, name, body) {
 export function applyBlocks(readme, ev) {
   let out = replaceBlock(readme, "summary", summaryMd(ev));
   out = replaceBlock(out, "fixes", fixesMd(ev));
+  out = replaceBlock(out, "open", openMd(ev));
   out = replaceBlock(out, "projects", projectsMd(ev));
   return out;
 }
