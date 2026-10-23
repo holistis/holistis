@@ -61,9 +61,16 @@
         "mergedAt": "2026-06-19"
       }
     ],
-    "sent": 113,
-    "open": 54,
+    "sent": 114,
+    "open": 55,
     "openLatest": [
+      {
+        "repo": "tigerless-labs/autoharness",
+        "number": 278,
+        "title": "fix(redact): redact bare vendor-prefixed keys and secret-named variables",
+        "url": "https://github.com/tigerless-labs/autoharness/pull/278",
+        "openedAt": "2026-10-23"
+      },
       {
         "repo": "x402-foundation/x402",
         "number": 3830,
@@ -98,13 +105,6 @@
         "title": "Fix path-containment bypass (prefix match + missing symlink resolution) in is_path_allowed()",
         "url": "https://github.com/blazickjp/shell-mcp-server/pull/9",
         "openedAt": "2026-09-14"
-      },
-      {
-        "repo": "camel-ai/camel",
-        "number": 4329,
-        "title": "ci: pin the four remaining unpinned action references to commit SHAs",
-        "url": "https://github.com/camel-ai/camel/pull/4329",
-        "openedAt": "2026-09-12"
       }
     ]
   },

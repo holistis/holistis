@@ -1,6 +1,6 @@
 <!-- profile:hero:start -->
 <div align="center">
-<img src="./assets/hero.svg?v=25cef247" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
+<img src="./assets/hero.svg?v=b8c1633a" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
 <!-- profile:hero:end -->
 
@@ -9,7 +9,7 @@
 <!-- profile:summary:start -->
 I direct AI agents to do real engineering work: research a problem, build the fix, verify it holds, and ship it.
 
-[230 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 206 in my own repositories, where the tools below live, and [24 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 16 projects, [5 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [113 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [54 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
+[230 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 206 in my own repositories, where the tools below live, and [24 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 16 projects, [5 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [114 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [55 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
 
 <sub>Counted from public GitHub data on 2026-10-23.</sub>
 <!-- profile:summary:end -->
@@ -27,12 +27,12 @@ Bug fixes merged by other maintainers, newest first:
 <!-- profile:open:start -->
 Open now in other people's projects, code and spec changes, newest first:
 
+- 2026-10-23 [tigerless-labs/autoharness#278](https://github.com/tigerless-labs/autoharness/pull/278) fix(redact): redact bare vendor-prefixed keys and secret-named variables
 - 2026-10-16 [x402-foundation/x402#3830](https://github.com/x402-foundation/x402/pull/3830) spec(offer-receipt): add the svm-memo authorization method
 - 2026-09-28 [x402-foundation/x402#3604](https://github.com/x402-foundation/x402/pull/3604) specs: propose Buyer Delivery Claim extension
 - 2026-09-15 [inercia/MCPShell#54](https://github.com/inercia/MCPShell/pull/54) Fix shell-quote injection in the weather example, add a shellQuote template helper
 - 2026-09-15 [cnosuke/mcp-command-exec#1](https://github.com/cnosuke/mcp-command-exec/pull/1) Validate arguments, not just the program name, in IsCommandAllowed
 - 2026-09-14 [blazickjp/shell-mcp-server#9](https://github.com/blazickjp/shell-mcp-server/pull/9) Fix path-containment bypass (prefix match + missing symlink resolution) in is\_path\_allowed()
-- 2026-09-12 [camel-ai/camel#4329](https://github.com/camel-ai/camel/pull/4329) ci: pin the four remaining unpinned action references to commit SHAs
 <!-- profile:open:end -->
 
 <sub>The numbers, the two lists above and the project list below refresh on their own from public GitHub data, see [data/evidence.json](data/evidence.json).</sub>
