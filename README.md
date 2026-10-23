@@ -1,6 +1,8 @@
+<!-- profile:hero:start -->
 <div align="center">
-<img src="./assets/hero.svg" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
+<img src="./assets/hero.svg?v=056c14bb" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
+<!-- profile:hero:end -->
 
 # Hey, I'm Abdellah 👋
 

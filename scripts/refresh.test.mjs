@@ -7,6 +7,7 @@ import { refresh, assertSane } from "./refresh.mjs";
 import { fakeFetch, pr, FEATURED, UPSTREAM, FIXES } from "./fixtures.mjs";
 
 const README = [
+  "<!-- profile:hero:start -->\n<!-- profile:hero:end -->",
   "# Hey",
   "<!-- profile:summary:start -->\n<!-- profile:summary:end -->",
   "<!-- profile:fixes:start -->\n<!-- profile:fixes:end -->",
@@ -31,6 +32,7 @@ test("first run writes the evidence, the hero and the README", async () => {
   assert.equal(r.changed, true);
   assert.match(read(root, "README.md"), /\[205 pull requests merged\]/);
   assert.match(read(root, "assets/hero.svg"), /205 PRS MERGED · 5 IN OTHER PEOPLE'S PROJECTS · 2 OPEN NOW/);
+  assert.match(read(root, "README.md"), /src="\.\/assets\/hero\.svg\?v=[0-9a-f]{8}"/);
   assert.equal(JSON.parse(read(root, "data/evidence.json")).upstream.mergedPrs, 5);
 });
 

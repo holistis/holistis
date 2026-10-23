@@ -1,5 +1,6 @@
 // Fills the generated blocks of README.md from data/evidence.json.
 // Hand-written text outside the markers is never touched.
+import { createHash } from "node:crypto";
 import { searchLink } from "./update-evidence.mjs";
 
 // Text that came from GitHub is data, never markup: one line, markdown characters escaped.
@@ -81,8 +82,20 @@ export function replaceBlock(text, name, body) {
   return `${text.slice(0, i + start.length)}\n${body.trim()}\n${text.slice(j)}`;
 }
 
-export function applyBlocks(readme, ev) {
-  let out = replaceBlock(readme, "summary", summaryMd(ev));
+// The picture URL carries a hash of the picture itself. GitHub keeps images in a cache for a few
+// minutes, so without this the hero could show last round's numbers next to this round's text.
+export function heroMd(heroSvg) {
+  const v = createHash("sha1").update(heroSvg).digest("hex").slice(0, 8);
+  return (
+    `<div align="center">\n` +
+    `<img src="./assets/hero.svg?v=${v}" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />\n` +
+    `</div>`
+  );
+}
+
+export function applyBlocks(readme, ev, heroSvg) {
+  let out = replaceBlock(readme, "hero", heroMd(heroSvg));
+  out = replaceBlock(out, "summary", summaryMd(ev));
   out = replaceBlock(out, "fixes", fixesMd(ev));
   out = replaceBlock(out, "open", openMd(ev));
   out = replaceBlock(out, "projects", projectsMd(ev));
