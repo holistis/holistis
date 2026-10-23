@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 228
+    "mergedPrs": 229
   },
   "upstream": {
     "mergedPrs": 24,
@@ -109,7 +109,7 @@
     ]
   },
   "ownRepos": {
-    "mergedPrs": 204
+    "mergedPrs": 205
   },
   "projects": [
     {
