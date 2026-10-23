@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 234
+    "mergedPrs": 235
   },
   "upstream": {
     "mergedPrs": 24,
@@ -61,9 +61,16 @@
         "mergedAt": "2026-06-19"
       }
     ],
-    "sent": 114,
-    "open": 55,
+    "sent": 115,
+    "open": 56,
     "openLatest": [
+      {
+        "repo": "Chain-Love/chain-love",
+        "number": 4786,
+        "title": "Add Bug Bounty Intelligence (provider, MCP server and security scanner on Base)",
+        "url": "https://github.com/Chain-Love/chain-love/pull/4786",
+        "openedAt": "2026-10-23"
+      },
       {
         "repo": "tigerless-labs/autoharness",
         "number": 278,
@@ -98,18 +105,11 @@
         "title": "Validate arguments, not just the program name, in IsCommandAllowed",
         "url": "https://github.com/cnosuke/mcp-command-exec/pull/1",
         "openedAt": "2026-09-15"
-      },
-      {
-        "repo": "blazickjp/shell-mcp-server",
-        "number": 9,
-        "title": "Fix path-containment bypass (prefix match + missing symlink resolution) in is_path_allowed()",
-        "url": "https://github.com/blazickjp/shell-mcp-server/pull/9",
-        "openedAt": "2026-09-14"
       }
     ]
   },
   "ownRepos": {
-    "mergedPrs": 210
+    "mergedPrs": 211
   },
   "projects": [
     {
