@@ -8,11 +8,6 @@ import { collectEvidence } from "./update-evidence.mjs";
 import { renderHero } from "./render-hero.mjs";
 import { applyBlocks } from "./render-readme.mjs";
 
-const withoutDate = (e) => {
-  const { date, ...rest } = e;
-  return JSON.stringify(rest);
-};
-
 // A lower number than before, or a list that suddenly shrank, is more likely a broken
 // answer from GitHub than the truth. A human decides about that, never the bot.
 export function assertSane(prev, next) {
@@ -38,12 +33,17 @@ export async function refresh({ root = process.cwd(), fetchFn = fetch, token, to
   const next = await collectEvidence({ fetchFn, token, today, featured });
   assertSane(prev, next);
 
-  if (prev && withoutDate(prev) === withoutDate(next) && prev.date === today) return { changed: false, evidence: prev };
-
   // Render everything in memory first, so a failure never leaves half a profile on disk.
   const evidenceText = `${JSON.stringify(next, null, 2)}\n`;
   const heroText = renderHero(next);
-  const readmeText = applyBlocks(readFileSync(at("README.md"), "utf8"), next);
+  const readmeText = applyBlocks(readFileSync(at("README.md"), "utf8"), next, heroText);
+
+  // Compare what would be written with what is on disk. That covers new numbers, a new day
+  // (the date moves, so at most one commit a day) and a changed template alike.
+  const onDisk = (f) => (existsSync(at(f)) ? readFileSync(at(f), "utf8") : null);
+  if (onDisk("data/evidence.json") === evidenceText && onDisk("assets/hero.svg") === heroText && onDisk("README.md") === readmeText) {
+    return { changed: false, evidence: next };
+  }
 
   if (!dry) {
     writeFileSync(at("assets/hero.svg"), heroText);

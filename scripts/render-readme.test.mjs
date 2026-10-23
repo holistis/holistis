@@ -1,10 +1,13 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { collectEvidence } from "./update-evidence.mjs";
-import { applyBlocks, replaceBlock, mdText, summaryMd, projectsMd, fixesMd, openMd } from "./render-readme.mjs";
+import { applyBlocks, replaceBlock, mdText, summaryMd, projectsMd, fixesMd, openMd, heroMd } from "./render-readme.mjs";
 import { fakeFetch, pr, openPr, repo, FEATURED, FIXES, UPSTREAM } from "./fixtures.mjs";
 
 const TEMPLATE = [
+  "<!-- profile:hero:start -->",
+  "old picture",
+  "<!-- profile:hero:end -->",
   "# Hey",
   "<!-- profile:summary:start -->",
   "old",
@@ -22,22 +25,23 @@ const TEMPLATE = [
 const evidence = (opts) => collectEvidence({ fetchFn: fakeFetch(opts), today: "2026-10-23", featured: FEATURED });
 
 test("blocks are filled and hand written text is untouched", async () => {
-  const out = applyBlocks(TEMPLATE, await evidence());
+  const out = applyBlocks(TEMPLATE, await evidence(), "<svg>one</svg>");
   assert.match(out, /\[205 pull requests merged\]/);
   assert.match(out, /Open now in other people's projects/);
   assert.match(out, /hand written text that must survive/);
-  assert.ok(out.startsWith("# Hey\n") && out.endsWith("\ntail"));
+  assert.ok(out.startsWith("<!-- profile:hero:start -->\n") && out.endsWith("\ntail"));
+  assert.match(out, /\n# Hey\n/, "the hand written heading is still there");
 });
 
 test("running it twice gives the same file", async () => {
   const ev = await evidence();
-  const once = applyBlocks(TEMPLATE, ev);
-  assert.equal(applyBlocks(once, ev), once);
+  const once = applyBlocks(TEMPLATE, ev, "<svg>one</svg>");
+  assert.equal(applyBlocks(once, ev, "<svg>one</svg>"), once);
 });
 
 test("missing or duplicated markers are an error, never a silent skip", async () => {
   const ev = await evidence();
-  assert.throws(() => applyBlocks("no markers here", ev), /exactly one/);
+  assert.throws(() => applyBlocks("no markers here", ev, "<svg/>"), /exactly one/);
   assert.throws(() => replaceBlock(`${TEMPLATE}\n<!-- profile:summary:start -->\n<!-- profile:summary:end -->`, "summary", "x"), /exactly one/);
 });
 
@@ -89,4 +93,11 @@ test("urls, www hosts and e-mail addresses are neutralised", () => {
 
 test("mdText escapes the characters that make markdown", () => {
   assert.equal(mdText("a_b *c* [d] <e> `f` | g ~h"), "a\\_b \\*c\\* \\[d\\] \\<e\\> \\`f\\` \\| g \\~h");
+});
+
+test("the picture url changes exactly when the picture changes", () => {
+  const one = heroMd("<svg>one</svg>");
+  assert.equal(heroMd("<svg>one</svg>"), one);
+  assert.notEqual(heroMd("<svg>two</svg>"), one);
+  assert.match(one, /src="\.\/assets\/hero\.svg\?v=[0-9a-f]{8}"/);
 });
