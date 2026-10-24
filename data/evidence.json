@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 250
+    "mergedPrs": 252
   },
   "upstream": {
     "mergedPrs": 24,
@@ -109,9 +109,21 @@
     ]
   },
   "ownRepos": {
-    "mergedPrs": 226
+    "mergedPrs": 228
   },
   "projects": [
+    {
+      "name": "agent-receipt-verify",
+      "url": "https://github.com/holistis/agent-receipt-verify",
+      "description": "MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'...",
+      "homepage": null,
+      "updated": "2026-10-24",
+      "release": {
+        "tag": "v0.2.1",
+        "date": "2026-10-17",
+        "url": "https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1"
+      }
+    },
     {
       "name": "tokenizen",
       "url": "https://github.com/holistis/tokenizen",
@@ -143,18 +155,6 @@
       "homepage": null,
       "updated": "2026-10-23",
       "release": null
-    },
-    {
-      "name": "agent-receipt-verify",
-      "url": "https://github.com/holistis/agent-receipt-verify",
-      "description": "MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'...",
-      "homepage": null,
-      "updated": "2026-10-19",
-      "release": {
-        "tag": "v0.2.1",
-        "date": "2026-10-17",
-        "url": "https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1"
-      }
     },
     {
       "name": "al-yad",
