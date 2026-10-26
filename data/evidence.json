@@ -1,7 +1,7 @@
 {
   "schema": 3,
   "account": "holistis",
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "queries": {
     "total": "author:holistis is:pr is:merged is:public",
     "upstream": "author:holistis is:pr is:merged -user:holistis is:public",
