@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 295
+    "mergedPrs": 296
   },
   "upstream": {
     "mergedPrs": 24,
@@ -61,9 +61,16 @@
         "mergedAt": "2026-06-19"
       }
     ],
-    "sent": 115,
-    "open": 55,
+    "sent": 116,
+    "open": 56,
     "openLatest": [
+      {
+        "repo": "x402-foundation/x402",
+        "number": 3954,
+        "title": "docs(extensions): bind the payment identifier to a request fingerprint in the idempotency example",
+        "url": "https://github.com/x402-foundation/x402/pull/3954",
+        "openedAt": "2026-10-26"
+      },
       {
         "repo": "Chain-Love/chain-love",
         "number": 4786,
@@ -98,18 +105,11 @@
         "title": "Fix shell-quote injection in the weather example, add a shellQuote template helper",
         "url": "https://github.com/inercia/MCPShell/pull/54",
         "openedAt": "2026-09-15"
-      },
-      {
-        "repo": "cnosuke/mcp-command-exec",
-        "number": 1,
-        "title": "Validate arguments, not just the program name, in IsCommandAllowed",
-        "url": "https://github.com/cnosuke/mcp-command-exec/pull/1",
-        "openedAt": "2026-09-15"
       }
     ]
   },
   "ownRepos": {
-    "mergedPrs": 271
+    "mergedPrs": 272
   },
   "projects": [
     {
