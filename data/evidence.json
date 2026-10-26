@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 296
+    "mergedPrs": 303
   },
   "upstream": {
     "mergedPrs": 24,
@@ -61,9 +61,16 @@
         "mergedAt": "2026-06-19"
       }
     ],
-    "sent": 116,
-    "open": 56,
+    "sent": 117,
+    "open": 57,
     "openLatest": [
+      {
+        "repo": "x402-foundation/x402",
+        "number": 3958,
+        "title": "docs(specs): known-answer vectors for section 5.5 canonicalization",
+        "url": "https://github.com/x402-foundation/x402/pull/3958",
+        "openedAt": "2026-10-26"
+      },
       {
         "repo": "x402-foundation/x402",
         "number": 3954,
@@ -98,32 +105,13 @@
         "title": "specs: propose Buyer Delivery Claim extension",
         "url": "https://github.com/x402-foundation/x402/pull/3604",
         "openedAt": "2026-09-28"
-      },
-      {
-        "repo": "inercia/MCPShell",
-        "number": 54,
-        "title": "Fix shell-quote injection in the weather example, add a shellQuote template helper",
-        "url": "https://github.com/inercia/MCPShell/pull/54",
-        "openedAt": "2026-09-15"
       }
     ]
   },
   "ownRepos": {
-    "mergedPrs": 272
+    "mergedPrs": 279
   },
   "projects": [
-    {
-      "name": "agent-receipt-verify",
-      "url": "https://github.com/holistis/agent-receipt-verify",
-      "description": "MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'...",
-      "homepage": null,
-      "updated": "2026-10-26",
-      "release": {
-        "tag": "v0.2.1",
-        "date": "2026-10-17",
-        "url": "https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1"
-      }
-    },
     {
       "name": "tokenizen",
       "url": "https://github.com/holistis/tokenizen",
@@ -141,11 +129,23 @@
       "url": "https://github.com/holistis/bug-bounty-intelligence-mcp",
       "description": "MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search...",
       "homepage": null,
-      "updated": "2026-10-25",
+      "updated": "2026-10-26",
       "release": {
         "tag": "v1.0.3",
         "date": "2026-07-29",
         "url": "https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3"
+      }
+    },
+    {
+      "name": "agent-receipt-verify",
+      "url": "https://github.com/holistis/agent-receipt-verify",
+      "description": "MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'...",
+      "homepage": null,
+      "updated": "2026-10-26",
+      "release": {
+        "tag": "v0.2.1",
+        "date": "2026-10-17",
+        "url": "https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1"
       }
     },
     {

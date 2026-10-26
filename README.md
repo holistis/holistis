@@ -1,6 +1,6 @@
 <!-- profile:hero:start -->
 <div align="center">
-<img src="./assets/hero.svg?v=f4b0e163" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
+<img src="./assets/hero.svg?v=70c9beef" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
 <!-- profile:hero:end -->
 
@@ -9,7 +9,7 @@
 <!-- profile:summary:start -->
 I direct AI agents to do real engineering work: research a problem, build the fix, verify it holds, and ship it.
 
-[296 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 272 in my own repositories, where the tools below live, and [24 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 16 projects, [5 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [116 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [56 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
+[303 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 279 in my own repositories, where the tools below live, and [24 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 16 projects, [5 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [117 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [57 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
 
 <sub>Counted from public GitHub data on 2026-10-26.</sub>
 <!-- profile:summary:end -->
@@ -27,12 +27,12 @@ Bug fixes merged by other maintainers, newest first:
 <!-- profile:open:start -->
 Open now in other people's projects, code and spec changes, newest first:
 
+- 2026-10-26 [x402-foundation/x402#3958](https://github.com/x402-foundation/x402/pull/3958) docs(specs): known-answer vectors for section 5.5 canonicalization
 - 2026-10-26 [x402-foundation/x402#3954](https://github.com/x402-foundation/x402/pull/3954) docs(extensions): bind the payment identifier to a request fingerprint in the idempotency example
 - 2026-10-23 [Chain-Love/chain-love#4786](https://github.com/Chain-Love/chain-love/pull/4786) Add Bug Bounty Intelligence (provider, MCP server and security scanner on Base)
 - 2026-10-23 [tigerless-labs/autoharness#278](https://github.com/tigerless-labs/autoharness/pull/278) fix(redact): redact bare vendor-prefixed keys and secret-named variables
 - 2026-10-16 [x402-foundation/x402#3830](https://github.com/x402-foundation/x402/pull/3830) spec(offer-receipt): add the svm-memo authorization method
 - 2026-09-28 [x402-foundation/x402#3604](https://github.com/x402-foundation/x402/pull/3604) specs: propose Buyer Delivery Claim extension
-- 2026-09-15 [inercia/MCPShell#54](https://github.com/inercia/MCPShell/pull/54) Fix shell-quote injection in the weather example, add a shellQuote template helper
 <!-- profile:open:end -->
 
 <sub>The numbers, the two lists above and the project list below refresh on their own from public GitHub data, see [data/evidence.json](data/evidence.json).</sub>
@@ -51,9 +51,9 @@ Open now in other people's projects, code and spec changes, newest first:
 ## Projects
 
 <!-- profile:projects:start -->
-- [agent-receipt-verify](https://github.com/holistis/agent-receipt-verify): MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'... Latest release [v0.2.1](https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1), 2026-10-17. Updated 2026-10-26.
 - [tokenizen](https://github.com/holistis/tokenizen): Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it... Latest release [v0.5.0](https://github.com/holistis/tokenizen/releases/tag/v0.5.0), 2026-09-06. [Website](https://tokenizen.nl). Updated 2026-10-26.
-- [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp): MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search... Latest release [v1.0.3](https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3), 2026-07-29. Updated 2026-10-25.
+- [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp): MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search... Latest release [v1.0.3](https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3), 2026-07-29. Updated 2026-10-26.
+- [agent-receipt-verify](https://github.com/holistis/agent-receipt-verify): MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'... Latest release [v0.2.1](https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1), 2026-10-17. Updated 2026-10-26.
 - [muraqib-agent-watch](https://github.com/holistis/muraqib-agent-watch): Free, instant capability check for any MCP server: what can it actually do, and does it say so Updated 2026-10-23.
 - [al-yad](https://github.com/holistis/al-yad): Yad: a free, open-source, local-first browser agent. Chrome extension (Part A, the hand) + local Companion (Part B, the brain). Your API key is encrypted on your... Latest release [v0.1.2-companion-npm-standin](https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin), 2026-09-11. [Website](https://yadagent.com). Updated 2026-10-11.
 - [muraqib](https://github.com/holistis/muraqib): Nightly Playwright QA that tells you when it stops watching. npx muraqib doctor finds the silent-cancel bug in any existing setup. Claude opens the fix PR. MIT, no... Latest release [v0.3.4](https://github.com/holistis/muraqib/releases/tag/v0.3.4), 2026-09-29. [Website](https://www.npmjs.com/package/muraqib). Updated 2026-09-29.
