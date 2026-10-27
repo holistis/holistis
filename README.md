@@ -14,6 +14,9 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 <sub>Counted from public GitHub data on 2026-10-27.</sub>
 <!-- profile:summary:end -->
 
+<!-- profile:merged:start -->
+<!-- profile:merged:end -->
+
 <!-- profile:fixes:start -->
 Bug fixes merged by other maintainers, newest first:
 

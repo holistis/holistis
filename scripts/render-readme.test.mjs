@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { collectEvidence } from "./update-evidence.mjs";
-import { applyBlocks, replaceBlock, mdText, summaryMd, projectsMd, fixesMd, openMd, heroMd } from "./render-readme.mjs";
+import { applyBlocks, replaceBlock, mdText, summaryMd, projectsMd, fixesMd, openMd, mergedMd, heroMd } from "./render-readme.mjs";
 import { fakeFetch, pr, openPr, repo, FEATURED, FIXES, UPSTREAM } from "./fixtures.mjs";
 
 const TEMPLATE = [
@@ -12,6 +12,8 @@ const TEMPLATE = [
   "<!-- profile:summary:start -->",
   "old",
   "<!-- profile:summary:end -->",
+  "<!-- profile:merged:start -->",
+  "<!-- profile:merged:end -->",
   "<!-- profile:fixes:start -->",
   "<!-- profile:fixes:end -->",
   "<!-- profile:open:start -->",
@@ -61,20 +63,36 @@ test("titles and descriptions from GitHub cannot inject markup or links", async 
     open: [hostileOpen],
     repos: [repo("tokenizen", { description: "nice <script>alert(1)</script> [x](javascript:alert(1))" }), repo("muraqib"), repo("postmortems")],
   });
-  const md = `${fixesMd(ev)}\n${openMd(ev)}\n${projectsMd(ev)}`;
+  const md = `${mergedMd(ev)}\n${fixesMd(ev)}\n${openMd(ev)}\n${projectsMd(ev)}`;
   assert.doesNotMatch(md, /(^|[^\\])<(img|script)/, "every angle bracket is escaped");
   const withoutOwnLinks = md.replace(/\]\(https:\/\/github\.com\/[^)\s]*\)/g, "]()");
   assert.doesNotMatch(withoutOwnLinks, /(^|[^\\])https?:\/\//, "outside our own github links no bare URL survives, so nothing autolinks");
   assert.doesNotMatch(md, /\[click\]\(/, "square brackets are escaped, so no link can be built from a title");
   assert.doesNotMatch(md, /\[x\]\(/);
   const items = md.split("\n").filter((l) => l.startsWith("- ")).length;
-  assert.equal(items, ev.upstream.latestFixes.length + ev.upstream.openLatest.length + ev.projects.length, "one line per item, no newline smuggling");
+  assert.equal(items, ev.upstream.latestMerged.length + ev.upstream.latestFixes.length + ev.upstream.openLatest.length + ev.projects.length, "one line per item, no newline smuggling");
+});
+
+test("the latest merged list shows changes of any kind, newest first, and stays empty without any", async () => {
+  const ev = await evidence();
+  const md = mergedMd(ev);
+  assert.match(md, /^Latest changes merged by other maintainers, of any kind, newest first:/);
+  const lines = md.split("\n").filter((l) => l.startsWith("- "));
+  assert.equal(lines.length, 4, "the directory listing is not an achievement");
+  assert.match(lines[0], /x402-foundation\/x402#3826/);
+  assert.match(lines[1], /om-world#18\].*docs: add buyer-side delivery attestation/, "a docs change is shown, unlike in the bug fix list");
+  ev.upstream.latestMerged = [];
+  assert.equal(mergedMd(ev), "");
+  delete ev.upstream.latestMerged;
+  assert.equal(mergedMd(ev), "", "older evidence without the list renders nothing instead of failing");
 });
 
 test("only github.com links are ever written", async () => {
   const ev = await evidence();
   ev.upstream.latestFixes[0].url = "https://evil.example/x";
   assert.throws(() => fixesMd(ev), /non-GitHub link/);
+  ev.upstream.latestMerged[0].url = "https://evil.example/y";
+  assert.throws(() => mergedMd(ev), /non-GitHub link/);
 });
 
 test("wording follows the numbers, including one and zero", async () => {

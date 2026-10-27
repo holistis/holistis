@@ -3,6 +3,7 @@
 // Anything unexpected throws, so the caller keeps the last verified evidence.
 const API = "https://api.github.com";
 const MAX_FIXES_LISTED = 5;
+const MAX_MERGED_LISTED = 5;
 const MAX_OPEN_LISTED = 6;
 const MAX_QUERY_RESULTS = 900; // the search API stops at 1000, refuse before it silently truncates
 
@@ -181,6 +182,7 @@ export async function collectEvidence({ fetchFn = fetch, token, account = "holis
       bugFixes: fixes.length,
       bugFixProjects: fixProjects,
       latestFixes: fixes.slice(0, MAX_FIXES_LISTED),
+      latestMerged: upstream.filter((p) => !isListing(p)).slice(0, MAX_MERGED_LISTED),
       sent,
       open: open.length,
       openLatest: open.filter((p) => !isListing(p)).slice(0, MAX_OPEN_LISTED),

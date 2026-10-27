@@ -16,6 +16,7 @@ export function assertSane(prev, next) {
   if (u.projects > u.mergedPrs) throw new Error("more projects than merged pull requests");
   if (u.latestFixes.length !== Math.min(5, u.bugFixes)) throw new Error("bug fix list does not match the bug fix count");
   if (u.openLatest.length > Math.min(6, u.open)) throw new Error("open list is longer than the open count allows");
+  if (u.latestMerged !== undefined && u.latestMerged.length > Math.min(5, u.mergedPrs)) throw new Error("merged list is longer than the merged count allows");
   if (next.totals.mergedPrs < u.mergedPrs) throw new Error("total merged is smaller than merged upstream");
   if (!prev) return;
   if (prev.totals && next.totals.mergedPrs < prev.totals.mergedPrs) throw new Error(`total merged went down from ${prev.totals.mergedPrs} to ${next.totals.mergedPrs}, a human has to look at that`);
