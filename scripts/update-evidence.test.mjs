@@ -14,6 +14,7 @@ test("counts, distinct projects and bug fixes come from the search results", asy
   assert.equal(ev.upstream.bugFixes, 3);
   assert.deepEqual(ev.upstream.bugFixProjects, ["x402", "cloudfoundry", "windmill"]); // newest first, long repo names fall back to the owner
   assert.equal(ev.upstream.latestFixes[0].number, 3826);
+  assert.deepEqual(ev.upstream.latestMerged.map((p) => p.number), [3826, 18, 592, 9680], "newest first, of any kind, and the directory listing (135) stays out");
   assert.equal(ev.ownRepos.mergedPrs, 200);
 });
 

@@ -10,6 +10,7 @@ const README = [
   "<!-- profile:hero:start -->\n<!-- profile:hero:end -->",
   "# Hey",
   "<!-- profile:summary:start -->\n<!-- profile:summary:end -->",
+  "<!-- profile:merged:start -->\n<!-- profile:merged:end -->",
   "<!-- profile:fixes:start -->\n<!-- profile:fixes:end -->",
   "<!-- profile:open:start -->\n<!-- profile:open:end -->",
   "<!-- profile:projects:start -->\n<!-- profile:projects:end -->",
@@ -103,6 +104,8 @@ test("sanity gate: impossible shapes", () => {
   assert.throws(() => assertSane(null, withUp({ projects: 9 })), /more projects/);
   assert.throws(() => assertSane(null, withUp({ latestFixes: [1] })), /does not match/);
   assert.throws(() => assertSane(null, withUp({ openLatest: [1, 2, 3] })), /longer than the open count/);
+  assert.throws(() => assertSane(null, withUp({ latestMerged: new Array(9) })), /merged list is longer/);
+  assert.doesNotThrow(() => assertSane(null, withUp({ latestMerged: [1, 2, 3] })), "an older evidence file without the merged list, or a shorter one, is fine");
   assert.doesNotThrow(() => assertSane(null, withUp({ openLatest: [] })), "a list can be shorter when open pull requests are only directory listings");
   assert.throws(() => assertSane(null, { ...base, totals: { mergedPrs: 4 } }), /smaller than merged upstream/);
   assert.doesNotThrow(() => assertSane(null, base));

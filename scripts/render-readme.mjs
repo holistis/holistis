@@ -54,6 +54,13 @@ export function openMd(ev) {
   return `Open now in other people's projects, code and spec changes, newest first:\n\n${lines.join("\n")}`;
 }
 
+export function mergedMd(ev) {
+  const list = ev.upstream.latestMerged ?? [];
+  if (!list.length) return "";
+  const lines = list.map((x) => `- ${x.mergedAt} [${x.repo}#${x.number}](${safeUrl(x.url)}) ${mdText(x.title)}`);
+  return `Latest changes merged by other maintainers, of any kind, newest first:\n\n${lines.join("\n")}`;
+}
+
 export function fixesMd(ev) {
   const list = ev.upstream.latestFixes;
   if (!list.length) return "";
@@ -96,6 +103,7 @@ export function heroMd(heroSvg) {
 export function applyBlocks(readme, ev, heroSvg) {
   let out = replaceBlock(readme, "hero", heroMd(heroSvg));
   out = replaceBlock(out, "summary", summaryMd(ev));
+  out = replaceBlock(out, "merged", mergedMd(ev));
   out = replaceBlock(out, "fixes", fixesMd(ev));
   out = replaceBlock(out, "open", openMd(ev));
   out = replaceBlock(out, "projects", projectsMd(ev));
