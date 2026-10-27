@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 320
+    "mergedPrs": 322
   },
   "upstream": {
     "mergedPrs": 24,
@@ -109,7 +109,7 @@
     ]
   },
   "ownRepos": {
-    "mergedPrs": 296
+    "mergedPrs": 298
   },
   "projects": [
     {
@@ -117,7 +117,7 @@
       "url": "https://github.com/holistis/agent-receipt-verify",
       "description": "MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'...",
       "homepage": null,
-      "updated": "2026-10-26",
+      "updated": "2026-10-27",
       "release": {
         "tag": "v0.2.1",
         "date": "2026-10-17",
