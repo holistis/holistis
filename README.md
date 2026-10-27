@@ -1,6 +1,6 @@
 <!-- profile:hero:start -->
 <div align="center">
-<img src="./assets/hero.svg?v=2c3c61e9" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
+<img src="./assets/hero.svg?v=56d9df38" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
 <!-- profile:hero:end -->
 
@@ -9,12 +9,19 @@
 <!-- profile:summary:start -->
 I direct AI agents to do real engineering work: research a problem, build the fix, verify it holds, and ship it.
 
-[325 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 300 in my own repositories, where the tools below live, and [25 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 16 projects, [5 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [117 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [55 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
+[326 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 301 in my own repositories, where the tools below live, and [25 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 16 projects, [5 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [117 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [55 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
 
 <sub>Counted from public GitHub data on 2026-10-27.</sub>
 <!-- profile:summary:end -->
 
 <!-- profile:merged:start -->
+Latest changes merged by other maintainers, of any kind, newest first:
+
+- 2026-10-27 [x402-foundation/x402#3954](https://github.com/x402-foundation/x402/pull/3954) docs(extensions): bind the payment identifier to a request fingerprint in the idempotency example
+- 2026-10-22 [x402-foundation/x402#3826](https://github.com/x402-foundation/x402/pull/3826) fix(core): do not mutate the extensions object while building a 402
+- 2026-10-20 [omworldprotocol/om-world#18](https://github.com/omworldprotocol/om-world/pull/18) docs: add buyer-side delivery attestation with explicit evidence limits
+- 2026-09-18 [devrelopers/shell-mcp#1](https://github.com/devrelopers/shell-mcp/pull/1) Deny find's -exec/-execdir/-ok/-okdir/-delete regardless of allowlist
+- 2026-09-12 [haoxiang-xu/PuPu#276](https://github.com/haoxiang-xu/PuPu/pull/276) feat: register bug-bounty-intelligence-mcp in the MCP toolkit store
 <!-- profile:merged:end -->
 
 <!-- profile:fixes:start -->

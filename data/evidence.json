@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 325
+    "mergedPrs": 326
   },
   "upstream": {
     "mergedPrs": 25,
@@ -59,6 +59,43 @@
         "title": "fix(home): preserve URL filter state on page refresh",
         "url": "https://github.com/windmill-labs/windmill/pull/9680",
         "mergedAt": "2026-06-19"
+      }
+    ],
+    "latestMerged": [
+      {
+        "repo": "x402-foundation/x402",
+        "number": 3954,
+        "title": "docs(extensions): bind the payment identifier to a request fingerprint in the idempotency example",
+        "url": "https://github.com/x402-foundation/x402/pull/3954",
+        "mergedAt": "2026-10-27"
+      },
+      {
+        "repo": "x402-foundation/x402",
+        "number": 3826,
+        "title": "fix(core): do not mutate the extensions object while building a 402",
+        "url": "https://github.com/x402-foundation/x402/pull/3826",
+        "mergedAt": "2026-10-22"
+      },
+      {
+        "repo": "omworldprotocol/om-world",
+        "number": 18,
+        "title": "docs: add buyer-side delivery attestation with explicit evidence limits",
+        "url": "https://github.com/omworldprotocol/om-world/pull/18",
+        "mergedAt": "2026-10-20"
+      },
+      {
+        "repo": "devrelopers/shell-mcp",
+        "number": 1,
+        "title": "Deny find's -exec/-execdir/-ok/-okdir/-delete regardless of allowlist",
+        "url": "https://github.com/devrelopers/shell-mcp/pull/1",
+        "mergedAt": "2026-09-18"
+      },
+      {
+        "repo": "haoxiang-xu/PuPu",
+        "number": 276,
+        "title": "feat: register bug-bounty-intelligence-mcp in the MCP toolkit store",
+        "url": "https://github.com/haoxiang-xu/PuPu/pull/276",
+        "mergedAt": "2026-09-12"
       }
     ],
     "sent": 117,
@@ -109,7 +146,7 @@
     ]
   },
   "ownRepos": {
-    "mergedPrs": 300
+    "mergedPrs": 301
   },
   "projects": [
     {
