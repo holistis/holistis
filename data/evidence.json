@@ -11,10 +11,10 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 323
+    "mergedPrs": 325
   },
   "upstream": {
-    "mergedPrs": 24,
+    "mergedPrs": 25,
     "projects": 16,
     "bugFixes": 5,
     "bugFixProjects": [
@@ -62,20 +62,13 @@
       }
     ],
     "sent": 117,
-    "open": 56,
+    "open": 55,
     "openLatest": [
       {
         "repo": "x402-foundation/x402",
         "number": 3958,
         "title": "docs(specs): known-answer vectors for section 5.5 canonicalization",
         "url": "https://github.com/x402-foundation/x402/pull/3958",
-        "openedAt": "2026-10-26"
-      },
-      {
-        "repo": "x402-foundation/x402",
-        "number": 3954,
-        "title": "docs(extensions): bind the payment identifier to a request fingerprint in the idempotency example",
-        "url": "https://github.com/x402-foundation/x402/pull/3954",
         "openedAt": "2026-10-26"
       },
       {
@@ -105,11 +98,18 @@
         "title": "specs: propose Buyer Delivery Claim extension",
         "url": "https://github.com/x402-foundation/x402/pull/3604",
         "openedAt": "2026-09-28"
+      },
+      {
+        "repo": "inercia/MCPShell",
+        "number": 54,
+        "title": "Fix shell-quote injection in the weather example, add a shellQuote template helper",
+        "url": "https://github.com/inercia/MCPShell/pull/54",
+        "openedAt": "2026-09-15"
       }
     ]
   },
   "ownRepos": {
-    "mergedPrs": 299
+    "mergedPrs": 300
   },
   "projects": [
     {
