@@ -14,6 +14,14 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 <sub>Counted from public GitHub data on 2026-10-28.</sub>
 <!-- profile:summary:end -->
 
+### Found, reported and fixed: secret redaction in autoharness
+
+[autoharness](https://github.com/tigerless-labs/autoharness) (10,442 stars on 2026-10-28) distills skills from real AI coding sessions, and its redaction function is meant to keep secrets out of the evidence files it writes. I tested that function on its own, not the whole tool, with 17 secret formats in 4 contexts each (bare in prose, in a KEY=value line, in JSON, in a multi-line log), using made-up values generated from a fixed seed. Bare vendor keys (Stripe, OpenAI, Anthropic, Google, npm, JWT) and the variable names AWS_SECRET_ACCESS_KEY and STRIPE_SECRET_KEY stayed readable.
+
+- Found: [issue #277](https://github.com/tigerless-labs/autoharness/issues/277) with the method, the numbers, and what already held up.
+- Fixed: [pull request #278](https://github.com/tigerless-labs/autoharness/pull/278) adds six redaction rules and a broader variable-name rule, plus a seeded test that puts no token-shaped value in the repository. In my 68-case check the leaks went from 20 to 4, and the PR names the four that are left and why I did not guess a rule for them. The full suite passed (710 tests) and the linter was clean.
+- Outcome: merged by the maintainers on 2026-10-28, and issue #277 closed as completed.
+
 <!-- profile:merged:start -->
 Latest changes merged by other maintainers, of any kind, newest first:
 
