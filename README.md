@@ -1,6 +1,6 @@
 <!-- profile:hero:start -->
 <div align="center">
-<img src="./assets/hero.svg?v=3d4c14bb" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
+<img src="./assets/hero.svg?v=ca30251e" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
 <!-- profile:hero:end -->
 
@@ -9,7 +9,7 @@
 <!-- profile:summary:start -->
 I direct AI agents to do real engineering work: research a problem, build the fix, verify it holds, and ship it.
 
-[331 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 306 in my own repositories, where the tools below live, and [25 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 16 projects, [5 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [117 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [55 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
+[332 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 306 in my own repositories, where the tools below live, and [26 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 17 projects, [6 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [117 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [54 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
 
 <sub>Counted from public GitHub data on 2026-10-28.</sub>
 <!-- profile:summary:end -->
@@ -17,21 +17,21 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 <!-- profile:merged:start -->
 Latest changes merged by other maintainers, of any kind, newest first:
 
+- 2026-10-28 [tigerless-labs/autoharness#278](https://github.com/tigerless-labs/autoharness/pull/278) fix(redact): redact bare vendor-prefixed keys and secret-named variables
 - 2026-10-27 [x402-foundation/x402#3954](https://github.com/x402-foundation/x402/pull/3954) docs(extensions): bind the payment identifier to a request fingerprint in the idempotency example
 - 2026-10-22 [x402-foundation/x402#3826](https://github.com/x402-foundation/x402/pull/3826) fix(core): do not mutate the extensions object while building a 402
 - 2026-10-20 [omworldprotocol/om-world#18](https://github.com/omworldprotocol/om-world/pull/18) docs: add buyer-side delivery attestation with explicit evidence limits
 - 2026-09-18 [devrelopers/shell-mcp#1](https://github.com/devrelopers/shell-mcp/pull/1) Deny find's -exec/-execdir/-ok/-okdir/-delete regardless of allowlist
-- 2026-09-12 [haoxiang-xu/PuPu#276](https://github.com/haoxiang-xu/PuPu/pull/276) feat: register bug-bounty-intelligence-mcp in the MCP toolkit store
 <!-- profile:merged:end -->
 
 <!-- profile:fixes:start -->
 Bug fixes merged by other maintainers, newest first:
 
+- 2026-10-28 [tigerless-labs/autoharness#278](https://github.com/tigerless-labs/autoharness/pull/278) fix(redact): redact bare vendor-prefixed keys and secret-named variables
 - 2026-10-22 [x402-foundation/x402#3826](https://github.com/x402-foundation/x402/pull/3826) fix(core): do not mutate the extensions object while building a 402
 - 2026-09-10 [cloudfoundry/terraform-provider-cloudfoundry#592](https://github.com/cloudfoundry/terraform-provider-cloudfoundry/pull/592) fix(provider): guard nil MaintenanceInfo on managed service instance create
 - 2026-07-03 [nexu-io/open-design#5078](https://github.com/nexu-io/open-design/pull/5078) fix(amr): normalize Vela JSON catalog ids on the live fetchModels path (fixes #4410)
 - 2026-06-24 [activepieces/activepieces#13806](https://github.com/activepieces/activepieces/pull/13806) fix(cal-com): migrate webhook registration from decommissioned API v1…
-- 2026-06-19 [windmill-labs/windmill#9680](https://github.com/windmill-labs/windmill/pull/9680) fix(home): preserve URL filter state on page refresh
 <!-- profile:fixes:end -->
 
 <!-- profile:open:start -->
@@ -39,10 +39,10 @@ Open now in other people's projects, code and spec changes, newest first:
 
 - 2026-10-26 [x402-foundation/x402#3958](https://github.com/x402-foundation/x402/pull/3958) docs(specs): known-answer vectors for section 5.5 canonicalization
 - 2026-10-23 [Chain-Love/chain-love#4786](https://github.com/Chain-Love/chain-love/pull/4786) Add Bug Bounty Intelligence (provider, MCP server and security scanner on Base)
-- 2026-10-23 [tigerless-labs/autoharness#278](https://github.com/tigerless-labs/autoharness/pull/278) fix(redact): redact bare vendor-prefixed keys and secret-named variables
 - 2026-10-16 [x402-foundation/x402#3830](https://github.com/x402-foundation/x402/pull/3830) spec(offer-receipt): add the svm-memo authorization method
 - 2026-09-28 [x402-foundation/x402#3604](https://github.com/x402-foundation/x402/pull/3604) specs: propose Buyer Delivery Claim extension
 - 2026-09-15 [inercia/MCPShell#54](https://github.com/inercia/MCPShell/pull/54) Fix shell-quote injection in the weather example, add a shellQuote template helper
+- 2026-09-15 [cnosuke/mcp-command-exec#1](https://github.com/cnosuke/mcp-command-exec/pull/1) Validate arguments, not just the program name, in IsCommandAllowed
 <!-- profile:open:end -->
 
 <sub>The numbers, the two lists above and the project list below refresh on their own from public GitHub data, see [data/evidence.json](data/evidence.json).</sub>
@@ -61,8 +61,8 @@ Open now in other people's projects, code and spec changes, newest first:
 ## Projects
 
 <!-- profile:projects:start -->
+- [tokenizen](https://github.com/holistis/tokenizen): Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it... Latest release [v0.5.0](https://github.com/holistis/tokenizen/releases/tag/v0.5.0), 2026-09-06. [Website](https://tokenizen.nl). Updated 2026-10-28.
 - [agent-receipt-verify](https://github.com/holistis/agent-receipt-verify): MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'... Latest release [v0.2.1](https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1), 2026-10-17. Updated 2026-10-28.
-- [tokenizen](https://github.com/holistis/tokenizen): Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it... Latest release [v0.5.0](https://github.com/holistis/tokenizen/releases/tag/v0.5.0), 2026-09-06. [Website](https://tokenizen.nl). Updated 2026-10-27.
 - [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp): MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search... Latest release [v1.0.3](https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3), 2026-07-29. Updated 2026-10-26.
 - [muraqib-agent-watch](https://github.com/holistis/muraqib-agent-watch): Free, instant capability check for any MCP server: what can it actually do, and does it say so Updated 2026-10-23.
 - [al-yad](https://github.com/holistis/al-yad): Yad: a free, open-source, local-first browser agent. Chrome extension (Part A, the hand) + local Companion (Part B, the brain). Your API key is encrypted on your... Latest release [v0.1.2-companion-npm-standin](https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin), 2026-09-11. [Website](https://yadagent.com). Updated 2026-10-11.

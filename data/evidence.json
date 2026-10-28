@@ -11,13 +11,14 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 331
+    "mergedPrs": 332
   },
   "upstream": {
-    "mergedPrs": 25,
-    "projects": 16,
-    "bugFixes": 5,
+    "mergedPrs": 26,
+    "projects": 17,
+    "bugFixes": 6,
     "bugFixProjects": [
+      "autoharness",
       "x402",
       "cloudfoundry",
       "open design",
@@ -25,6 +26,13 @@
       "windmill"
     ],
     "latestFixes": [
+      {
+        "repo": "tigerless-labs/autoharness",
+        "number": 278,
+        "title": "fix(redact): redact bare vendor-prefixed keys and secret-named variables",
+        "url": "https://github.com/tigerless-labs/autoharness/pull/278",
+        "mergedAt": "2026-10-28"
+      },
       {
         "repo": "x402-foundation/x402",
         "number": 3826,
@@ -52,16 +60,16 @@
         "title": "fix(cal-com): migrate webhook registration from decommissioned API v1…",
         "url": "https://github.com/activepieces/activepieces/pull/13806",
         "mergedAt": "2026-06-24"
-      },
-      {
-        "repo": "windmill-labs/windmill",
-        "number": 9680,
-        "title": "fix(home): preserve URL filter state on page refresh",
-        "url": "https://github.com/windmill-labs/windmill/pull/9680",
-        "mergedAt": "2026-06-19"
       }
     ],
     "latestMerged": [
+      {
+        "repo": "tigerless-labs/autoharness",
+        "number": 278,
+        "title": "fix(redact): redact bare vendor-prefixed keys and secret-named variables",
+        "url": "https://github.com/tigerless-labs/autoharness/pull/278",
+        "mergedAt": "2026-10-28"
+      },
       {
         "repo": "x402-foundation/x402",
         "number": 3954,
@@ -89,17 +97,10 @@
         "title": "Deny find's -exec/-execdir/-ok/-okdir/-delete regardless of allowlist",
         "url": "https://github.com/devrelopers/shell-mcp/pull/1",
         "mergedAt": "2026-09-18"
-      },
-      {
-        "repo": "haoxiang-xu/PuPu",
-        "number": 276,
-        "title": "feat: register bug-bounty-intelligence-mcp in the MCP toolkit store",
-        "url": "https://github.com/haoxiang-xu/PuPu/pull/276",
-        "mergedAt": "2026-09-12"
       }
     ],
     "sent": 117,
-    "open": 55,
+    "open": 54,
     "openLatest": [
       {
         "repo": "x402-foundation/x402",
@@ -113,13 +114,6 @@
         "number": 4786,
         "title": "Add Bug Bounty Intelligence (provider, MCP server and security scanner on Base)",
         "url": "https://github.com/Chain-Love/chain-love/pull/4786",
-        "openedAt": "2026-10-23"
-      },
-      {
-        "repo": "tigerless-labs/autoharness",
-        "number": 278,
-        "title": "fix(redact): redact bare vendor-prefixed keys and secret-named variables",
-        "url": "https://github.com/tigerless-labs/autoharness/pull/278",
         "openedAt": "2026-10-23"
       },
       {
@@ -142,6 +136,13 @@
         "title": "Fix shell-quote injection in the weather example, add a shellQuote template helper",
         "url": "https://github.com/inercia/MCPShell/pull/54",
         "openedAt": "2026-09-15"
+      },
+      {
+        "repo": "cnosuke/mcp-command-exec",
+        "number": 1,
+        "title": "Validate arguments, not just the program name, in IsCommandAllowed",
+        "url": "https://github.com/cnosuke/mcp-command-exec/pull/1",
+        "openedAt": "2026-09-15"
       }
     ]
   },
@@ -149,6 +150,18 @@
     "mergedPrs": 306
   },
   "projects": [
+    {
+      "name": "tokenizen",
+      "url": "https://github.com/holistis/tokenizen",
+      "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
+      "homepage": "https://tokenizen.nl",
+      "updated": "2026-10-28",
+      "release": {
+        "tag": "v0.5.0",
+        "date": "2026-09-06",
+        "url": "https://github.com/holistis/tokenizen/releases/tag/v0.5.0"
+      }
+    },
     {
       "name": "agent-receipt-verify",
       "url": "https://github.com/holistis/agent-receipt-verify",
@@ -159,18 +172,6 @@
         "tag": "v0.2.1",
         "date": "2026-10-17",
         "url": "https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1"
-      }
-    },
-    {
-      "name": "tokenizen",
-      "url": "https://github.com/holistis/tokenizen",
-      "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
-      "homepage": "https://tokenizen.nl",
-      "updated": "2026-10-27",
-      "release": {
-        "tag": "v0.5.0",
-        "date": "2026-09-06",
-        "url": "https://github.com/holistis/tokenizen/releases/tag/v0.5.0"
       }
     },
     {

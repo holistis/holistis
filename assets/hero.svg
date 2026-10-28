@@ -1,6 +1,6 @@
 <svg width="1200" height="440" viewBox="0 0 1200 440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts</title>
-  <desc id="desc">Abdellah Ouadoudi directs AI agents that ship real fixes and keep the receipts. Counted from public GitHub data on 2026-10-28: 331 pull requests merged, 25 of them in 16 projects owned by others (5 bug fixes), and 55 more open in other people&#39;s projects. The graphic shows a receipt that is paid, delivered and signed, then checked by us and checked by someone else.</desc>
+  <desc id="desc">Abdellah Ouadoudi directs AI agents that ship real fixes and keep the receipts. Counted from public GitHub data on 2026-10-28: 332 pull requests merged, 26 of them in 17 projects owned by others (6 bug fixes), and 54 more open in other people&#39;s projects. The graphic shows a receipt that is paid, delivered and signed, then checked by us and checked by someone else.</desc>
   <defs>
     <style>
       .reveal { animation: reveal .9s cubic-bezier(.16,1,.3,1) both; }
@@ -101,8 +101,8 @@
     <g class="reveal r6">
       <line x1="72" y1="338" x2="640" y2="338" stroke="#22372E"/>
       <circle class="live" cx="78" cy="362" r="5" fill="#34D399"/>
-      <text x="94" y="366" fill="#B4C6BC" font-size="12.5" letter-spacing=".5">331 PRS MERGED · 25 IN OTHER PEOPLE'S PROJECTS · 55 OPEN NOW</text>
-      <text x="94" y="387" fill="#B4C6BC" font-size="12" letter-spacing=".1">5 BUG FIXES IN X402 · CLOUDFOUNDRY · OPEN DESIGN · ACTIVEPIECES · WINDMILL</text>
+      <text x="94" y="366" fill="#B4C6BC" font-size="12.5" letter-spacing=".5">332 PRS MERGED · 26 IN OTHER PEOPLE'S PROJECTS · 54 OPEN NOW</text>
+      <text x="94" y="387" fill="#B4C6BC" font-size="12" letter-spacing=".1">6 BUG FIXES IN AUTOHARNESS · X402 · CLOUDFOUNDRY · OPEN DESIGN · +2</text>
       <text x="94" y="410" fill="#7C998B" font-size="11" letter-spacing=".8">COUNTED FROM PUBLIC GITHUB DATA · 2026-10-28 UTC</text>
     </g>
   </g>
