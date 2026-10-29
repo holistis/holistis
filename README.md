@@ -1,6 +1,6 @@
 <!-- profile:hero:start -->
 <div align="center">
-<img src="./assets/hero.svg?v=fda89db5" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
+<img src="./assets/hero.svg?v=1697dda7" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
 <!-- profile:hero:end -->
 
@@ -11,7 +11,7 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 
 [348 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 322 in my own repositories, where the tools below live, and [26 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 17 projects, [6 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [117 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [53 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
 
-<sub>Counted from public GitHub data on 2026-10-28.</sub>
+<sub>Counted from public GitHub data on 2026-10-29.</sub>
 <!-- profile:summary:end -->
 
 ### Found, reported and fixed: secret redaction in autoharness
