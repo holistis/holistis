@@ -1,6 +1,6 @@
 <!-- profile:hero:start -->
 <div align="center">
-<img src="./assets/hero.svg?v=d9ce129a" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
+<img src="./assets/hero.svg?v=d2c91f8b" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
 <!-- profile:hero:end -->
 
@@ -9,7 +9,7 @@
 <!-- profile:summary:start -->
 I direct AI agents to do real engineering work: research a problem, build the fix, verify it holds, and ship it.
 
-[380 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 354 in my own repositories, where the tools below live, and [26 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 17 projects, [6 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [117 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [53 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
+[381 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 355 in my own repositories, where the tools below live, and [26 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 17 projects, [6 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [117 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [53 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
 
 <sub>Counted from public GitHub data on 2026-10-30.</sub>
 <!-- profile:summary:end -->
@@ -69,7 +69,7 @@ Open now in other people's projects, code and spec changes, newest first:
 ## Projects
 
 <!-- profile:projects:start -->
-- [tokenizen](https://github.com/holistis/tokenizen): Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it... Latest release [v0.5.0](https://github.com/holistis/tokenizen/releases/tag/v0.5.0), 2026-09-06. [Website](https://tokenizen.nl). Updated 2026-10-29.
+- [tokenizen](https://github.com/holistis/tokenizen): Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it... Latest release [v0.5.0](https://github.com/holistis/tokenizen/releases/tag/v0.5.0), 2026-09-06. [Website](https://tokenizen.nl). Updated 2026-10-30.
 - [al-yad](https://github.com/holistis/al-yad): Yad: a free, open-source, local-first browser agent. Chrome extension (Part A, the hand) + local Companion (Part B, the brain). Your API key is encrypted on your... Latest release [v0.1.2-companion-npm-standin](https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin), 2026-09-11. [Website](https://yadagent.com). Updated 2026-10-29.
 - [agent-receipt-verify](https://github.com/holistis/agent-receipt-verify): MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'... Latest release [v0.2.1](https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1), 2026-10-17. Updated 2026-10-28.
 - [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp): MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search... Latest release [v1.0.3](https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3), 2026-07-29. Updated 2026-10-26.

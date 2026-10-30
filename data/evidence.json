@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 380
+    "mergedPrs": 381
   },
   "upstream": {
     "mergedPrs": 26,
@@ -147,7 +147,7 @@
     ]
   },
   "ownRepos": {
-    "mergedPrs": 354
+    "mergedPrs": 355
   },
   "projects": [
     {
@@ -155,7 +155,7 @@
       "url": "https://github.com/holistis/tokenizen",
       "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
       "homepage": "https://tokenizen.nl",
-      "updated": "2026-10-29",
+      "updated": "2026-10-30",
       "release": {
         "tag": "v0.5.0",
         "date": "2026-09-06",
