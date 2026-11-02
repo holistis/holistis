@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 407
+    "mergedPrs": 411
   },
   "upstream": {
     "mergedPrs": 26,
@@ -100,7 +100,7 @@
       }
     ],
     "sent": 117,
-    "open": 53,
+    "open": 52,
     "openLatest": [
       {
         "repo": "x402-foundation/x402",
@@ -147,7 +147,7 @@
     ]
   },
   "ownRepos": {
-    "mergedPrs": 381
+    "mergedPrs": 385
   },
   "projects": [
     {
@@ -167,7 +167,7 @@
       "url": "https://github.com/holistis/bug-bounty-intelligence-mcp",
       "description": "MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search...",
       "homepage": null,
-      "updated": "2026-11-01",
+      "updated": "2026-11-02",
       "release": {
         "tag": "v1.0.3",
         "date": "2026-07-29",
