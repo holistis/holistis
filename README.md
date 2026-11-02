@@ -1,6 +1,6 @@
 <!-- profile:hero:start -->
 <div align="center">
-<img src="./assets/hero.svg?v=0115b404" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
+<img src="./assets/hero.svg?v=96d2f0ef" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
 <!-- profile:hero:end -->
 
@@ -9,7 +9,7 @@
 <!-- profile:summary:start -->
 I direct AI agents to do real engineering work: research a problem, build the fix, verify it holds, and ship it.
 
-[421 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 395 in my own repositories, where the tools below live, and [26 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 17 projects, [6 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [117 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [52 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
+[424 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 397 in my own repositories, where the tools below live, and [27 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 18 projects, [6 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [117 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [51 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
 
 <sub>Counted from public GitHub data on 2026-11-02.</sub>
 <!-- profile:summary:end -->
@@ -25,11 +25,11 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 <!-- profile:merged:start -->
 Latest changes merged by other maintainers, of any kind, newest first:
 
+- 2026-11-02 [Chain-Love/chain-love#4786](https://github.com/Chain-Love/chain-love/pull/4786) Add Bug Bounty Intelligence (provider, MCP server and security scanner on Base)
 - 2026-10-28 [tigerless-labs/autoharness#278](https://github.com/tigerless-labs/autoharness/pull/278) fix(redact): redact bare vendor-prefixed keys and secret-named variables
 - 2026-10-27 [x402-foundation/x402#3954](https://github.com/x402-foundation/x402/pull/3954) docs(extensions): bind the payment identifier to a request fingerprint in the idempotency example
 - 2026-10-22 [x402-foundation/x402#3826](https://github.com/x402-foundation/x402/pull/3826) fix(core): do not mutate the extensions object while building a 402
 - 2026-10-20 [omworldprotocol/om-world#18](https://github.com/omworldprotocol/om-world/pull/18) docs: add buyer-side delivery attestation with explicit evidence limits
-- 2026-09-18 [devrelopers/shell-mcp#1](https://github.com/devrelopers/shell-mcp/pull/1) Deny find's -exec/-execdir/-ok/-okdir/-delete regardless of allowlist
 <!-- profile:merged:end -->
 
 <!-- profile:fixes:start -->
@@ -46,11 +46,11 @@ Bug fixes merged by other maintainers, newest first:
 Open now in other people's projects, code and spec changes, newest first:
 
 - 2026-10-26 [x402-foundation/x402#3958](https://github.com/x402-foundation/x402/pull/3958) docs(specs): known-answer vectors for section 5.5 canonicalization
-- 2026-10-23 [Chain-Love/chain-love#4786](https://github.com/Chain-Love/chain-love/pull/4786) Add Bug Bounty Intelligence (provider, MCP server and security scanner on Base)
 - 2026-10-16 [x402-foundation/x402#3830](https://github.com/x402-foundation/x402/pull/3830) spec(offer-receipt): add the svm-memo authorization method
 - 2026-09-28 [x402-foundation/x402#3604](https://github.com/x402-foundation/x402/pull/3604) specs: propose Buyer Delivery Claim extension
 - 2026-09-15 [inercia/MCPShell#54](https://github.com/inercia/MCPShell/pull/54) Fix shell-quote injection in the weather example, add a shellQuote template helper
 - 2026-09-15 [cnosuke/mcp-command-exec#1](https://github.com/cnosuke/mcp-command-exec/pull/1) Validate arguments, not just the program name, in IsCommandAllowed
+- 2026-09-14 [blazickjp/shell-mcp-server#9](https://github.com/blazickjp/shell-mcp-server/pull/9) Fix path-containment bypass (prefix match + missing symlink resolution) in is\_path\_allowed()
 <!-- profile:open:end -->
 
 <sub>The numbers, the two lists above and the project list below refresh on their own from public GitHub data, see [data/evidence.json](data/evidence.json).</sub>

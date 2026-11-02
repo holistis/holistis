@@ -11,11 +11,11 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 421
+    "mergedPrs": 424
   },
   "upstream": {
-    "mergedPrs": 26,
-    "projects": 17,
+    "mergedPrs": 27,
+    "projects": 18,
     "bugFixes": 6,
     "bugFixProjects": [
       "autoharness",
@@ -64,6 +64,13 @@
     ],
     "latestMerged": [
       {
+        "repo": "Chain-Love/chain-love",
+        "number": 4786,
+        "title": "Add Bug Bounty Intelligence (provider, MCP server and security scanner on Base)",
+        "url": "https://github.com/Chain-Love/chain-love/pull/4786",
+        "mergedAt": "2026-11-02"
+      },
+      {
         "repo": "tigerless-labs/autoharness",
         "number": 278,
         "title": "fix(redact): redact bare vendor-prefixed keys and secret-named variables",
@@ -90,17 +97,10 @@
         "title": "docs: add buyer-side delivery attestation with explicit evidence limits",
         "url": "https://github.com/omworldprotocol/om-world/pull/18",
         "mergedAt": "2026-10-20"
-      },
-      {
-        "repo": "devrelopers/shell-mcp",
-        "number": 1,
-        "title": "Deny find's -exec/-execdir/-ok/-okdir/-delete regardless of allowlist",
-        "url": "https://github.com/devrelopers/shell-mcp/pull/1",
-        "mergedAt": "2026-09-18"
       }
     ],
     "sent": 117,
-    "open": 52,
+    "open": 51,
     "openLatest": [
       {
         "repo": "x402-foundation/x402",
@@ -108,13 +108,6 @@
         "title": "docs(specs): known-answer vectors for section 5.5 canonicalization",
         "url": "https://github.com/x402-foundation/x402/pull/3958",
         "openedAt": "2026-10-26"
-      },
-      {
-        "repo": "Chain-Love/chain-love",
-        "number": 4786,
-        "title": "Add Bug Bounty Intelligence (provider, MCP server and security scanner on Base)",
-        "url": "https://github.com/Chain-Love/chain-love/pull/4786",
-        "openedAt": "2026-10-23"
       },
       {
         "repo": "x402-foundation/x402",
@@ -143,11 +136,18 @@
         "title": "Validate arguments, not just the program name, in IsCommandAllowed",
         "url": "https://github.com/cnosuke/mcp-command-exec/pull/1",
         "openedAt": "2026-09-15"
+      },
+      {
+        "repo": "blazickjp/shell-mcp-server",
+        "number": 9,
+        "title": "Fix path-containment bypass (prefix match + missing symlink resolution) in is_path_allowed()",
+        "url": "https://github.com/blazickjp/shell-mcp-server/pull/9",
+        "openedAt": "2026-09-14"
       }
     ]
   },
   "ownRepos": {
-    "mergedPrs": 395
+    "mergedPrs": 397
   },
   "projects": [
     {
