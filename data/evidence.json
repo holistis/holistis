@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 464
+    "mergedPrs": 466
   },
   "upstream": {
     "mergedPrs": 27,
@@ -147,21 +147,9 @@
     ]
   },
   "ownRepos": {
-    "mergedPrs": 437
+    "mergedPrs": 439
   },
   "projects": [
-    {
-      "name": "bug-bounty-intelligence-mcp",
-      "url": "https://github.com/holistis/bug-bounty-intelligence-mcp",
-      "description": "MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search...",
-      "homepage": null,
-      "updated": "2026-11-03",
-      "release": {
-        "tag": "v1.0.3",
-        "date": "2026-07-29",
-        "url": "https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3"
-      }
-    },
     {
       "name": "tokenizen",
       "url": "https://github.com/holistis/tokenizen",
@@ -172,6 +160,26 @@
         "tag": "v0.5.0",
         "date": "2026-09-06",
         "url": "https://github.com/holistis/tokenizen/releases/tag/v0.5.0"
+      }
+    },
+    {
+      "name": "muraqib-agent-watch",
+      "url": "https://github.com/holistis/muraqib-agent-watch",
+      "description": "Free, instant capability check for any MCP server: what can it actually do, and does it say so",
+      "homepage": null,
+      "updated": "2026-11-03",
+      "release": null
+    },
+    {
+      "name": "bug-bounty-intelligence-mcp",
+      "url": "https://github.com/holistis/bug-bounty-intelligence-mcp",
+      "description": "MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search...",
+      "homepage": null,
+      "updated": "2026-11-03",
+      "release": {
+        "tag": "v1.0.3",
+        "date": "2026-07-29",
+        "url": "https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3"
       }
     },
     {
@@ -197,14 +205,6 @@
         "date": "2026-09-11",
         "url": "https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin"
       }
-    },
-    {
-      "name": "muraqib-agent-watch",
-      "url": "https://github.com/holistis/muraqib-agent-watch",
-      "description": "Free, instant capability check for any MCP server: what can it actually do, and does it say so",
-      "homepage": null,
-      "updated": "2026-10-23",
-      "release": null
     },
     {
       "name": "muraqib",
