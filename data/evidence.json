@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 447
+    "mergedPrs": 449
   },
   "upstream": {
     "mergedPrs": 27,
@@ -147,7 +147,7 @@
     ]
   },
   "ownRepos": {
-    "mergedPrs": 420
+    "mergedPrs": 422
   },
   "projects": [
     {
@@ -155,7 +155,7 @@
       "url": "https://github.com/holistis/tokenizen",
       "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
       "homepage": "https://tokenizen.nl",
-      "updated": "2026-11-02",
+      "updated": "2026-11-03",
       "release": {
         "tag": "v0.5.0",
         "date": "2026-09-06",
@@ -167,7 +167,7 @@
       "url": "https://github.com/holistis/bug-bounty-intelligence-mcp",
       "description": "MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search...",
       "homepage": null,
-      "updated": "2026-11-02",
+      "updated": "2026-11-03",
       "release": {
         "tag": "v1.0.3",
         "date": "2026-07-29",
