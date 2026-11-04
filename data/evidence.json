@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 487
+    "mergedPrs": 488
   },
   "upstream": {
     "mergedPrs": 27,
@@ -99,9 +99,16 @@
         "mergedAt": "2026-10-20"
       }
     ],
-    "sent": 117,
-    "open": 51,
+    "sent": 118,
+    "open": 52,
     "openLatest": [
+      {
+        "repo": "x402-foundation/x402",
+        "number": 4140,
+        "title": "docs: add agent-receipt-verify to third-party extensions",
+        "url": "https://github.com/x402-foundation/x402/pull/4140",
+        "openedAt": "2026-11-04"
+      },
       {
         "repo": "x402-foundation/x402",
         "number": 3958,
@@ -136,18 +143,11 @@
         "title": "Validate arguments, not just the program name, in IsCommandAllowed",
         "url": "https://github.com/cnosuke/mcp-command-exec/pull/1",
         "openedAt": "2026-09-15"
-      },
-      {
-        "repo": "blazickjp/shell-mcp-server",
-        "number": 9,
-        "title": "Fix path-containment bypass (prefix match + missing symlink resolution) in is_path_allowed()",
-        "url": "https://github.com/blazickjp/shell-mcp-server/pull/9",
-        "openedAt": "2026-09-14"
       }
     ]
   },
   "ownRepos": {
-    "mergedPrs": 460
+    "mergedPrs": 461
   },
   "projects": [
     {
