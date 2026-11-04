@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 475
+    "mergedPrs": 477
   },
   "upstream": {
     "mergedPrs": 27,
@@ -147,7 +147,7 @@
     ]
   },
   "ownRepos": {
-    "mergedPrs": 448
+    "mergedPrs": 450
   },
   "projects": [
     {
@@ -163,24 +163,24 @@
       }
     },
     {
+      "name": "bug-bounty-intelligence-mcp",
+      "url": "https://github.com/holistis/bug-bounty-intelligence-mcp",
+      "description": "MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search...",
+      "homepage": null,
+      "updated": "2026-11-04",
+      "release": {
+        "tag": "v1.0.3",
+        "date": "2026-07-29",
+        "url": "https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3"
+      }
+    },
+    {
       "name": "muraqib-agent-watch",
       "url": "https://github.com/holistis/muraqib-agent-watch",
       "description": "Free, instant capability check for any MCP server: what can it actually do, and does it say so",
       "homepage": null,
       "updated": "2026-11-03",
       "release": null
-    },
-    {
-      "name": "bug-bounty-intelligence-mcp",
-      "url": "https://github.com/holistis/bug-bounty-intelligence-mcp",
-      "description": "MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search...",
-      "homepage": null,
-      "updated": "2026-11-03",
-      "release": {
-        "tag": "v1.0.3",
-        "date": "2026-07-29",
-        "url": "https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3"
-      }
     },
     {
       "name": "agent-receipt-verify",
