@@ -151,6 +151,14 @@
   },
   "projects": [
     {
+      "name": "al-mizaan-judge",
+      "url": "https://github.com/holistis/al-mizaan-judge",
+      "description": "Strict 7-gate validity judge for a smart-contract bug bounty finding, a second opinion before you spend a Sherlock/Immunefi/Cantina submission.",
+      "homepage": null,
+      "updated": "2026-11-07",
+      "release": null
+    },
+    {
       "name": "tokenizen",
       "url": "https://github.com/holistis/tokenizen",
       "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
@@ -173,14 +181,6 @@
         "date": "2026-09-11",
         "url": "https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin"
       }
-    },
-    {
-      "name": "al-mizaan-judge",
-      "url": "https://github.com/holistis/al-mizaan-judge",
-      "description": "Strict 7-gate validity judge for a smart-contract bug bounty finding, a second opinion before you spend a Sherlock/Immunefi/Cantina submission.",
-      "homepage": null,
-      "updated": "2026-11-07",
-      "release": null
     },
     {
       "name": "muraqib",
