@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 508
+    "mergedPrs": 514
   },
   "upstream": {
     "mergedPrs": 27,
@@ -147,7 +147,7 @@
     ]
   },
   "ownRepos": {
-    "mergedPrs": 481
+    "mergedPrs": 487
   },
   "projects": [
     {
@@ -161,6 +161,14 @@
         "date": "2026-09-11",
         "url": "https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin"
       }
+    },
+    {
+      "name": "al-mizaan-judge",
+      "url": "https://github.com/holistis/al-mizaan-judge",
+      "description": "Strict 7-gate validity judge for a smart-contract bug bounty finding, a second opinion before you spend a Sherlock/Immunefi/Cantina submission.",
+      "homepage": null,
+      "updated": "2026-11-07",
+      "release": null
     },
     {
       "name": "muraqib",
@@ -183,20 +191,16 @@
       "release": null
     },
     {
-      "name": "al-mizaan-judge",
-      "url": "https://github.com/holistis/al-mizaan-judge",
-      "description": "Strict 7-gate validity judge for a smart-contract bug bounty finding, a second opinion before you spend a Sherlock/Immunefi/Cantina submission.",
-      "homepage": null,
+      "name": "tokenizen",
+      "url": "https://github.com/holistis/tokenizen",
+      "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
+      "homepage": "https://tokenizen.nl",
       "updated": "2026-11-07",
-      "release": null
-    },
-    {
-      "name": "claude-memory-trim",
-      "url": "https://github.com/holistis/claude-memory-trim",
-      "description": "Keeps Claude Code session memory lean by rotating session logs between hot and cold storage. Cuts token cost at session start by 60-80%.",
-      "homepage": null,
-      "updated": "2026-11-07",
-      "release": null
+      "release": {
+        "tag": "v0.5.0",
+        "date": "2026-09-06",
+        "url": "https://github.com/holistis/tokenizen/releases/tag/v0.5.0"
+      }
     },
     {
       "name": "bug-bounty-intelligence-mcp",
@@ -209,6 +213,14 @@
         "date": "2026-07-29",
         "url": "https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3"
       }
+    },
+    {
+      "name": "claude-memory-trim",
+      "url": "https://github.com/holistis/claude-memory-trim",
+      "description": "Keeps Claude Code session memory lean by rotating session logs between hot and cold storage. Cuts token cost at session start by 60-80%.",
+      "homepage": null,
+      "updated": "2026-11-07",
+      "release": null
     },
     {
       "name": "muraqib-agent-watch",
@@ -225,18 +237,6 @@
       "homepage": null,
       "updated": "2026-11-07",
       "release": null
-    },
-    {
-      "name": "tokenizen",
-      "url": "https://github.com/holistis/tokenizen",
-      "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
-      "homepage": "https://tokenizen.nl",
-      "updated": "2026-11-07",
-      "release": {
-        "tag": "v0.5.0",
-        "date": "2026-09-06",
-        "url": "https://github.com/holistis/tokenizen/releases/tag/v0.5.0"
-      }
     },
     {
       "name": "agent-receipt-verify",
