@@ -1,7 +1,7 @@
 {
   "schema": 3,
   "account": "holistis",
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "queries": {
     "total": "author:holistis is:pr is:merged is:public",
     "upstream": "author:holistis is:pr is:merged -user:holistis is:public",
@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 516
+    "mergedPrs": 517
   },
   "upstream": {
     "mergedPrs": 27,
@@ -147,9 +147,21 @@
     ]
   },
   "ownRepos": {
-    "mergedPrs": 489
+    "mergedPrs": 490
   },
   "projects": [
+    {
+      "name": "tokenizen",
+      "url": "https://github.com/holistis/tokenizen",
+      "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
+      "homepage": "https://tokenizen.nl",
+      "updated": "2026-11-08",
+      "release": {
+        "tag": "v0.5.0",
+        "date": "2026-09-06",
+        "url": "https://github.com/holistis/tokenizen/releases/tag/v0.5.0"
+      }
+    },
     {
       "name": "al-mizaan-judge",
       "url": "https://github.com/holistis/al-mizaan-judge",
@@ -157,18 +169,6 @@
       "homepage": null,
       "updated": "2026-11-07",
       "release": null
-    },
-    {
-      "name": "tokenizen",
-      "url": "https://github.com/holistis/tokenizen",
-      "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
-      "homepage": "https://tokenizen.nl",
-      "updated": "2026-11-07",
-      "release": {
-        "tag": "v0.5.0",
-        "date": "2026-09-06",
-        "url": "https://github.com/holistis/tokenizen/releases/tag/v0.5.0"
-      }
     },
     {
       "name": "al-yad",
