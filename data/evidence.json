@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 522
+    "mergedPrs": 527
   },
   "upstream": {
     "mergedPrs": 27,
@@ -147,9 +147,29 @@
     ]
   },
   "ownRepos": {
-    "mergedPrs": 495
+    "mergedPrs": 500
   },
   "projects": [
+    {
+      "name": "al-mizaan-judge",
+      "url": "https://github.com/holistis/al-mizaan-judge",
+      "description": "Strict 7-gate validity judge for a smart-contract bug bounty finding, a second opinion before you spend a Sherlock/Immunefi/Cantina submission.",
+      "homepage": null,
+      "updated": "2026-11-08",
+      "release": null
+    },
+    {
+      "name": "agent-receipt-verify",
+      "url": "https://github.com/holistis/agent-receipt-verify",
+      "description": "MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'...",
+      "homepage": null,
+      "updated": "2026-11-08",
+      "release": {
+        "tag": "v0.2.1",
+        "date": "2026-10-17",
+        "url": "https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1"
+      }
+    },
     {
       "name": "al-yad",
       "url": "https://github.com/holistis/al-yad",
@@ -161,14 +181,6 @@
         "date": "2026-09-11",
         "url": "https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin"
       }
-    },
-    {
-      "name": "postmortems",
-      "url": "https://github.com/holistis/postmortems",
-      "description": "Short technical postmortems: what looked right, what turned out wrong",
-      "homepage": null,
-      "updated": "2026-11-08",
-      "release": null
     },
     {
       "name": "tokenizen",
@@ -183,11 +195,11 @@
       }
     },
     {
-      "name": "al-mizaan-judge",
-      "url": "https://github.com/holistis/al-mizaan-judge",
-      "description": "Strict 7-gate validity judge for a smart-contract bug bounty finding, a second opinion before you spend a Sherlock/Immunefi/Cantina submission.",
+      "name": "postmortems",
+      "url": "https://github.com/holistis/postmortems",
+      "description": "Short technical postmortems: what looked right, what turned out wrong",
       "homepage": null,
-      "updated": "2026-11-07",
+      "updated": "2026-11-08",
       "release": null
     },
     {
@@ -245,18 +257,6 @@
       "homepage": null,
       "updated": "2026-11-07",
       "release": null
-    },
-    {
-      "name": "agent-receipt-verify",
-      "url": "https://github.com/holistis/agent-receipt-verify",
-      "description": "MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'...",
-      "homepage": null,
-      "updated": "2026-11-05",
-      "release": {
-        "tag": "v0.2.1",
-        "date": "2026-10-17",
-        "url": "https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1"
-      }
     }
   ]
 }
