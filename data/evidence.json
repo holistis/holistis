@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 529
+    "mergedPrs": 538
   },
   "upstream": {
     "mergedPrs": 27,
@@ -147,9 +147,53 @@
     ]
   },
   "ownRepos": {
-    "mergedPrs": 502
+    "mergedPrs": 511
   },
   "projects": [
+    {
+      "name": "agent-receipt-verify",
+      "url": "https://github.com/holistis/agent-receipt-verify",
+      "description": "MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'...",
+      "homepage": null,
+      "updated": "2026-11-08",
+      "release": {
+        "tag": "v0.2.1",
+        "date": "2026-10-17",
+        "url": "https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1"
+      }
+    },
+    {
+      "name": "muraqib-agent-watch",
+      "url": "https://github.com/holistis/muraqib-agent-watch",
+      "description": "Free, instant capability check for any MCP server: what can it actually do, and does it say so",
+      "homepage": null,
+      "updated": "2026-11-08",
+      "release": null
+    },
+    {
+      "name": "al-mizaan-judge",
+      "url": "https://github.com/holistis/al-mizaan-judge",
+      "description": "Strict 7-gate validity judge for a smart-contract bug bounty finding, a second opinion before you spend a Sherlock/Immunefi/Cantina submission.",
+      "homepage": null,
+      "updated": "2026-11-08",
+      "release": null
+    },
+    {
+      "name": "automation-guardrails",
+      "url": "https://github.com/holistis/automation-guardrails",
+      "description": "Two small guardrails for Playwright/Puppeteer: verify you're on the right page, and fill contenteditable/rich-text editors without the silent double-write bug",
+      "homepage": null,
+      "updated": "2026-11-08",
+      "release": null
+    },
+    {
+      "name": "claude-memory-trim",
+      "url": "https://github.com/holistis/claude-memory-trim",
+      "description": "Keeps Claude Code session memory lean by rotating session logs between hot and cold storage. Cuts token cost at session start by 60-80%.",
+      "homepage": null,
+      "updated": "2026-11-08",
+      "release": null
+    },
     {
       "name": "bug-bounty-intelligence-mcp",
       "url": "https://github.com/holistis/bug-bounty-intelligence-mcp",
@@ -169,26 +213,6 @@
       "homepage": null,
       "updated": "2026-11-08",
       "release": null
-    },
-    {
-      "name": "al-mizaan-judge",
-      "url": "https://github.com/holistis/al-mizaan-judge",
-      "description": "Strict 7-gate validity judge for a smart-contract bug bounty finding, a second opinion before you spend a Sherlock/Immunefi/Cantina submission.",
-      "homepage": null,
-      "updated": "2026-11-08",
-      "release": null
-    },
-    {
-      "name": "agent-receipt-verify",
-      "url": "https://github.com/holistis/agent-receipt-verify",
-      "description": "MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'...",
-      "homepage": null,
-      "updated": "2026-11-08",
-      "release": {
-        "tag": "v0.2.1",
-        "date": "2026-10-17",
-        "url": "https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1"
-      }
     },
     {
       "name": "al-yad",
@@ -233,30 +257,6 @@
         "date": "2026-09-29",
         "url": "https://github.com/holistis/muraqib/releases/tag/v0.3.4"
       }
-    },
-    {
-      "name": "claude-memory-trim",
-      "url": "https://github.com/holistis/claude-memory-trim",
-      "description": "Keeps Claude Code session memory lean by rotating session logs between hot and cold storage. Cuts token cost at session start by 60-80%.",
-      "homepage": null,
-      "updated": "2026-11-07",
-      "release": null
-    },
-    {
-      "name": "muraqib-agent-watch",
-      "url": "https://github.com/holistis/muraqib-agent-watch",
-      "description": "Free, instant capability check for any MCP server: what can it actually do, and does it say so",
-      "homepage": null,
-      "updated": "2026-11-07",
-      "release": null
-    },
-    {
-      "name": "automation-guardrails",
-      "url": "https://github.com/holistis/automation-guardrails",
-      "description": "Two small guardrails for Playwright/Puppeteer: verify you're on the right page, and fill contenteditable/rich-text editors without the silent double-write bug",
-      "homepage": null,
-      "updated": "2026-11-07",
-      "release": null
     }
   ]
 }
