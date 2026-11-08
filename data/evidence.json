@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 546
+    "mergedPrs": 547
   },
   "upstream": {
     "mergedPrs": 27,
@@ -147,21 +147,9 @@
     ]
   },
   "ownRepos": {
-    "mergedPrs": 519
+    "mergedPrs": 520
   },
   "projects": [
-    {
-      "name": "tokenizen",
-      "url": "https://github.com/holistis/tokenizen",
-      "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
-      "homepage": "https://tokenizen.nl",
-      "updated": "2026-11-08",
-      "release": {
-        "tag": "v0.5.0",
-        "date": "2026-09-06",
-        "url": "https://github.com/holistis/tokenizen/releases/tag/v0.5.0"
-      }
-    },
     {
       "name": "al-yad",
       "url": "https://github.com/holistis/al-yad",
@@ -172,6 +160,18 @@
         "tag": "v0.1.2-companion-npm-standin",
         "date": "2026-09-11",
         "url": "https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin"
+      }
+    },
+    {
+      "name": "tokenizen",
+      "url": "https://github.com/holistis/tokenizen",
+      "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
+      "homepage": "https://tokenizen.nl",
+      "updated": "2026-11-08",
+      "release": {
+        "tag": "v0.5.0",
+        "date": "2026-09-06",
+        "url": "https://github.com/holistis/tokenizen/releases/tag/v0.5.0"
       }
     },
     {
