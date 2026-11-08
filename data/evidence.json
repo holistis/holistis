@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 544
+    "mergedPrs": 545
   },
   "upstream": {
     "mergedPrs": 27,
@@ -147,21 +147,9 @@
     ]
   },
   "ownRepos": {
-    "mergedPrs": 517
+    "mergedPrs": 518
   },
   "projects": [
-    {
-      "name": "al-yad",
-      "url": "https://github.com/holistis/al-yad",
-      "description": "Yad: a free, open-source, local-first browser agent. Chrome extension (Part A, the hand) + local Companion (Part B, the brain). Your API key is encrypted on your...",
-      "homepage": "https://yadagent.com",
-      "updated": "2026-11-08",
-      "release": {
-        "tag": "v0.1.2-companion-npm-standin",
-        "date": "2026-09-11",
-        "url": "https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin"
-      }
-    },
     {
       "name": "tokenizen",
       "url": "https://github.com/holistis/tokenizen",
@@ -172,6 +160,18 @@
         "tag": "v0.5.0",
         "date": "2026-09-06",
         "url": "https://github.com/holistis/tokenizen/releases/tag/v0.5.0"
+      }
+    },
+    {
+      "name": "al-yad",
+      "url": "https://github.com/holistis/al-yad",
+      "description": "Yad: a free, open-source, local-first browser agent. Chrome extension (Part A, the hand) + local Companion (Part B, the brain). Your API key is encrypted on your...",
+      "homepage": "https://yadagent.com",
+      "updated": "2026-11-08",
+      "release": {
+        "tag": "v0.1.2-companion-npm-standin",
+        "date": "2026-09-11",
+        "url": "https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin"
       }
     },
     {
