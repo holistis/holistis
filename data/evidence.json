@@ -151,6 +151,14 @@
   },
   "projects": [
     {
+      "name": "postmortems",
+      "url": "https://github.com/holistis/postmortems",
+      "description": "Short technical postmortems: what looked right, what turned out wrong",
+      "homepage": null,
+      "updated": "2026-11-08",
+      "release": null
+    },
+    {
       "name": "tokenizen",
       "url": "https://github.com/holistis/tokenizen",
       "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
@@ -249,14 +257,6 @@
         "date": "2026-10-17",
         "url": "https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1"
       }
-    },
-    {
-      "name": "postmortems",
-      "url": "https://github.com/holistis/postmortems",
-      "description": "Short technical postmortems: what looked right, what turned out wrong",
-      "homepage": null,
-      "updated": "2026-08-24",
-      "release": null
     }
   ]
 }
