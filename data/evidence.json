@@ -99,14 +99,21 @@
         "mergedAt": "2026-10-20"
       }
     ],
-    "sent": 122,
-    "open": 56,
+    "sent": 123,
+    "open": 57,
     "openLatest": [
       {
         "repo": "x402-foundation/x402",
         "number": 4202,
         "title": "docs(specs): facilitator-request-binding vectors, worked example, and prevalence scan",
         "url": "https://github.com/x402-foundation/x402/pull/4202",
+        "openedAt": "2026-11-09"
+      },
+      {
+        "repo": "Cyfrin/aderyn",
+        "number": 1095,
+        "title": "docs: link vulnerability acceptance-rate dataset as an optional triage resource",
+        "url": "https://github.com/Cyfrin/aderyn/pull/1095",
         "openedAt": "2026-11-09"
       },
       {
@@ -136,13 +143,6 @@
         "title": "docs(specs): known-answer vectors for section 5.5 canonicalization",
         "url": "https://github.com/x402-foundation/x402/pull/3958",
         "openedAt": "2026-10-26"
-      },
-      {
-        "repo": "x402-foundation/x402",
-        "number": 3830,
-        "title": "spec(offer-receipt): add the svm-memo authorization method",
-        "url": "https://github.com/x402-foundation/x402/pull/3830",
-        "openedAt": "2026-10-16"
       }
     ]
   },
