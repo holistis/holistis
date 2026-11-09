@@ -99,8 +99,8 @@
         "mergedAt": "2026-10-20"
       }
     ],
-    "sent": 123,
-    "open": 57,
+    "sent": 124,
+    "open": 58,
     "openLatest": [
       {
         "repo": "x402-foundation/x402",
@@ -114,6 +114,13 @@
         "number": 1095,
         "title": "docs: link vulnerability acceptance-rate dataset as an optional triage resource",
         "url": "https://github.com/Cyfrin/aderyn/pull/1095",
+        "openedAt": "2026-11-09"
+      },
+      {
+        "repo": "smartflowproai-lang/x402-endpoint-validator",
+        "number": 21,
+        "title": "Validate legacy body amount value, not just presence",
+        "url": "https://github.com/smartflowproai-lang/x402-endpoint-validator/pull/21",
         "openedAt": "2026-11-09"
       },
       {
@@ -136,13 +143,6 @@
         "title": "docs: add agent-receipt-verify to third-party extensions",
         "url": "https://github.com/x402-foundation/x402/pull/4140",
         "openedAt": "2026-11-04"
-      },
-      {
-        "repo": "x402-foundation/x402",
-        "number": 3958,
-        "title": "docs(specs): known-answer vectors for section 5.5 canonicalization",
-        "url": "https://github.com/x402-foundation/x402/pull/3958",
-        "openedAt": "2026-10-26"
       }
     ]
   },
