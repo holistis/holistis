@@ -99,14 +99,21 @@
         "mergedAt": "2026-10-20"
       }
     ],
-    "sent": 120,
-    "open": 54,
+    "sent": 121,
+    "open": 55,
     "openLatest": [
       {
         "repo": "x402-foundation/x402",
         "number": 4202,
         "title": "docs(specs): facilitator-request-binding vectors, worked example, and prevalence scan",
         "url": "https://github.com/x402-foundation/x402/pull/4202",
+        "openedAt": "2026-11-09"
+      },
+      {
+        "repo": "melonask/facilitator",
+        "number": 5,
+        "title": "fix: settlement cache reuse must match payee/token/amount, not just nonce+chain",
+        "url": "https://github.com/melonask/facilitator/pull/5",
         "openedAt": "2026-11-09"
       },
       {
@@ -136,13 +143,6 @@
         "title": "specs: propose Buyer Delivery Claim extension",
         "url": "https://github.com/x402-foundation/x402/pull/3604",
         "openedAt": "2026-09-28"
-      },
-      {
-        "repo": "inercia/MCPShell",
-        "number": 54,
-        "title": "Fix shell-quote injection in the weather example, add a shellQuote template helper",
-        "url": "https://github.com/inercia/MCPShell/pull/54",
-        "openedAt": "2026-09-15"
       }
     ]
   },
