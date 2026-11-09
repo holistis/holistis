@@ -1,6 +1,6 @@
 <!-- profile:hero:start -->
 <div align="center">
-<img src="./assets/hero.svg?v=9c08fea1" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
+<img src="./assets/hero.svg?v=0ea5556b" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
 <!-- profile:hero:end -->
 
@@ -9,7 +9,7 @@
 <!-- profile:summary:start -->
 I direct AI agents to do real engineering work: research a problem, build the fix, verify it holds, and ship it.
 
-[551 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 524 in my own repositories, where the tools below live, and [27 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 18 projects, [6 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [121 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [55 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
+[551 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 524 in my own repositories, where the tools below live, and [27 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 18 projects, [6 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [122 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [56 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
 
 <sub>Counted from public GitHub data on 2026-11-09.</sub>
 <!-- profile:summary:end -->
@@ -47,10 +47,10 @@ Open now in other people's projects, code and spec changes, newest first:
 
 - 2026-11-09 [x402-foundation/x402#4202](https://github.com/x402-foundation/x402/pull/4202) docs(specs): facilitator-request-binding vectors, worked example, and prevalence scan
 - 2026-11-09 [melonask/facilitator#5](https://github.com/melonask/facilitator/pull/5) fix: settlement cache reuse must match payee/token/amount, not just nonce+chain
+- 2026-11-09 [selectarank/x402-conformance#1](https://github.com/selectarank/x402-conformance/pull/1) Catch value-level and cross-transport spec violations the checker previously missed
 - 2026-11-04 [x402-foundation/x402#4140](https://github.com/x402-foundation/x402/pull/4140) docs: add agent-receipt-verify to third-party extensions
 - 2026-10-26 [x402-foundation/x402#3958](https://github.com/x402-foundation/x402/pull/3958) docs(specs): known-answer vectors for section 5.5 canonicalization
 - 2026-10-16 [x402-foundation/x402#3830](https://github.com/x402-foundation/x402/pull/3830) spec(offer-receipt): add the svm-memo authorization method
-- 2026-09-28 [x402-foundation/x402#3604](https://github.com/x402-foundation/x402/pull/3604) specs: propose Buyer Delivery Claim extension
 <!-- profile:open:end -->
 
 <sub>The numbers, the two lists above and the project list below refresh on their own from public GitHub data, see [data/evidence.json](data/evidence.json).</sub>

@@ -99,8 +99,8 @@
         "mergedAt": "2026-10-20"
       }
     ],
-    "sent": 121,
-    "open": 55,
+    "sent": 122,
+    "open": 56,
     "openLatest": [
       {
         "repo": "x402-foundation/x402",
@@ -114,6 +114,13 @@
         "number": 5,
         "title": "fix: settlement cache reuse must match payee/token/amount, not just nonce+chain",
         "url": "https://github.com/melonask/facilitator/pull/5",
+        "openedAt": "2026-11-09"
+      },
+      {
+        "repo": "selectarank/x402-conformance",
+        "number": 1,
+        "title": "Catch value-level and cross-transport spec violations the checker previously missed",
+        "url": "https://github.com/selectarank/x402-conformance/pull/1",
         "openedAt": "2026-11-09"
       },
       {
@@ -136,13 +143,6 @@
         "title": "spec(offer-receipt): add the svm-memo authorization method",
         "url": "https://github.com/x402-foundation/x402/pull/3830",
         "openedAt": "2026-10-16"
-      },
-      {
-        "repo": "x402-foundation/x402",
-        "number": 3604,
-        "title": "specs: propose Buyer Delivery Claim extension",
-        "url": "https://github.com/x402-foundation/x402/pull/3604",
-        "openedAt": "2026-09-28"
       }
     ]
   },
