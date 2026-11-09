@@ -99,8 +99,8 @@
         "mergedAt": "2026-10-20"
       }
     ],
-    "sent": 118,
-    "open": 52,
+    "sent": 119,
+    "open": 53,
     "openLatest": [
       {
         "repo": "x402-foundation/x402",
@@ -163,6 +163,18 @@
       }
     },
     {
+      "name": "agent-receipt-verify",
+      "url": "https://github.com/holistis/agent-receipt-verify",
+      "description": "MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'...",
+      "homepage": null,
+      "updated": "2026-11-09",
+      "release": {
+        "tag": "v0.2.1",
+        "date": "2026-10-17",
+        "url": "https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1"
+      }
+    },
+    {
       "name": "tokenizen",
       "url": "https://github.com/holistis/tokenizen",
       "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
@@ -184,18 +196,6 @@
         "tag": "v0.3.4",
         "date": "2026-09-29",
         "url": "https://github.com/holistis/muraqib/releases/tag/v0.3.4"
-      }
-    },
-    {
-      "name": "agent-receipt-verify",
-      "url": "https://github.com/holistis/agent-receipt-verify",
-      "description": "MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'...",
-      "homepage": null,
-      "updated": "2026-11-08",
-      "release": {
-        "tag": "v0.2.1",
-        "date": "2026-10-17",
-        "url": "https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1"
       }
     },
     {
