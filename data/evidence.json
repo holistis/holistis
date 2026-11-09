@@ -99,9 +99,16 @@
         "mergedAt": "2026-10-20"
       }
     ],
-    "sent": 119,
-    "open": 53,
+    "sent": 120,
+    "open": 54,
     "openLatest": [
+      {
+        "repo": "x402-foundation/x402",
+        "number": 4202,
+        "title": "docs(specs): facilitator-request-binding vectors, worked example, and prevalence scan",
+        "url": "https://github.com/x402-foundation/x402/pull/4202",
+        "openedAt": "2026-11-09"
+      },
       {
         "repo": "x402-foundation/x402",
         "number": 4140,
@@ -135,13 +142,6 @@
         "number": 54,
         "title": "Fix shell-quote injection in the weather example, add a shellQuote template helper",
         "url": "https://github.com/inercia/MCPShell/pull/54",
-        "openedAt": "2026-09-15"
-      },
-      {
-        "repo": "cnosuke/mcp-command-exec",
-        "number": 1,
-        "title": "Validate arguments, not just the program name, in IsCommandAllowed",
-        "url": "https://github.com/cnosuke/mcp-command-exec/pull/1",
         "openedAt": "2026-09-15"
       }
     ]
