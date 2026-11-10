@@ -99,14 +99,21 @@
         "mergedAt": "2026-10-20"
       }
     ],
-    "sent": 127,
-    "open": 61,
+    "sent": 130,
+    "open": 64,
     "openLatest": [
       {
         "repo": "accensa/x402-facilitator-stellar",
         "number": 654,
         "title": "POST /settle replays a cached success for an Idempotency-Key reused with a different payTo/asset/amount",
         "url": "https://github.com/accensa/x402-facilitator-stellar/pull/654",
+        "openedAt": "2026-11-10"
+      },
+      {
+        "repo": "aymenfurter/polyclaw",
+        "number": 15,
+        "title": "fix: escape rich markup in tool approval prompt",
+        "url": "https://github.com/aymenfurter/polyclaw/pull/15",
         "openedAt": "2026-11-10"
       },
       {
@@ -117,32 +124,25 @@
         "openedAt": "2026-11-10"
       },
       {
+        "repo": "jzthree/nebula-tools",
+        "number": 2,
+        "title": "fix: escape control characters in approval prompt",
+        "url": "https://github.com/jzthree/nebula-tools/pull/2",
+        "openedAt": "2026-11-10"
+      },
+      {
+        "repo": "ManusAgents/ManusClaw",
+        "number": 2,
+        "title": "fix: escape control characters in Plan Mode approval prompt",
+        "url": "https://github.com/ManusAgents/ManusClaw/pull/2",
+        "openedAt": "2026-11-10"
+      },
+      {
         "repo": "gratitude5dee/5dee-x402-gateway",
         "number": 2,
         "title": "Idempotency cache key is not scoped by route, lets a cheap-route payment unlock an expensive route",
         "url": "https://github.com/gratitude5dee/5dee-x402-gateway/pull/2",
         "openedAt": "2026-11-10"
-      },
-      {
-        "repo": "x402-foundation/x402",
-        "number": 4202,
-        "title": "docs(specs): facilitator-request-binding vectors, worked example, and prevalence scan",
-        "url": "https://github.com/x402-foundation/x402/pull/4202",
-        "openedAt": "2026-11-09"
-      },
-      {
-        "repo": "Cyfrin/aderyn",
-        "number": 1095,
-        "title": "docs: link vulnerability acceptance-rate dataset as an optional triage resource",
-        "url": "https://github.com/Cyfrin/aderyn/pull/1095",
-        "openedAt": "2026-11-09"
-      },
-      {
-        "repo": "smartflowproai-lang/x402-endpoint-validator",
-        "number": 21,
-        "title": "Validate legacy body amount value, not just presence",
-        "url": "https://github.com/smartflowproai-lang/x402-endpoint-validator/pull/21",
-        "openedAt": "2026-11-09"
       }
     ]
   },
