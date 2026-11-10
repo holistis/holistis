@@ -99,8 +99,8 @@
         "mergedAt": "2026-10-20"
       }
     ],
-    "sent": 126,
-    "open": 60,
+    "sent": 127,
+    "open": 61,
     "openLatest": [
       {
         "repo": "accensa/x402-facilitator-stellar",
@@ -114,6 +114,13 @@
         "number": 4,
         "title": "verifyReceipt accepts a self-signed, fully fabricated receipt as VALID",
         "url": "https://github.com/89rat/x402-conformance/pull/4",
+        "openedAt": "2026-11-10"
+      },
+      {
+        "repo": "gratitude5dee/5dee-x402-gateway",
+        "number": 2,
+        "title": "Idempotency cache key is not scoped by route, lets a cheap-route payment unlock an expensive route",
+        "url": "https://github.com/gratitude5dee/5dee-x402-gateway/pull/2",
         "openedAt": "2026-11-10"
       },
       {
@@ -135,13 +142,6 @@
         "number": 21,
         "title": "Validate legacy body amount value, not just presence",
         "url": "https://github.com/smartflowproai-lang/x402-endpoint-validator/pull/21",
-        "openedAt": "2026-11-09"
-      },
-      {
-        "repo": "melonask/facilitator",
-        "number": 5,
-        "title": "fix: settlement cache reuse must match payee/token/amount, not just nonce+chain",
-        "url": "https://github.com/melonask/facilitator/pull/5",
         "openedAt": "2026-11-09"
       }
     ]

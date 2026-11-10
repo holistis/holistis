@@ -1,6 +1,6 @@
 <!-- profile:hero:start -->
 <div align="center">
-<img src="./assets/hero.svg?v=9e3f163e" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
+<img src="./assets/hero.svg?v=14199cdf" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
 <!-- profile:hero:end -->
 
@@ -9,7 +9,7 @@
 <!-- profile:summary:start -->
 I direct AI agents to do real engineering work: research a problem, build the fix, verify it holds, and ship it.
 
-[551 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 524 in my own repositories, where the tools below live, and [27 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 18 projects, [6 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [126 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [60 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
+[551 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 524 in my own repositories, where the tools below live, and [27 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 18 projects, [6 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [127 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [61 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
 
 <sub>Counted from public GitHub data on 2026-11-10.</sub>
 <!-- profile:summary:end -->
@@ -47,10 +47,10 @@ Open now in other people's projects, code and spec changes, newest first:
 
 - 2026-11-10 [accensa/x402-facilitator-stellar#654](https://github.com/accensa/x402-facilitator-stellar/pull/654) POST /settle replays a cached success for an Idempotency-Key reused with a different payTo/asset/amount
 - 2026-11-10 [89rat/x402-conformance#4](https://github.com/89rat/x402-conformance/pull/4) verifyReceipt accepts a self-signed, fully fabricated receipt as VALID
+- 2026-11-10 [gratitude5dee/5dee-x402-gateway#2](https://github.com/gratitude5dee/5dee-x402-gateway/pull/2) Idempotency cache key is not scoped by route, lets a cheap-route payment unlock an expensive route
 - 2026-11-09 [x402-foundation/x402#4202](https://github.com/x402-foundation/x402/pull/4202) docs(specs): facilitator-request-binding vectors, worked example, and prevalence scan
 - 2026-11-09 [Cyfrin/aderyn#1095](https://github.com/Cyfrin/aderyn/pull/1095) docs: link vulnerability acceptance-rate dataset as an optional triage resource
 - 2026-11-09 [smartflowproai-lang/x402-endpoint-validator#21](https://github.com/smartflowproai-lang/x402-endpoint-validator/pull/21) Validate legacy body amount value, not just presence
-- 2026-11-09 [melonask/facilitator#5](https://github.com/melonask/facilitator/pull/5) fix: settlement cache reuse must match payee/token/amount, not just nonce+chain
 <!-- profile:open:end -->
 
 <sub>The numbers, the two lists above and the project list below refresh on their own from public GitHub data, see [data/evidence.json](data/evidence.json).</sub>
