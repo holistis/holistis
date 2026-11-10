@@ -99,9 +99,16 @@
         "mergedAt": "2026-10-20"
       }
     ],
-    "sent": 125,
-    "open": 59,
+    "sent": 126,
+    "open": 60,
     "openLatest": [
+      {
+        "repo": "accensa/x402-facilitator-stellar",
+        "number": 654,
+        "title": "POST /settle replays a cached success for an Idempotency-Key reused with a different payTo/asset/amount",
+        "url": "https://github.com/accensa/x402-facilitator-stellar/pull/654",
+        "openedAt": "2026-11-10"
+      },
       {
         "repo": "89rat/x402-conformance",
         "number": 4,
@@ -135,13 +142,6 @@
         "number": 5,
         "title": "fix: settlement cache reuse must match payee/token/amount, not just nonce+chain",
         "url": "https://github.com/melonask/facilitator/pull/5",
-        "openedAt": "2026-11-09"
-      },
-      {
-        "repo": "selectarank/x402-conformance",
-        "number": 1,
-        "title": "Catch value-level and cross-transport spec violations the checker previously missed",
-        "url": "https://github.com/selectarank/x402-conformance/pull/1",
         "openedAt": "2026-11-09"
       }
     ]
