@@ -155,7 +155,7 @@
       "url": "https://github.com/holistis/agent-receipt-verify",
       "description": "MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'...",
       "homepage": null,
-      "updated": "2026-11-09",
+      "updated": "2026-11-10",
       "release": {
         "tag": "v0.2.1",
         "date": "2026-10-17",
