@@ -99,9 +99,16 @@
         "mergedAt": "2026-10-20"
       }
     ],
-    "sent": 130,
-    "open": 64,
+    "sent": 131,
+    "open": 65,
     "openLatest": [
+      {
+        "repo": "x402-foundation/x402",
+        "number": 4209,
+        "title": "feat(extensions): add request binding helper for payment-identifier",
+        "url": "https://github.com/x402-foundation/x402/pull/4209",
+        "openedAt": "2026-11-10"
+      },
       {
         "repo": "accensa/x402-facilitator-stellar",
         "number": 654,
@@ -135,13 +142,6 @@
         "number": 2,
         "title": "fix: escape control characters in Plan Mode approval prompt",
         "url": "https://github.com/ManusAgents/ManusClaw/pull/2",
-        "openedAt": "2026-11-10"
-      },
-      {
-        "repo": "gratitude5dee/5dee-x402-gateway",
-        "number": 2,
-        "title": "Idempotency cache key is not scoped by route, lets a cheap-route payment unlock an expensive route",
-        "url": "https://github.com/gratitude5dee/5dee-x402-gateway/pull/2",
         "openedAt": "2026-11-10"
       }
     ]
