@@ -117,8 +117,8 @@ Runs on its own automation: [muraqib](https://github.com/holistis/muraqib) watch
 ## Tech stack
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React_18-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js_22-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![React](https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js_24-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 ![tRPC](https://img.shields.io/badge/tRPC-2596BE?style=flat-square&logo=trpc&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
@@ -141,5 +141,5 @@ Runs on its own automation: [muraqib](https://github.com/holistis/muraqib) watch
 
 ## Links
 
-🌐 Platform: [longevityai.nl](https://longevityai.nl)
+🌐 Platform: [tokenizen.nl](https://tokenizen.nl)
 📬 Contact: info@holistischadviseur.nl
