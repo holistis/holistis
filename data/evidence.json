@@ -99,9 +99,16 @@
         "mergedAt": "2026-10-20"
       }
     ],
-    "sent": 124,
-    "open": 58,
+    "sent": 125,
+    "open": 59,
     "openLatest": [
+      {
+        "repo": "89rat/x402-conformance",
+        "number": 4,
+        "title": "verifyReceipt accepts a self-signed, fully fabricated receipt as VALID",
+        "url": "https://github.com/89rat/x402-conformance/pull/4",
+        "openedAt": "2026-11-10"
+      },
       {
         "repo": "x402-foundation/x402",
         "number": 4202,
@@ -136,13 +143,6 @@
         "title": "Catch value-level and cross-transport spec violations the checker previously missed",
         "url": "https://github.com/selectarank/x402-conformance/pull/1",
         "openedAt": "2026-11-09"
-      },
-      {
-        "repo": "x402-foundation/x402",
-        "number": 4140,
-        "title": "docs: add agent-receipt-verify to third-party extensions",
-        "url": "https://github.com/x402-foundation/x402/pull/4140",
-        "openedAt": "2026-11-04"
       }
     ]
   },
