@@ -1,0 +1,45 @@
+name: Sync project board
+
+# Adds real issues and pull requests from the featured repositories to the public
+# "Building in public" project board, and moves existing cards to Shipped when they
+# merge or close as completed. Never writes a draft card, never removes one.
+# It fails closed: an unexpected answer from GitHub, or an unusually large batch of
+# new cards, stops the whole run and leaves the board untouched.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "26 */6 * * *"
+
+permissions: {}
+
+concurrency:
+  group: sync-project
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.repository == 'holistis/holistis'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions: {}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Node version
+        run: |
+          node --version
+          node -e "if (Number(process.versions.node.split('.')[0]) < 20) { console.error('Node 20 or newer is required'); process.exit(1); }"
+
+      - name: Tests
+        run: node --test scripts/*.test.mjs
+
+      - name: Sync the board
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROJECTS_TOKEN }}
+        run: |
+          if [ -z "$GITHUB_TOKEN" ]; then
+            echo "PROJECTS_TOKEN secret is not set yet, skipping. The default GITHUB_TOKEN cannot write to a user-level Project (v2), so this step needs a personal access token with the 'project' scope added as a repository secret named PROJECTS_TOKEN."
+            exit 0
+          fi
+          node scripts/sync-project.mjs
