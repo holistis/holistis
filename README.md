@@ -142,4 +142,5 @@ Runs on its own automation: [muraqib](https://github.com/holistis/muraqib) watch
 ## Links
 
 🌐 Platform: [tokenizen.nl](https://tokenizen.nl)
+📋 Live roadmap: [Building in public](https://github.com/users/holistis/projects/1)
 📬 Contact: info@holistischadviseur.nl
