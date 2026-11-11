@@ -99,9 +99,16 @@
         "mergedAt": "2026-10-20"
       }
     ],
-    "sent": 131,
-    "open": 65,
+    "sent": 132,
+    "open": 66,
     "openLatest": [
+      {
+        "repo": "x402-foundation/x402",
+        "number": 4215,
+        "title": "specs(extensions): propose a Rejection Receipt",
+        "url": "https://github.com/x402-foundation/x402/pull/4215",
+        "openedAt": "2026-11-11"
+      },
       {
         "repo": "x402-foundation/x402",
         "number": 4209,
@@ -135,13 +142,6 @@
         "number": 2,
         "title": "fix: escape control characters in approval prompt",
         "url": "https://github.com/jzthree/nebula-tools/pull/2",
-        "openedAt": "2026-11-10"
-      },
-      {
-        "repo": "ManusAgents/ManusClaw",
-        "number": 2,
-        "title": "fix: escape control characters in Plan Mode approval prompt",
-        "url": "https://github.com/ManusAgents/ManusClaw/pull/2",
         "openedAt": "2026-11-10"
       }
     ]
