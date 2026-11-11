@@ -163,6 +163,34 @@
       }
     },
     {
+      "name": "claude-memory-trim",
+      "url": "https://github.com/holistis/claude-memory-trim",
+      "description": "Keeps Claude Code session memory lean by rotating session logs between hot and cold storage. Cuts token cost at session start by 60-80%.",
+      "homepage": null,
+      "updated": "2026-11-11",
+      "release": null
+    },
+    {
+      "name": "3ilm-mcp",
+      "url": "https://github.com/holistis/3ilm-mcp",
+      "description": "MCP server: 1,032 verified smart contract vulnerability findings from 10 Sherlock audit contests",
+      "homepage": null,
+      "updated": "2026-11-11",
+      "release": null
+    },
+    {
+      "name": "muraqib",
+      "url": "https://github.com/holistis/muraqib",
+      "description": "Nightly Playwright QA that tells you when it stops watching. npx muraqib doctor finds the silent-cancel bug in any existing setup. Claude opens the fix PR. MIT, no...",
+      "homepage": "https://www.npmjs.com/package/muraqib",
+      "updated": "2026-11-11",
+      "release": {
+        "tag": "v0.3.4",
+        "date": "2026-09-29",
+        "url": "https://github.com/holistis/muraqib/releases/tag/v0.3.4"
+      }
+    },
+    {
       "name": "tokenizen",
       "url": "https://github.com/holistis/tokenizen",
       "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
@@ -184,18 +212,6 @@
         "tag": "v0.1.2-companion-npm-standin",
         "date": "2026-09-11",
         "url": "https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin"
-      }
-    },
-    {
-      "name": "muraqib",
-      "url": "https://github.com/holistis/muraqib",
-      "description": "Nightly Playwright QA that tells you when it stops watching. npx muraqib doctor finds the silent-cancel bug in any existing setup. Claude opens the fix PR. MIT, no...",
-      "homepage": "https://www.npmjs.com/package/muraqib",
-      "updated": "2026-11-08",
-      "release": {
-        "tag": "v0.3.4",
-        "date": "2026-09-29",
-        "url": "https://github.com/holistis/muraqib/releases/tag/v0.3.4"
       }
     },
     {
@@ -223,14 +239,6 @@
       "release": null
     },
     {
-      "name": "claude-memory-trim",
-      "url": "https://github.com/holistis/claude-memory-trim",
-      "description": "Keeps Claude Code session memory lean by rotating session logs between hot and cold storage. Cuts token cost at session start by 60-80%.",
-      "homepage": null,
-      "updated": "2026-11-08",
-      "release": null
-    },
-    {
       "name": "bug-bounty-intelligence-mcp",
       "url": "https://github.com/holistis/bug-bounty-intelligence-mcp",
       "description": "MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search...",
@@ -241,14 +249,6 @@
         "date": "2026-07-29",
         "url": "https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3"
       }
-    },
-    {
-      "name": "3ilm-mcp",
-      "url": "https://github.com/holistis/3ilm-mcp",
-      "description": "MCP server: 1,032 verified smart contract vulnerability findings from 10 Sherlock audit contests",
-      "homepage": null,
-      "updated": "2026-11-08",
-      "release": null
     },
     {
       "name": "postmortems",
