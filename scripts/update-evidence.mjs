@@ -58,7 +58,7 @@ async function searchPage(fetchFn, token, q, page, perPage) {
   return j;
 }
 
-async function searchAll(fetchFn, token, q) {
+export async function searchAll(fetchFn, token, q) {
   const items = [];
   let total = 0;
   for (let page = 1; page <= 10; page++) {

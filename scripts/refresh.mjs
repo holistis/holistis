@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 import { collectEvidence } from "./update-evidence.mjs";
 import { renderHero } from "./render-hero.mjs";
 import { applyBlocks } from "./render-readme.mjs";
+import { collectActivity, assertActivitySane, renderActivityMd, renderLlmsTxt } from "./update-activity.mjs";
 
 // A lower number than before, or a list that suddenly shrank, is more likely a broken
 // answer from GitHub than the truth. A human decides about that, never the bot.
@@ -39,19 +40,30 @@ export async function refresh({ root = process.cwd(), fetchFn = fetch, token, to
   const heroText = renderHero(next);
   const readmeText = applyBlocks(readFileSync(at("README.md"), "utf8"), next, heroText);
 
+  // The full ledger (merged, open and closed without a merge) is checked against the counts above before anything is written.
+  const prevActivity = existsSync(at("data/activity.json")) ? JSON.parse(readFileSync(at("data/activity.json"), "utf8")) : null;
+  const activity = await collectActivity({ fetchFn, token, account: next.account, today });
+  assertActivitySane(prevActivity, activity, next);
+  const files = {
+    "data/evidence.json": evidenceText,
+    "assets/hero.svg": heroText,
+    "README.md": readmeText,
+    "data/activity.json": `${JSON.stringify(activity, null, 2)}\n`,
+    "activity.md": renderActivityMd(activity),
+    "llms.txt": renderLlmsTxt(activity),
+  };
+
   // Compare what would be written with what is on disk. That covers new numbers, a new day
   // (the date moves, so at most one commit a day) and a changed template alike.
   const onDisk = (f) => (existsSync(at(f)) ? readFileSync(at(f), "utf8") : null);
-  if (onDisk("data/evidence.json") === evidenceText && onDisk("assets/hero.svg") === heroText && onDisk("README.md") === readmeText) {
-    return { changed: false, evidence: next };
+  if (Object.entries(files).every(([f, text]) => onDisk(f) === text)) {
+    return { changed: false, evidence: next, activity };
   }
 
   if (!dry) {
-    writeFileSync(at("assets/hero.svg"), heroText);
-    writeFileSync(at("README.md"), readmeText);
-    writeFileSync(at("data/evidence.json"), evidenceText);
+    for (const [f, text] of Object.entries(files)) writeFileSync(at(f), text);
   }
-  return { changed: true, evidence: next, before: prev?.upstream ?? null };
+  return { changed: true, evidence: next, activity, before: prev?.upstream ?? null };
 }
 
 const isMain = process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1];

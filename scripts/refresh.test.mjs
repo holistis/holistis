@@ -4,7 +4,8 @@ import { mkdtempSync, mkdirSync, writeFileSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { refresh, assertSane } from "./refresh.mjs";
-import { fakeFetch, pr, FEATURED, UPSTREAM, FIXES } from "./fixtures.mjs";
+import { queries } from "./update-evidence.mjs";
+import { fakeFetch, tamperSearch, pr, FEATURED, UPSTREAM, FIXES } from "./fixtures.mjs";
 
 const README = [
   "<!-- profile:hero:start -->\n<!-- profile:hero:end -->",
@@ -109,4 +110,32 @@ test("sanity gate: impossible shapes", () => {
   assert.doesNotThrow(() => assertSane(null, withUp({ openLatest: [] })), "a list can be shorter when open pull requests are only directory listings");
   assert.throws(() => assertSane(null, { ...base, totals: { mergedPrs: 4 } }), /smaller than merged upstream/);
   assert.doesNotThrow(() => assertSane(null, base));
+});
+
+const ledgerFiles = ["data/activity.json", "activity.md", "llms.txt"];
+const everything = (root) => snapshot(root) + ledgerFiles.map((f) => read(root, f)).join("");
+
+test("the first run also writes the ledger of every pull request, the readable page and llms.txt", async () => {
+  const root = sandbox();
+  const r = await refresh({ root, fetchFn: fakeFetch(), today: "2026-10-23" });
+  assert.equal(r.changed, true);
+  const ledger = JSON.parse(read(root, "data/activity.json"));
+  assert.equal(ledger.totals.sent, 10);
+  assert.equal(ledger.totals.closed, 3, "closed without a merge is in the ledger, not left out");
+  assert.ok(read(root, "activity.md").includes("Sent 10. Merged 5, still open 2, closed without a merge 3."));
+  assert.ok(read(root, "llms.txt").includes("Cite as: github.com/holistis, 2026-10-23."));
+  const again = await refresh({ root, fetchFn: fakeFetch(), today: "2026-10-23" });
+  assert.equal(again.changed, false, "same numbers on the same day change nothing");
+});
+
+test("if the ledger and the profile counts disagree, nothing is written and the last verified files stay", async () => {
+  const root = sandbox();
+  await refresh({ root, fetchFn: fakeFetch(), today: "2026-10-23" });
+  const before = everything(root);
+  // The ledger sees one merged pull request as unmerged while the profile query still counts five merged.
+  const skewed = tamperSearch(fakeFetch(), queries("holistis").sent, (j) => {
+    j.items.find((i) => i.pull_request.merged_at).pull_request.merged_at = null;
+  });
+  await assert.rejects(refresh({ root, fetchFn: skewed, today: "2026-10-24" }), /profile counted/);
+  assert.equal(everything(root), before);
 });

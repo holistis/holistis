@@ -6,9 +6,14 @@ export const pr = (repo, number, title, day) => ({
   html_url: `https://github.com/${repo}/pull/${number}`,
   closed_at: `${day}T10:00:00Z`,
   created_at: `${day}T08:00:00Z`,
+  state: "closed",
+  pull_request: { merged_at: `${day}T10:00:00Z` },
 });
 
-export const openPr = (repo, number, title, day) => ({ ...pr(repo, number, title, day), closed_at: null });
+export const openPr = (repo, number, title, day) => ({ ...pr(repo, number, title, day), closed_at: null, state: "open", pull_request: { merged_at: null } });
+
+// Closed without a merge: the search shows it closed, with no merge date.
+export const closedPr = (repo, number, title, day) => ({ ...pr(repo, number, title, day), pull_request: { merged_at: null } });
 
 export const UPSTREAM = [
   pr("x402-foundation/x402", 3826, "fix(core): do not mutate the extensions object while building a 402", "2026-10-22"),
@@ -21,6 +26,12 @@ export const FIXES = [UPSTREAM[0], UPSTREAM[2], UPSTREAM[3]];
 export const OPEN = [
   openPr("microsoft/autogen", 8205, "ci: harden workflow permissions", "2026-09-20"),
   openPr("google/adk-python", 7052, "ci: avoid secrets in issue triggered jobs", "2026-10-02"),
+];
+
+export const CLOSED = [
+  closedPr("some-org/some-repo", 11, "fix: handle empty input", "2026-09-01"),
+  closedPr("other-org/other-repo", 4, "docs: clarify the install step", "2026-09-05"),
+  closedPr("third-org/third-repo", 90, "feat: add retry option", "2026-09-12"),
 ];
 
 export const repo = (name, over = {}) => ({
@@ -36,7 +47,7 @@ export const repo = (name, over = {}) => ({
 
 export const FEATURED = { seed: ["tokenizen", "muraqib", "postmortems"], topic: "profile-featured", hideTopic: "profile-hidden", max: 12 };
 
-export function fakeFetch({ upstream = UPSTREAM, fixes = FIXES, open = OPEN, ownTotal = 200, total, sent, repos, releases = {}, incomplete = false, failRepos = false } = {}) {
+export function fakeFetch({ upstream = UPSTREAM, fixes = FIXES, open = OPEN, closed = CLOSED, ownTotal = 200, total, sent, repos, releases = {}, incomplete = false, failRepos = false } = {}) {
   const reposList = repos ?? [repo("tokenizen"), repo("muraqib"), repo("postmortems"), repo("holistis"), repo("scratch-test")];
   const json = (body, status = 200) => ({ ok: status >= 200 && status < 300, status, json: async () => body });
   const calls = [];
@@ -55,7 +66,8 @@ export function fakeFetch({ upstream = UPSTREAM, fixes = FIXES, open = OPEN, own
       else if (has("is:merged") && has("-user:")) list = upstream;
       else if (has("is:merged") && has("user:")) count = ownTotal;
       else if (has("is:merged")) count = total ?? upstream.length + ownTotal;
-      else count = sent ?? upstream.length + open.length + 3;
+      else if (sent === undefined) list = [...upstream, ...open, ...closed];
+      else count = sent;
       if (list === null) return json({ total_count: count, incomplete_results: incomplete, items: [] });
       return json({ total_count: list.length, incomplete_results: incomplete, items: list.slice((page - 1) * per, page * per) });
     }
@@ -70,5 +82,19 @@ export function fakeFetch({ upstream = UPSTREAM, fixes = FIXES, open = OPEN, own
     return json({}, 404);
   };
   fn.calls = calls;
+  return fn;
+}
+
+// Wraps a fake GitHub and lets a test corrupt exactly one search answer, the one for query q.
+export function tamperSearch(inner, q, mutate) {
+  const fn = async (url) => {
+    const res = await inner(url);
+    const u = new URL(url);
+    if (u.pathname !== "/search/issues" || u.searchParams.get("q") !== q) return res;
+    const body = structuredClone(await res.json());
+    mutate(body);
+    return { ok: true, status: 200, json: async () => body };
+  };
+  fn.calls = inner.calls;
   return fn;
 }
