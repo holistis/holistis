@@ -1,8 +1,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { collectEvidence } from "./update-evidence.mjs";
-import { applyBlocks, replaceBlock, mdText, summaryMd, projectsMd, fixesMd, openMd, mergedMd, heroMd } from "./render-readme.mjs";
-import { fakeFetch, pr, openPr, repo, FEATURED, FIXES, UPSTREAM } from "./fixtures.mjs";
+import { applyBlocks, replaceBlock, mdText, summaryMd, projectsMd, fixesMd, mergedMd, heroMd } from "./render-readme.mjs";
+import { fakeFetch, pr, repo, FEATURED, FIXES, UPSTREAM } from "./fixtures.mjs";
 
 const TEMPLATE = [
   "<!-- profile:hero:start -->",
@@ -16,8 +16,6 @@ const TEMPLATE = [
   "<!-- profile:merged:end -->",
   "<!-- profile:fixes:start -->",
   "<!-- profile:fixes:end -->",
-  "<!-- profile:open:start -->",
-  "<!-- profile:open:end -->",
   "hand written text that must survive",
   "<!-- profile:projects:start -->",
   "<!-- profile:projects:end -->",
@@ -29,7 +27,7 @@ const evidence = (opts) => collectEvidence({ fetchFn: fakeFetch(opts), today: "2
 test("blocks are filled and hand written text is untouched", async () => {
   const out = applyBlocks(TEMPLATE, await evidence(), "<svg>one</svg>");
   assert.match(out, /\[205 pull requests merged\]/);
-  assert.match(out, /Open now in other people's projects/);
+  assert.doesNotMatch(out, /Open now|still open|I have sent/, "the page shows merged work only");
   assert.match(out, /hand written text that must survive/);
   assert.ok(out.startsWith("<!-- profile:hero:start -->\n") && out.endsWith("\ntail"));
   assert.match(out, /\n# Hey\n/, "the hand written heading is still there");
@@ -50,27 +48,25 @@ test("missing or duplicated markers are an error, never a silent skip", async ()
 test("every number in the summary links to the public search that produces it", async () => {
   const text = summaryMd(await evidence());
   const links = [...text.matchAll(/\]\((https:\/\/github\.com\/search\?q=[^)]+)\)/g)].map((m) => decodeURIComponent(m[1]));
-  assert.equal(links.length, 5);
+  assert.equal(links.length, 3, "total merged, merged in other projects, bug fixes");
   for (const l of links) assert.match(l, /is:public/);
 });
 
 test("titles and descriptions from GitHub cannot inject markup or links", async () => {
   const hostile = pr("some/repo", 9, "fix: <img src=x onerror=alert(1)> [click](https://evil.example) `code` | pipe\nnew line", "2026-10-22");
-  const hostileOpen = openPr("other/repo", 3, "<script>alert(1)</script> [x](javascript:alert(1))", "2026-10-21");
   const ev = await evidence({
     upstream: [hostile],
     fixes: [hostile],
-    open: [hostileOpen],
     repos: [repo("tokenizen", { description: "nice <script>alert(1)</script> [x](javascript:alert(1))" }), repo("muraqib"), repo("postmortems")],
   });
-  const md = `${mergedMd(ev)}\n${fixesMd(ev)}\n${openMd(ev)}\n${projectsMd(ev)}`;
+  const md = `${mergedMd(ev)}\n${fixesMd(ev)}\n${projectsMd(ev)}`;
   assert.doesNotMatch(md, /(^|[^\\])<(img|script)/, "every angle bracket is escaped");
   const withoutOwnLinks = md.replace(/\]\(https:\/\/github\.com\/[^)\s]*\)/g, "]()");
   assert.doesNotMatch(withoutOwnLinks, /(^|[^\\])https?:\/\//, "outside our own github links no bare URL survives, so nothing autolinks");
   assert.doesNotMatch(md, /\[click\]\(/, "square brackets are escaped, so no link can be built from a title");
   assert.doesNotMatch(md, /\[x\]\(/);
   const items = md.split("\n").filter((l) => l.startsWith("- ")).length;
-  assert.equal(items, ev.upstream.latestMerged.length + ev.upstream.latestFixes.length + ev.upstream.openLatest.length + ev.projects.length, "one line per item, no newline smuggling");
+  assert.equal(items, ev.upstream.latestMerged.length + ev.upstream.latestFixes.length + ev.projects.length, "one line per item, no newline smuggling");
 });
 
 test("the latest merged list shows changes of any kind, newest first, and stays empty without any", async () => {
@@ -101,8 +97,7 @@ test("wording follows the numbers, including one and zero", async () => {
   assert.match(text, /\[1 pull request merged\]/);
   assert.match(text, /\[1 in other people's projects\]\([^)]*\) across 1 project,/);
   assert.match(text, /\[1 of them bug fix\]/);
-  assert.match(text, /\[0 still open\]/);
-  assert.equal(openMd(one), "", "no open pull requests, no empty list");
+  assert.doesNotMatch(text, /still open|have sent/, "open and sent counts are not on the page");
 });
 
 test("urls, www hosts and e-mail addresses are neutralised", () => {

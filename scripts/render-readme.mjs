@@ -41,17 +41,9 @@ export function summaryMd(ev) {
     `I direct AI agents to do real engineering work: research a problem, build the fix, verify it holds, and ship it.\n\n` +
     `${link(`${total} pull ${plural(total, "request")} merged`, ev.queries.total)}: ${ev.ownRepos.mergedPrs} in my own repositories, where the tools below live, ` +
     `and ${link(`${u.mergedPrs} in other people's projects`, ev.queries.upstream)} across ${u.projects} ${plural(u.projects, "project")}, ` +
-    `${link(`${u.bugFixes} of them bug ${plural(u.bugFixes, "fix", "fixes")}`, ev.queries.bugFixes)}. ` +
-    `I have sent ${link(`${u.sent} to other projects`, ev.queries.sent)} so far, ${link(`${u.open} still open`, ev.queries.open)}.\n\n` +
+    `${link(`${u.bugFixes} of them bug ${plural(u.bugFixes, "fix", "fixes")}`, ev.queries.bugFixes)}.\n\n` +
     `<sub>Counted from public GitHub data on ${ev.date}.</sub>`
   );
-}
-
-export function openMd(ev) {
-  const list = ev.upstream.openLatest;
-  if (!list.length) return "";
-  const lines = list.map((x) => `- ${x.openedAt} [${x.repo}#${x.number}](${safeUrl(x.url)}) ${mdText(x.title)}`);
-  return `Open now in other people's projects, code and spec changes, newest first:\n\n${lines.join("\n")}`;
 }
 
 export function mergedMd(ev) {
@@ -105,7 +97,6 @@ export function applyBlocks(readme, ev, heroSvg) {
   out = replaceBlock(out, "summary", summaryMd(ev));
   out = replaceBlock(out, "merged", mergedMd(ev));
   out = replaceBlock(out, "fixes", fixesMd(ev));
-  out = replaceBlock(out, "open", openMd(ev));
   out = replaceBlock(out, "projects", projectsMd(ev));
   return out;
 }

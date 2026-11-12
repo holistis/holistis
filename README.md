@@ -42,17 +42,6 @@ Bug fixes merged by other maintainers, newest first:
 - 2026-06-24 [activepieces/activepieces#13806](https://github.com/activepieces/activepieces/pull/13806) fix(cal-com): migrate webhook registration from decommissioned API v1…
 <!-- profile:fixes:end -->
 
-<!-- profile:open:start -->
-Open now in other people's projects, code and spec changes, newest first:
-
-- 2026-11-11 [x402-foundation/x402#4215](https://github.com/x402-foundation/x402/pull/4215) specs(extensions): propose a Rejection Receipt
-- 2026-11-10 [x402-foundation/x402#4209](https://github.com/x402-foundation/x402/pull/4209) feat(extensions): add request binding helper for payment-identifier
-- 2026-11-10 [accensa/x402-facilitator-stellar#654](https://github.com/accensa/x402-facilitator-stellar/pull/654) POST /settle replays a cached success for an Idempotency-Key reused with a different payTo/asset/amount
-- 2026-11-10 [aymenfurter/polyclaw#15](https://github.com/aymenfurter/polyclaw/pull/15) fix: escape rich markup in tool approval prompt
-- 2026-11-10 [89rat/x402-conformance#4](https://github.com/89rat/x402-conformance/pull/4) verifyReceipt accepts a self-signed, fully fabricated receipt as VALID
-- 2026-11-10 [jzthree/nebula-tools#2](https://github.com/jzthree/nebula-tools/pull/2) fix: escape control characters in approval prompt
-<!-- profile:open:end -->
-
 <sub>The numbers, the two lists above and the project list below refresh on their own from public GitHub data, see [data/evidence.json](data/evidence.json).</sub>
 
 ### Currently active in

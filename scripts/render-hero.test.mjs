@@ -10,7 +10,8 @@ const ev = await collectEvidence({ fetchFn: fakeFetch(), today: "2026-10-23", fe
 
 test("the hero shows exactly the counted numbers from the evidence file", () => {
   const svg = renderHero(ev);
-  assert.match(svg, new RegExp(`${ev.totals.mergedPrs} PRS MERGED · ${ev.upstream.mergedPrs} IN OTHER PEOPLE'S PROJECTS · ${ev.upstream.open} OPEN NOW`));
+  assert.match(svg, new RegExp(`${ev.totals.mergedPrs} PRS MERGED · ${ev.upstream.mergedPrs} IN OTHER PEOPLE'S PROJECTS`));
+  assert.doesNotMatch(svg, /OPEN NOW/, "the picture shows merged work only");
   assert.match(svg, new RegExp(`${ev.upstream.bugFixes} BUG FIXES? IN `));
   assert.match(svg, new RegExp(`COUNTED FROM PUBLIC GITHUB DATA · ${ev.date} UTC`));
 });
