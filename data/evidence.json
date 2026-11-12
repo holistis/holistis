@@ -99,9 +99,16 @@
         "mergedAt": "2026-10-20"
       }
     ],
-    "sent": 132,
-    "open": 66,
+    "sent": 133,
+    "open": 65,
     "openLatest": [
+      {
+        "repo": "microsoft/promptflow",
+        "number": 4242,
+        "title": "ci: pin AliSajid/random-wait-action to a full commit SHA",
+        "url": "https://github.com/microsoft/promptflow/pull/4242",
+        "openedAt": "2026-11-12"
+      },
       {
         "repo": "x402-foundation/x402",
         "number": 4215,
@@ -135,13 +142,6 @@
         "number": 4,
         "title": "verifyReceipt accepts a self-signed, fully fabricated receipt as VALID",
         "url": "https://github.com/89rat/x402-conformance/pull/4",
-        "openedAt": "2026-11-10"
-      },
-      {
-        "repo": "jzthree/nebula-tools",
-        "number": 2,
-        "title": "fix: escape control characters in approval prompt",
-        "url": "https://github.com/jzthree/nebula-tools/pull/2",
         "openedAt": "2026-11-10"
       }
     ]
