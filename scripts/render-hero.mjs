@@ -89,7 +89,7 @@ export function fitNames(names, maxChars = 60) {
 
 export function renderHero(ev) {
   const up = ev?.upstream;
-  for (const k of ["mergedPrs", "projects", "bugFixes", "open"]) {
+  for (const k of ["mergedPrs", "projects", "bugFixes"]) {
     if (!Number.isInteger(up?.[k]) || up[k] < 0) throw new Error(`evidence.upstream.${k} must be a non-negative integer`);
   }
   const total = ev.totals?.mergedPrs;
@@ -102,7 +102,7 @@ export function renderHero(ev) {
   const desc =
     `Abdellah Ouadoudi directs AI agents that ship real fixes and keep the receipts. ` +
     `Counted from public GitHub data on ${ev.date}: ${total} pull requests merged, ${up.mergedPrs} of them in ${up.projects} projects owned by others ` +
-    `(${up.bugFixes} bug fixes), and ${up.open} more open in other people's projects. ` +
+    `(${up.bugFixes} bug fixes). ` +
     `The graphic shows a receipt that is paid, delivered and signed, then checked by us and checked by someone else.`;
 
   const tiles = TILES.map((t) => tile(t)).join("");
@@ -196,7 +196,7 @@ export function renderHero(ev) {
     <g class="reveal r6">
       <line x1="72" y1="338" x2="640" y2="338" stroke="#22372E"/>
       <circle class="live" cx="78" cy="362" r="5" fill="#34D399"/>
-      <text x="94" y="366" fill="#B4C6BC" font-size="12.5" letter-spacing=".5">${total} PRS MERGED · ${up.mergedPrs} IN OTHER PEOPLE'S PROJECTS · ${up.open} OPEN NOW</text>
+      <text x="94" y="366" fill="#B4C6BC" font-size="12.5" letter-spacing=".5">${total} PRS MERGED · ${up.mergedPrs} IN OTHER PEOPLE'S PROJECTS</text>
       <text x="94" y="387" fill="#B4C6BC" font-size="12" letter-spacing=".1">${fixLine}</text>
       <text x="94" y="410" fill="#7C998B" font-size="11" letter-spacing=".8">COUNTED FROM PUBLIC GITHUB DATA · ${esc(ev.date)} UTC</text>
     </g>

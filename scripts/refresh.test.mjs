@@ -12,7 +12,6 @@ const README = [
   "<!-- profile:summary:start -->\n<!-- profile:summary:end -->",
   "<!-- profile:merged:start -->\n<!-- profile:merged:end -->",
   "<!-- profile:fixes:start -->\n<!-- profile:fixes:end -->",
-  "<!-- profile:open:start -->\n<!-- profile:open:end -->",
   "<!-- profile:projects:start -->\n<!-- profile:projects:end -->",
 ].join("\n");
 
@@ -32,7 +31,8 @@ test("first run writes the evidence, the hero and the README", async () => {
   const r = await refresh({ root, fetchFn: fakeFetch(), today: "2026-10-23" });
   assert.equal(r.changed, true);
   assert.match(read(root, "README.md"), /\[205 pull requests merged\]/);
-  assert.match(read(root, "assets/hero.svg"), /205 PRS MERGED · 5 IN OTHER PEOPLE'S PROJECTS · 2 OPEN NOW/);
+  assert.match(read(root, "assets/hero.svg"), /205 PRS MERGED · 5 IN OTHER PEOPLE'S PROJECTS</);
+  assert.doesNotMatch(read(root, "README.md"), /Open now|still open|I have sent/);
   assert.match(read(root, "README.md"), /src="\.\/assets\/hero\.svg\?v=[0-9a-f]{8}"/);
   assert.equal(JSON.parse(read(root, "data/evidence.json")).upstream.mergedPrs, 5);
 });
