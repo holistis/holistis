@@ -69,6 +69,7 @@ Open now in other people's projects, code and spec changes, newest first:
 ## Projects
 
 <!-- profile:projects:start -->
+- [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp): MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search... Latest release [v1.0.3](https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3), 2026-07-29. Updated 2026-11-12.
 - [tokenizen](https://github.com/holistis/tokenizen): Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it... Latest release [v0.5.0](https://github.com/holistis/tokenizen/releases/tag/v0.5.0), 2026-09-06. [Website](https://tokenizen.nl). Updated 2026-11-11.
 - [agent-receipt-verify](https://github.com/holistis/agent-receipt-verify): MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'... Latest release [v0.2.1](https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1), 2026-10-17. Updated 2026-11-11.
 - [claude-memory-trim](https://github.com/holistis/claude-memory-trim): Keeps Claude Code session memory lean by rotating session logs between hot and cold storage. Cuts token cost at session start by 60-80%. Updated 2026-11-11.
@@ -78,7 +79,6 @@ Open now in other people's projects, code and spec changes, newest first:
 - [muraqib-agent-watch](https://github.com/holistis/muraqib-agent-watch): Free, instant capability check for any MCP server: what can it actually do, and does it say so Updated 2026-11-08.
 - [al-mizaan-judge](https://github.com/holistis/al-mizaan-judge): Strict 7-gate validity judge for a smart-contract bug bounty finding, a second opinion before you spend a Sherlock/Immunefi/Cantina submission. Updated 2026-11-08.
 - [automation-guardrails](https://github.com/holistis/automation-guardrails): Two small guardrails for Playwright/Puppeteer: verify you're on the right page, and fill contenteditable/rich-text editors without the silent double-write bug Updated 2026-11-08.
-- [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp): MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search... Latest release [v1.0.3](https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3), 2026-07-29. Updated 2026-11-08.
 - [postmortems](https://github.com/holistis/postmortems): Short technical postmortems: what looked right, what turned out wrong Updated 2026-11-08.
 <!-- profile:projects:end -->
 
