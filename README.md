@@ -1,6 +1,6 @@
 <!-- profile:hero:start -->
 <div align="center">
-<img src="./assets/hero.svg?v=17f4eadc" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
+<img src="./assets/hero.svg?v=ac58fd9f" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
 <!-- profile:hero:end -->
 
@@ -9,7 +9,7 @@
 <!-- profile:summary:start -->
 I direct AI agents to do real engineering work: research a problem, build the fix, verify it holds, and ship it.
 
-[555 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 528 in my own repositories, where the tools below live, and [27 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 18 projects, [6 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [133 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [53 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
+[557 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 530 in my own repositories, where the tools below live, and [27 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 18 projects, [6 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests). I have sent [136 to other projects](https://github.com/search?q=author%3Aholistis+is%3Apr+-user%3Aholistis+is%3Apublic&type=pullrequests) so far, [56 still open](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Aopen+-user%3Aholistis+is%3Apublic&type=pullrequests).
 
 <sub>Counted from public GitHub data on 2026-11-12.</sub>
 <!-- profile:summary:end -->
@@ -45,12 +45,12 @@ Bug fixes merged by other maintainers, newest first:
 <!-- profile:open:start -->
 Open now in other people's projects, code and spec changes, newest first:
 
+- 2026-11-12 [puppeteer/puppeteer#15792](https://github.com/puppeteer/puppeteer/pull/15792) fix: reject immediately when the AbortSignal is already aborted
+- 2026-11-12 [puppeteer/puppeteer#15791](https://github.com/puppeteer/puppeteer/pull/15791) fix: use RAF polling for P selectors with pseudo classes
+- 2026-11-12 [puppeteer/puppeteer#15790](https://github.com/puppeteer/puppeteer/pull/15790) fix(cdp): delete cookies from the page partition for default port pages
 - 2026-11-12 [microsoft/promptflow#4242](https://github.com/microsoft/promptflow/pull/4242) ci: pin AliSajid/random-wait-action to a full commit SHA
 - 2026-11-11 [x402-foundation/x402#4215](https://github.com/x402-foundation/x402/pull/4215) specs(extensions): propose a Rejection Receipt
 - 2026-11-10 [x402-foundation/x402#4209](https://github.com/x402-foundation/x402/pull/4209) feat(extensions): add request binding helper for payment-identifier
-- 2026-11-10 [accensa/x402-facilitator-stellar#654](https://github.com/accensa/x402-facilitator-stellar/pull/654) POST /settle replays a cached success for an Idempotency-Key reused with a different payTo/asset/amount
-- 2026-11-10 [aymenfurter/polyclaw#15](https://github.com/aymenfurter/polyclaw/pull/15) fix: escape rich markup in tool approval prompt
-- 2026-11-10 [89rat/x402-conformance#4](https://github.com/89rat/x402-conformance/pull/4) verifyReceipt accepts a self-signed, fully fabricated receipt as VALID
 <!-- profile:open:end -->
 
 <sub>The numbers, the two lists above and the project list below refresh on their own from public GitHub data, see [data/evidence.json](data/evidence.json).</sub>
@@ -69,8 +69,8 @@ Open now in other people's projects, code and spec changes, newest first:
 ## Projects
 
 <!-- profile:projects:start -->
-- [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp): MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search... Latest release [v1.0.3](https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3), 2026-07-29. Updated 2026-11-12.
 - [tokenizen](https://github.com/holistis/tokenizen): Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it... Latest release [v0.5.0](https://github.com/holistis/tokenizen/releases/tag/v0.5.0), 2026-09-06. [Website](https://tokenizen.nl). Updated 2026-11-12.
+- [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp): MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search... Latest release [v1.0.3](https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3), 2026-07-29. Updated 2026-11-12.
 - [agent-receipt-verify](https://github.com/holistis/agent-receipt-verify): MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'... Latest release [v0.2.1](https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1), 2026-10-17. Updated 2026-11-11.
 - [claude-memory-trim](https://github.com/holistis/claude-memory-trim): Keeps Claude Code session memory lean by rotating session logs between hot and cold storage. Cuts token cost at session start by 60-80%. Updated 2026-11-11.
 - [3ilm-mcp](https://github.com/holistis/3ilm-mcp): MCP server: 1,032 verified smart contract vulnerability findings from 10 Sherlock audit contests Updated 2026-11-11.
