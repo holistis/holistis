@@ -14,6 +14,8 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 <sub>Counted from public GitHub data on 2026-11-12.</sub>
 <!-- profile:summary:end -->
 
+Every public pull request I have sent to other projects is listed in [the ledger](https://github.com/holistis/holistis/blob/main/activity.md), including the ones that were closed without a merge.
+
 ### Found, reported and fixed: secret redaction in autoharness
 
 [autoharness](https://github.com/tigerless-labs/autoharness) (10,442 stars on 2026-10-28) distills skills from real AI coding sessions, and its redaction function is meant to keep secrets out of the evidence files it writes. I tested that function on its own, not the whole tool, with 17 secret formats in 4 contexts each (bare in prose, in a KEY=value line, in JSON, in a multi-line log), using made-up values generated from a fixed seed. Bare vendor keys (Stripe, OpenAI, Anthropic, Google, npm, JWT) and the variable names AWS_SECRET_ACCESS_KEY and STRIPE_SECRET_KEY stayed readable.
