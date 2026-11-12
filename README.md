@@ -42,17 +42,6 @@ Bug fixes merged by other maintainers, newest first:
 - 2026-06-24 [activepieces/activepieces#13806](https://github.com/activepieces/activepieces/pull/13806) fix(cal-com): migrate webhook registration from decommissioned API v1…
 <!-- profile:fixes:end -->
 
-<!-- profile:open:start -->
-Open now in other people's projects, code and spec changes, newest first:
-
-- 2026-11-12 [puppeteer/puppeteer#15792](https://github.com/puppeteer/puppeteer/pull/15792) fix: reject immediately when the AbortSignal is already aborted
-- 2026-11-12 [puppeteer/puppeteer#15791](https://github.com/puppeteer/puppeteer/pull/15791) fix: use RAF polling for P selectors with pseudo classes
-- 2026-11-12 [puppeteer/puppeteer#15790](https://github.com/puppeteer/puppeteer/pull/15790) fix(cdp): delete cookies from the page partition for default port pages
-- 2026-11-12 [microsoft/promptflow#4242](https://github.com/microsoft/promptflow/pull/4242) ci: pin AliSajid/random-wait-action to a full commit SHA
-- 2026-11-11 [x402-foundation/x402#4215](https://github.com/x402-foundation/x402/pull/4215) specs(extensions): propose a Rejection Receipt
-- 2026-11-10 [x402-foundation/x402#4209](https://github.com/x402-foundation/x402/pull/4209) feat(extensions): add request binding helper for payment-identifier
-<!-- profile:open:end -->
-
 <sub>The numbers, the two lists above and the project list below refresh on their own from public GitHub data, see [data/evidence.json](data/evidence.json).</sub>
 
 ### Currently active in
