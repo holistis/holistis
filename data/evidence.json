@@ -11,12 +11,12 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 561
+    "mergedPrs": 562
   },
   "upstream": {
-    "mergedPrs": 28,
+    "mergedPrs": 29,
     "projects": 19,
-    "bugFixes": 7,
+    "bugFixes": 8,
     "bugFixProjects": [
       "puppeteer",
       "autoharness",
@@ -32,6 +32,13 @@
         "number": 15792,
         "title": "fix: reject immediately when the AbortSignal is already aborted",
         "url": "https://github.com/puppeteer/puppeteer/pull/15792",
+        "mergedAt": "2026-11-12"
+      },
+      {
+        "repo": "puppeteer/puppeteer",
+        "number": 15791,
+        "title": "fix: use RAF polling for P selectors with pseudo classes",
+        "url": "https://github.com/puppeteer/puppeteer/pull/15791",
         "mergedAt": "2026-11-12"
       },
       {
@@ -54,13 +61,6 @@
         "title": "fix(provider): guard nil MaintenanceInfo on managed service instance create",
         "url": "https://github.com/cloudfoundry/terraform-provider-cloudfoundry/pull/592",
         "mergedAt": "2026-09-10"
-      },
-      {
-        "repo": "nexu-io/open-design",
-        "number": 5078,
-        "title": "fix(amr): normalize Vela JSON catalog ids on the live fetchModels path (fixes #4410)",
-        "url": "https://github.com/nexu-io/open-design/pull/5078",
-        "mergedAt": "2026-07-03"
       }
     ],
     "latestMerged": [
@@ -69,6 +69,13 @@
         "number": 15792,
         "title": "fix: reject immediately when the AbortSignal is already aborted",
         "url": "https://github.com/puppeteer/puppeteer/pull/15792",
+        "mergedAt": "2026-11-12"
+      },
+      {
+        "repo": "puppeteer/puppeteer",
+        "number": 15791,
+        "title": "fix: use RAF polling for P selectors with pseudo classes",
+        "url": "https://github.com/puppeteer/puppeteer/pull/15791",
         "mergedAt": "2026-11-12"
       },
       {
@@ -91,25 +98,11 @@
         "title": "docs(extensions): bind the payment identifier to a request fingerprint in the idempotency example",
         "url": "https://github.com/x402-foundation/x402/pull/3954",
         "mergedAt": "2026-10-27"
-      },
-      {
-        "repo": "x402-foundation/x402",
-        "number": 3826,
-        "title": "fix(core): do not mutate the extensions object while building a 402",
-        "url": "https://github.com/x402-foundation/x402/pull/3826",
-        "mergedAt": "2026-10-22"
       }
     ],
     "sent": 136,
-    "open": 55,
+    "open": 54,
     "openLatest": [
-      {
-        "repo": "puppeteer/puppeteer",
-        "number": 15791,
-        "title": "fix: use RAF polling for P selectors with pseudo classes",
-        "url": "https://github.com/puppeteer/puppeteer/pull/15791",
-        "openedAt": "2026-11-12"
-      },
       {
         "repo": "puppeteer/puppeteer",
         "number": 15790,
@@ -143,6 +136,13 @@
         "number": 654,
         "title": "POST /settle replays a cached success for an Idempotency-Key reused with a different payTo/asset/amount",
         "url": "https://github.com/accensa/x402-facilitator-stellar/pull/654",
+        "openedAt": "2026-11-10"
+      },
+      {
+        "repo": "aymenfurter/polyclaw",
+        "number": 15,
+        "title": "fix: escape rich markup in tool approval prompt",
+        "url": "https://github.com/aymenfurter/polyclaw/pull/15",
         "openedAt": "2026-11-10"
       }
     ]
