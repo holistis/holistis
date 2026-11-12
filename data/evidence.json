@@ -11,13 +11,14 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 559
+    "mergedPrs": 561
   },
   "upstream": {
-    "mergedPrs": 27,
-    "projects": 18,
-    "bugFixes": 6,
+    "mergedPrs": 28,
+    "projects": 19,
+    "bugFixes": 7,
     "bugFixProjects": [
+      "puppeteer",
       "autoharness",
       "x402",
       "cloudfoundry",
@@ -26,6 +27,13 @@
       "windmill"
     ],
     "latestFixes": [
+      {
+        "repo": "puppeteer/puppeteer",
+        "number": 15792,
+        "title": "fix: reject immediately when the AbortSignal is already aborted",
+        "url": "https://github.com/puppeteer/puppeteer/pull/15792",
+        "mergedAt": "2026-11-12"
+      },
       {
         "repo": "tigerless-labs/autoharness",
         "number": 278,
@@ -53,16 +61,16 @@
         "title": "fix(amr): normalize Vela JSON catalog ids on the live fetchModels path (fixes #4410)",
         "url": "https://github.com/nexu-io/open-design/pull/5078",
         "mergedAt": "2026-07-03"
-      },
-      {
-        "repo": "activepieces/activepieces",
-        "number": 13806,
-        "title": "fix(cal-com): migrate webhook registration from decommissioned API v1…",
-        "url": "https://github.com/activepieces/activepieces/pull/13806",
-        "mergedAt": "2026-06-24"
       }
     ],
     "latestMerged": [
+      {
+        "repo": "puppeteer/puppeteer",
+        "number": 15792,
+        "title": "fix: reject immediately when the AbortSignal is already aborted",
+        "url": "https://github.com/puppeteer/puppeteer/pull/15792",
+        "mergedAt": "2026-11-12"
+      },
       {
         "repo": "Chain-Love/chain-love",
         "number": 4786,
@@ -90,25 +98,11 @@
         "title": "fix(core): do not mutate the extensions object while building a 402",
         "url": "https://github.com/x402-foundation/x402/pull/3826",
         "mergedAt": "2026-10-22"
-      },
-      {
-        "repo": "omworldprotocol/om-world",
-        "number": 18,
-        "title": "docs: add buyer-side delivery attestation with explicit evidence limits",
-        "url": "https://github.com/omworldprotocol/om-world/pull/18",
-        "mergedAt": "2026-10-20"
       }
     ],
     "sent": 136,
-    "open": 56,
+    "open": 55,
     "openLatest": [
-      {
-        "repo": "puppeteer/puppeteer",
-        "number": 15792,
-        "title": "fix: reject immediately when the AbortSignal is already aborted",
-        "url": "https://github.com/puppeteer/puppeteer/pull/15792",
-        "openedAt": "2026-11-12"
-      },
       {
         "repo": "puppeteer/puppeteer",
         "number": 15791,
@@ -143,11 +137,18 @@
         "title": "feat(extensions): add request binding helper for payment-identifier",
         "url": "https://github.com/x402-foundation/x402/pull/4209",
         "openedAt": "2026-11-10"
+      },
+      {
+        "repo": "accensa/x402-facilitator-stellar",
+        "number": 654,
+        "title": "POST /settle replays a cached success for an Idempotency-Key reused with a different payTo/asset/amount",
+        "url": "https://github.com/accensa/x402-facilitator-stellar/pull/654",
+        "openedAt": "2026-11-10"
       }
     ]
   },
   "ownRepos": {
-    "mergedPrs": 532
+    "mergedPrs": 533
   },
   "projects": [
     {

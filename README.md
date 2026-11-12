@@ -1,6 +1,6 @@
 <!-- profile:hero:start -->
 <div align="center">
-<img src="./assets/hero.svg?v=78f985cf" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
+<img src="./assets/hero.svg?v=a64b33a3" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
 <!-- profile:hero:end -->
 
@@ -9,7 +9,7 @@
 <!-- profile:summary:start -->
 I direct AI agents to do real engineering work: research a problem, build the fix, verify it holds, and ship it.
 
-[559 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 532 in my own repositories, where the tools below live, and [27 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 18 projects, [6 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests).
+[561 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 533 in my own repositories, where the tools below live, and [28 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 19 projects, [7 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests).
 
 <sub>Counted from public GitHub data on 2026-11-12.</sub>
 <!-- profile:summary:end -->
@@ -25,21 +25,21 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 <!-- profile:merged:start -->
 Latest changes merged by other maintainers, of any kind, newest first:
 
+- 2026-11-12 [puppeteer/puppeteer#15792](https://github.com/puppeteer/puppeteer/pull/15792) fix: reject immediately when the AbortSignal is already aborted
 - 2026-11-02 [Chain-Love/chain-love#4786](https://github.com/Chain-Love/chain-love/pull/4786) Add Bug Bounty Intelligence (provider, MCP server and security scanner on Base)
 - 2026-10-28 [tigerless-labs/autoharness#278](https://github.com/tigerless-labs/autoharness/pull/278) fix(redact): redact bare vendor-prefixed keys and secret-named variables
 - 2026-10-27 [x402-foundation/x402#3954](https://github.com/x402-foundation/x402/pull/3954) docs(extensions): bind the payment identifier to a request fingerprint in the idempotency example
 - 2026-10-22 [x402-foundation/x402#3826](https://github.com/x402-foundation/x402/pull/3826) fix(core): do not mutate the extensions object while building a 402
-- 2026-10-20 [omworldprotocol/om-world#18](https://github.com/omworldprotocol/om-world/pull/18) docs: add buyer-side delivery attestation with explicit evidence limits
 <!-- profile:merged:end -->
 
 <!-- profile:fixes:start -->
 Bug fixes merged by other maintainers, newest first:
 
+- 2026-11-12 [puppeteer/puppeteer#15792](https://github.com/puppeteer/puppeteer/pull/15792) fix: reject immediately when the AbortSignal is already aborted
 - 2026-10-28 [tigerless-labs/autoharness#278](https://github.com/tigerless-labs/autoharness/pull/278) fix(redact): redact bare vendor-prefixed keys and secret-named variables
 - 2026-10-22 [x402-foundation/x402#3826](https://github.com/x402-foundation/x402/pull/3826) fix(core): do not mutate the extensions object while building a 402
 - 2026-09-10 [cloudfoundry/terraform-provider-cloudfoundry#592](https://github.com/cloudfoundry/terraform-provider-cloudfoundry/pull/592) fix(provider): guard nil MaintenanceInfo on managed service instance create
 - 2026-07-03 [nexu-io/open-design#5078](https://github.com/nexu-io/open-design/pull/5078) fix(amr): normalize Vela JSON catalog ids on the live fetchModels path (fixes #4410)
-- 2026-06-24 [activepieces/activepieces#13806](https://github.com/activepieces/activepieces/pull/13806) fix(cal-com): migrate webhook registration from decommissioned API v1…
 <!-- profile:fixes:end -->
 
 <sub>The numbers, the two lists above and the project list below refresh on their own from public GitHub data, see [data/evidence.json](data/evidence.json).</sub>
