@@ -100,9 +100,16 @@
         "mergedAt": "2026-10-28"
       }
     ],
-    "sent": 137,
-    "open": 54,
+    "sent": 138,
+    "open": 55,
     "openLatest": [
+      {
+        "repo": "puppeteer/puppeteer",
+        "number": 15804,
+        "title": "fix: honor an already aborted signal in waitForFileChooser() and waitForDevicePrompt()",
+        "url": "https://github.com/puppeteer/puppeteer/pull/15804",
+        "openedAt": "2026-11-13"
+      },
       {
         "repo": "puppeteer/puppeteer",
         "number": 15802,
@@ -136,13 +143,6 @@
         "number": 654,
         "title": "POST /settle replays a cached success for an Idempotency-Key reused with a different payTo/asset/amount",
         "url": "https://github.com/accensa/x402-facilitator-stellar/pull/654",
-        "openedAt": "2026-11-10"
-      },
-      {
-        "repo": "aymenfurter/polyclaw",
-        "number": 15,
-        "title": "fix: escape rich markup in tool approval prompt",
-        "url": "https://github.com/aymenfurter/polyclaw/pull/15",
         "openedAt": "2026-11-10"
       }
     ]
