@@ -1,6 +1,6 @@
 <!-- profile:hero:start -->
 <div align="center">
-<img src="./assets/hero.svg?v=1642365b" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
+<img src="./assets/hero.svg?v=2bc34d32" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
 <!-- profile:hero:end -->
 
@@ -9,7 +9,7 @@
 <!-- profile:summary:start -->
 I direct AI agents to do real engineering work: research a problem, build the fix, verify it holds, and ship it.
 
-[563 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 534 in my own repositories, where the tools below live, and [29 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 19 projects, [8 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests).
+[564 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 534 in my own repositories, where the tools below live, and [30 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 19 projects, [9 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests).
 
 <sub>Counted from public GitHub data on 2026-11-13.</sub>
 <!-- profile:summary:end -->
@@ -25,21 +25,21 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 <!-- profile:merged:start -->
 Latest changes merged by other maintainers, of any kind, newest first:
 
+- 2026-11-13 [puppeteer/puppeteer#15790](https://github.com/puppeteer/puppeteer/pull/15790) fix(cdp): delete cookies from the page partition for default port pages
 - 2026-11-12 [puppeteer/puppeteer#15792](https://github.com/puppeteer/puppeteer/pull/15792) fix: reject immediately when the AbortSignal is already aborted
 - 2026-11-12 [puppeteer/puppeteer#15791](https://github.com/puppeteer/puppeteer/pull/15791) fix: use RAF polling for P selectors with pseudo classes
 - 2026-11-02 [Chain-Love/chain-love#4786](https://github.com/Chain-Love/chain-love/pull/4786) Add Bug Bounty Intelligence (provider, MCP server and security scanner on Base)
 - 2026-10-28 [tigerless-labs/autoharness#278](https://github.com/tigerless-labs/autoharness/pull/278) fix(redact): redact bare vendor-prefixed keys and secret-named variables
-- 2026-10-27 [x402-foundation/x402#3954](https://github.com/x402-foundation/x402/pull/3954) docs(extensions): bind the payment identifier to a request fingerprint in the idempotency example
 <!-- profile:merged:end -->
 
 <!-- profile:fixes:start -->
 Bug fixes merged by other maintainers, newest first:
 
+- 2026-11-13 [puppeteer/puppeteer#15790](https://github.com/puppeteer/puppeteer/pull/15790) fix(cdp): delete cookies from the page partition for default port pages
 - 2026-11-12 [puppeteer/puppeteer#15792](https://github.com/puppeteer/puppeteer/pull/15792) fix: reject immediately when the AbortSignal is already aborted
 - 2026-11-12 [puppeteer/puppeteer#15791](https://github.com/puppeteer/puppeteer/pull/15791) fix: use RAF polling for P selectors with pseudo classes
 - 2026-10-28 [tigerless-labs/autoharness#278](https://github.com/tigerless-labs/autoharness/pull/278) fix(redact): redact bare vendor-prefixed keys and secret-named variables
 - 2026-10-22 [x402-foundation/x402#3826](https://github.com/x402-foundation/x402/pull/3826) fix(core): do not mutate the extensions object while building a 402
-- 2026-09-10 [cloudfoundry/terraform-provider-cloudfoundry#592](https://github.com/cloudfoundry/terraform-provider-cloudfoundry/pull/592) fix(provider): guard nil MaintenanceInfo on managed service instance create
 <!-- profile:fixes:end -->
 
 <sub>The numbers, the two lists above and the project list below refresh on their own from public GitHub data, see [data/evidence.json](data/evidence.json).</sub>

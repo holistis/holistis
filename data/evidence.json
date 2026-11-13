@@ -11,12 +11,12 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 563
+    "mergedPrs": 564
   },
   "upstream": {
-    "mergedPrs": 29,
+    "mergedPrs": 30,
     "projects": 19,
-    "bugFixes": 8,
+    "bugFixes": 9,
     "bugFixProjects": [
       "puppeteer",
       "autoharness",
@@ -27,6 +27,13 @@
       "windmill"
     ],
     "latestFixes": [
+      {
+        "repo": "puppeteer/puppeteer",
+        "number": 15790,
+        "title": "fix(cdp): delete cookies from the page partition for default port pages",
+        "url": "https://github.com/puppeteer/puppeteer/pull/15790",
+        "mergedAt": "2026-11-13"
+      },
       {
         "repo": "puppeteer/puppeteer",
         "number": 15792,
@@ -54,16 +61,16 @@
         "title": "fix(core): do not mutate the extensions object while building a 402",
         "url": "https://github.com/x402-foundation/x402/pull/3826",
         "mergedAt": "2026-10-22"
-      },
-      {
-        "repo": "cloudfoundry/terraform-provider-cloudfoundry",
-        "number": 592,
-        "title": "fix(provider): guard nil MaintenanceInfo on managed service instance create",
-        "url": "https://github.com/cloudfoundry/terraform-provider-cloudfoundry/pull/592",
-        "mergedAt": "2026-09-10"
       }
     ],
     "latestMerged": [
+      {
+        "repo": "puppeteer/puppeteer",
+        "number": 15790,
+        "title": "fix(cdp): delete cookies from the page partition for default port pages",
+        "url": "https://github.com/puppeteer/puppeteer/pull/15790",
+        "mergedAt": "2026-11-13"
+      },
       {
         "repo": "puppeteer/puppeteer",
         "number": 15792,
@@ -91,25 +98,11 @@
         "title": "fix(redact): redact bare vendor-prefixed keys and secret-named variables",
         "url": "https://github.com/tigerless-labs/autoharness/pull/278",
         "mergedAt": "2026-10-28"
-      },
-      {
-        "repo": "x402-foundation/x402",
-        "number": 3954,
-        "title": "docs(extensions): bind the payment identifier to a request fingerprint in the idempotency example",
-        "url": "https://github.com/x402-foundation/x402/pull/3954",
-        "mergedAt": "2026-10-27"
       }
     ],
     "sent": 136,
-    "open": 54,
+    "open": 53,
     "openLatest": [
-      {
-        "repo": "puppeteer/puppeteer",
-        "number": 15790,
-        "title": "fix(cdp): delete cookies from the page partition for default port pages",
-        "url": "https://github.com/puppeteer/puppeteer/pull/15790",
-        "openedAt": "2026-11-12"
-      },
       {
         "repo": "microsoft/promptflow",
         "number": 4242,
@@ -143,6 +136,13 @@
         "number": 15,
         "title": "fix: escape rich markup in tool approval prompt",
         "url": "https://github.com/aymenfurter/polyclaw/pull/15",
+        "openedAt": "2026-11-10"
+      },
+      {
+        "repo": "89rat/x402-conformance",
+        "number": 4,
+        "title": "verifyReceipt accepts a self-signed, fully fabricated receipt as VALID",
+        "url": "https://github.com/89rat/x402-conformance/pull/4",
         "openedAt": "2026-11-10"
       }
     ]
