@@ -14,6 +14,15 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 <sub>Counted from public GitHub data on 2026-11-13.</sub>
 <!-- profile:summary:end -->
 
+### Found, reported and fixed: three bugs in Puppeteer
+
+[Puppeteer](https://github.com/puppeteer/puppeteer) controls Chrome or Firefox from code (95,828 stars on 2026-11-13, 15,087,271 npm downloads in the week to 2026-11-11, and its source files carry Google's copyright). I found three bugs, sent a fix with a test for each, and the Puppeteer team merged all three within 14 hours of opening. The maintainer who merged them lists Google as employer on GitHub.
+
+- Cookies: [pull request 15790](https://github.com/puppeteer/puppeteer/pull/15790). `page.deleteCookie` left a partitioned cookie in place on pages with a default port.
+- Waiting: [pull request 15791](https://github.com/puppeteer/puppeteer/pull/15791). `waitForSelector` with a pseudo-class such as `:focus` polled on the wrong schedule.
+- Cancelling: [pull request 15792](https://github.com/puppeteer/puppeteer/pull/15792). Wait helpers ignored a signal that was already cancelled.
+- Outcome: merged on 2026-11-12 and 2026-11-13, and part of the open release pull request for 25.18.0.
+
 ### Found, reported and fixed: secret redaction in autoharness
 
 [autoharness](https://github.com/tigerless-labs/autoharness) (10,442 stars on 2026-10-28) distills skills from real AI coding sessions, and its redaction function is meant to keep secrets out of the evidence files it writes. I tested that function on its own, not the whole tool, with 17 secret formats in 4 contexts each (bare in prose, in a KEY=value line, in JSON, in a multi-line log), using made-up values generated from a fixed seed. Bare vendor keys (Stripe, OpenAI, Anthropic, Google, npm, JWT) and the variable names AWS_SECRET_ACCESS_KEY and STRIPE_SECRET_KEY stayed readable.
