@@ -152,6 +152,18 @@
   },
   "projects": [
     {
+      "name": "muraqib",
+      "url": "https://github.com/holistis/muraqib",
+      "description": "Nightly Playwright QA that tells you when it stops watching. npx muraqib doctor finds the silent-cancel bug in any existing setup. Claude opens the fix PR. MIT, no...",
+      "homepage": "https://www.npmjs.com/package/muraqib",
+      "updated": "2026-11-13",
+      "release": {
+        "tag": "v0.3.4",
+        "date": "2026-09-29",
+        "url": "https://github.com/holistis/muraqib/releases/tag/v0.3.4"
+      }
+    },
+    {
       "name": "tokenizen",
       "url": "https://github.com/holistis/tokenizen",
       "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
@@ -202,18 +214,6 @@
       "homepage": null,
       "updated": "2026-11-11",
       "release": null
-    },
-    {
-      "name": "muraqib",
-      "url": "https://github.com/holistis/muraqib",
-      "description": "Nightly Playwright QA that tells you when it stops watching. npx muraqib doctor finds the silent-cancel bug in any existing setup. Claude opens the fix PR. MIT, no...",
-      "homepage": "https://www.npmjs.com/package/muraqib",
-      "updated": "2026-11-11",
-      "release": {
-        "tag": "v0.3.4",
-        "date": "2026-09-29",
-        "url": "https://github.com/holistis/muraqib/releases/tag/v0.3.4"
-      }
     },
     {
       "name": "al-yad",
