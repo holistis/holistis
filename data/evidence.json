@@ -100,9 +100,16 @@
         "mergedAt": "2026-10-28"
       }
     ],
-    "sent": 138,
-    "open": 55,
+    "sent": 139,
+    "open": 56,
     "openLatest": [
+      {
+        "repo": "Aider-AI/aider",
+        "number": 5981,
+        "title": "io: strip ANSI/control characters from confirm_ask subject before display",
+        "url": "https://github.com/Aider-AI/aider/pull/5981",
+        "openedAt": "2026-11-14"
+      },
       {
         "repo": "puppeteer/puppeteer",
         "number": 15804,
@@ -136,13 +143,6 @@
         "number": 4209,
         "title": "feat(extensions): add request binding helper for payment-identifier",
         "url": "https://github.com/x402-foundation/x402/pull/4209",
-        "openedAt": "2026-11-10"
-      },
-      {
-        "repo": "accensa/x402-facilitator-stellar",
-        "number": 654,
-        "title": "POST /settle replays a cached success for an Idempotency-Key reused with a different payTo/asset/amount",
-        "url": "https://github.com/accensa/x402-facilitator-stellar/pull/654",
         "openedAt": "2026-11-10"
       }
     ]
