@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 566
+    "mergedPrs": 568
   },
   "upstream": {
     "mergedPrs": 30,
@@ -148,7 +148,7 @@
     ]
   },
   "ownRepos": {
-    "mergedPrs": 536
+    "mergedPrs": 538
   },
   "projects": [
     {
@@ -156,7 +156,7 @@
       "url": "https://github.com/holistis/muraqib",
       "description": "Nightly Playwright QA that tells you when it stops watching. npx muraqib doctor finds the silent-cancel bug in any existing setup. Claude opens the fix PR. MIT, no...",
       "homepage": "https://www.npmjs.com/package/muraqib",
-      "updated": "2026-11-13",
+      "updated": "2026-11-14",
       "release": {
         "tag": "v0.3.4",
         "date": "2026-09-29",
