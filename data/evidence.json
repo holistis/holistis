@@ -100,9 +100,16 @@
         "mergedAt": "2026-10-28"
       }
     ],
-    "sent": 140,
-    "open": 57,
+    "sent": 141,
+    "open": 58,
     "openLatest": [
+      {
+        "repo": "QwenLM/qwen-code",
+        "number": 17346,
+        "title": "fix(cli): sanitize terminal control sequences in the shell command confirmation",
+        "url": "https://github.com/QwenLM/qwen-code/pull/17346",
+        "openedAt": "2026-11-15"
+      },
       {
         "repo": "Aider-AI/aider",
         "number": 5981,
@@ -137,13 +144,6 @@
         "title": "ci: pin AliSajid/random-wait-action to a full commit SHA",
         "url": "https://github.com/microsoft/promptflow/pull/4242",
         "openedAt": "2026-11-12"
-      },
-      {
-        "repo": "x402-foundation/x402",
-        "number": 4215,
-        "title": "specs(extensions): propose a Rejection Receipt",
-        "url": "https://github.com/x402-foundation/x402/pull/4215",
-        "openedAt": "2026-11-11"
       }
     ]
   },
