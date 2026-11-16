@@ -152,6 +152,18 @@
   },
   "projects": [
     {
+      "name": "bug-bounty-intelligence-mcp",
+      "url": "https://github.com/holistis/bug-bounty-intelligence-mcp",
+      "description": "MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search...",
+      "homepage": null,
+      "updated": "2026-11-16",
+      "release": {
+        "tag": "v1.0.3",
+        "date": "2026-07-29",
+        "url": "https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3"
+      }
+    },
+    {
       "name": "tokenizen",
       "url": "https://github.com/holistis/tokenizen",
       "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
@@ -193,18 +205,6 @@
         "tag": "v0.2.1",
         "date": "2026-10-17",
         "url": "https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1"
-      }
-    },
-    {
-      "name": "bug-bounty-intelligence-mcp",
-      "url": "https://github.com/holistis/bug-bounty-intelligence-mcp",
-      "description": "MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search...",
-      "homepage": null,
-      "updated": "2026-11-14",
-      "release": {
-        "tag": "v1.0.3",
-        "date": "2026-07-29",
-        "url": "https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3"
       }
     },
     {
