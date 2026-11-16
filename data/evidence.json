@@ -100,9 +100,16 @@
         "mergedAt": "2026-10-28"
       }
     ],
-    "sent": 141,
-    "open": 58,
+    "sent": 142,
+    "open": 59,
     "openLatest": [
+      {
+        "repo": "paidmcp/directory",
+        "number": 21,
+        "title": "Add listing: Bug Bounty Intelligence, USDC, Base",
+        "url": "https://github.com/paidmcp/directory/pull/21",
+        "openedAt": "2026-11-16"
+      },
       {
         "repo": "QwenLM/qwen-code",
         "number": 17346,
@@ -137,13 +144,6 @@
         "title": "fix: keep equals signs in the --user-data-dir value",
         "url": "https://github.com/puppeteer/puppeteer/pull/15802",
         "openedAt": "2026-11-13"
-      },
-      {
-        "repo": "microsoft/promptflow",
-        "number": 4242,
-        "title": "ci: pin AliSajid/random-wait-action to a full commit SHA",
-        "url": "https://github.com/microsoft/promptflow/pull/4242",
-        "openedAt": "2026-11-12"
       }
     ]
   },
