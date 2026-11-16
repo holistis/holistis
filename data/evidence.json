@@ -152,6 +152,18 @@
   },
   "projects": [
     {
+      "name": "tokenizen",
+      "url": "https://github.com/holistis/tokenizen",
+      "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
+      "homepage": "https://tokenizen.nl",
+      "updated": "2026-11-16",
+      "release": {
+        "tag": "v0.5.0",
+        "date": "2026-09-06",
+        "url": "https://github.com/holistis/tokenizen/releases/tag/v0.5.0"
+      }
+    },
+    {
       "name": "al-mizaan-judge",
       "url": "https://github.com/holistis/al-mizaan-judge",
       "description": "Strict 7-gate validity judge for a smart-contract bug bounty finding, a second opinion before you spend a Sherlock/Immunefi/Cantina submission.",
@@ -193,18 +205,6 @@
         "tag": "v1.0.3",
         "date": "2026-07-29",
         "url": "https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3"
-      }
-    },
-    {
-      "name": "tokenizen",
-      "url": "https://github.com/holistis/tokenizen",
-      "description": "Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it...",
-      "homepage": "https://tokenizen.nl",
-      "updated": "2026-11-14",
-      "release": {
-        "tag": "v0.5.0",
-        "date": "2026-09-06",
-        "url": "https://github.com/holistis/tokenizen/releases/tag/v0.5.0"
       }
     },
     {
