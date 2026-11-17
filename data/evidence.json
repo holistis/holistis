@@ -1,7 +1,7 @@
 {
   "schema": 3,
   "account": "holistis",
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "queries": {
     "total": "author:holistis is:pr is:merged is:public",
     "upstream": "author:holistis is:pr is:merged -user:holistis is:public",
@@ -11,11 +11,11 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 573
+    "mergedPrs": 574
   },
   "upstream": {
-    "mergedPrs": 30,
-    "projects": 19,
+    "mergedPrs": 31,
+    "projects": 20,
     "bugFixes": 9,
     "bugFixProjects": [
       "puppeteer",
@@ -101,7 +101,7 @@
       }
     ],
     "sent": 142,
-    "open": 59,
+    "open": 58,
     "openLatest": [
       {
         "repo": "paidmcp/directory",
