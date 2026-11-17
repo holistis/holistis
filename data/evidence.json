@@ -100,9 +100,16 @@
         "mergedAt": "2026-11-02"
       }
     ],
-    "sent": 142,
-    "open": 57,
+    "sent": 143,
+    "open": 58,
     "openLatest": [
+      {
+        "repo": "QwenLM/qwen-code",
+        "number": 17545,
+        "title": "fix(cli): sanitize untrusted text in the exec confirmation dialog",
+        "url": "https://github.com/QwenLM/qwen-code/pull/17545",
+        "openedAt": "2026-11-17"
+      },
       {
         "repo": "paidmcp/directory",
         "number": 21,
@@ -137,13 +144,6 @@
         "title": "fix: honor an already aborted signal in waitForFileChooser() and waitForDevicePrompt()",
         "url": "https://github.com/puppeteer/puppeteer/pull/15804",
         "openedAt": "2026-11-13"
-      },
-      {
-        "repo": "microsoft/promptflow",
-        "number": 4242,
-        "title": "ci: pin AliSajid/random-wait-action to a full commit SHA",
-        "url": "https://github.com/microsoft/promptflow/pull/4242",
-        "openedAt": "2026-11-12"
       }
     ]
   },
