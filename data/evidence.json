@@ -11,11 +11,11 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 595
+    "mergedPrs": 596
   },
   "upstream": {
-    "mergedPrs": 32,
-    "projects": 20,
+    "mergedPrs": 33,
+    "projects": 21,
     "bugFixes": 10,
     "bugFixProjects": [
       "puppeteer",
@@ -65,6 +65,13 @@
     ],
     "latestMerged": [
       {
+        "repo": "paidmcp/directory",
+        "number": 21,
+        "title": "Add listing: Bug Bounty Intelligence, USDC, Base",
+        "url": "https://github.com/paidmcp/directory/pull/21",
+        "mergedAt": "2026-11-18"
+      },
+      {
         "repo": "puppeteer/puppeteer",
         "number": 15802,
         "title": "fix: keep equals signs in the --user-data-dir value",
@@ -91,17 +98,10 @@
         "title": "fix: use RAF polling for P selectors with pseudo classes",
         "url": "https://github.com/puppeteer/puppeteer/pull/15791",
         "mergedAt": "2026-11-12"
-      },
-      {
-        "repo": "Chain-Love/chain-love",
-        "number": 4786,
-        "title": "Add Bug Bounty Intelligence (provider, MCP server and security scanner on Base)",
-        "url": "https://github.com/Chain-Love/chain-love/pull/4786",
-        "mergedAt": "2026-11-02"
       }
     ],
     "sent": 143,
-    "open": 57,
+    "open": 56,
     "openLatest": [
       {
         "repo": "QwenLM/qwen-code",
@@ -109,13 +109,6 @@
         "title": "fix(cli): sanitize untrusted text in the exec confirmation dialog",
         "url": "https://github.com/QwenLM/qwen-code/pull/17545",
         "openedAt": "2026-11-17"
-      },
-      {
-        "repo": "paidmcp/directory",
-        "number": 21,
-        "title": "Add listing: Bug Bounty Intelligence, USDC, Base",
-        "url": "https://github.com/paidmcp/directory/pull/21",
-        "openedAt": "2026-11-16"
       },
       {
         "repo": "QwenLM/qwen-code",
@@ -144,6 +137,13 @@
         "title": "fix: honor an already aborted signal in waitForFileChooser() and waitForDevicePrompt()",
         "url": "https://github.com/puppeteer/puppeteer/pull/15804",
         "openedAt": "2026-11-13"
+      },
+      {
+        "repo": "microsoft/promptflow",
+        "number": 4242,
+        "title": "ci: pin AliSajid/random-wait-action to a full commit SHA",
+        "url": "https://github.com/microsoft/promptflow/pull/4242",
+        "openedAt": "2026-11-12"
       }
     ]
   },

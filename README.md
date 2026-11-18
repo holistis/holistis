@@ -1,6 +1,6 @@
 <!-- profile:hero:start -->
 <div align="center">
-<img src="./assets/hero.svg?v=49ddeb28" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
+<img src="./assets/hero.svg?v=e38e1cf9" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
 <!-- profile:hero:end -->
 
@@ -9,7 +9,7 @@
 <!-- profile:summary:start -->
 I direct AI agents to do real engineering work: research a problem, build the fix, verify it holds, and ship it.
 
-[595 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 563 in my own repositories, where the tools below live, and [32 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 20 projects, [10 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests).
+[596 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 563 in my own repositories, where the tools below live, and [33 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 21 projects, [10 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests).
 
 <sub>Counted from public GitHub data on 2026-11-18.</sub>
 <!-- profile:summary:end -->
@@ -42,11 +42,11 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 <!-- profile:merged:start -->
 Latest changes merged by other maintainers, of any kind, newest first:
 
+- 2026-11-18 [paidmcp/directory#21](https://github.com/paidmcp/directory/pull/21) Add listing: Bug Bounty Intelligence, USDC, Base
 - 2026-11-17 [puppeteer/puppeteer#15802](https://github.com/puppeteer/puppeteer/pull/15802) fix: keep equals signs in the --user-data-dir value
 - 2026-11-13 [puppeteer/puppeteer#15790](https://github.com/puppeteer/puppeteer/pull/15790) fix(cdp): delete cookies from the page partition for default port pages
 - 2026-11-12 [puppeteer/puppeteer#15792](https://github.com/puppeteer/puppeteer/pull/15792) fix: reject immediately when the AbortSignal is already aborted
 - 2026-11-12 [puppeteer/puppeteer#15791](https://github.com/puppeteer/puppeteer/pull/15791) fix: use RAF polling for P selectors with pseudo classes
-- 2026-11-02 [Chain-Love/chain-love#4786](https://github.com/Chain-Love/chain-love/pull/4786) Add Bug Bounty Intelligence (provider, MCP server and security scanner on Base)
 <!-- profile:merged:end -->
 
 <!-- profile:fixes:start -->
