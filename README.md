@@ -31,6 +31,14 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 - Fixed: [pull request #278](https://github.com/tigerless-labs/autoharness/pull/278) adds six redaction rules and a broader variable-name rule, plus a seeded test that puts no token-shaped value in the repository. In my 68-case check the leaks went from 20 to 4, and the PR names the four that are left and why I did not guess a rule for them. The full suite passed (710 tests) and the linter was clean.
 - Outcome: merged by the maintainers on 2026-10-28, and issue #277 closed as completed.
 
+### Found and reported: stray control characters in the MCP Inspector
+
+[MCP Inspector](https://github.com/modelcontextprotocol/inspector) is the deterministic testing tool for MCP servers (11,331 stars on 2026-11-18). Its contribution policy is issues only: outside pull requests are not accepted and the maintainers write the change themselves. So I reported the bug as a detailed issue, with the evidence and the exact version bump.
+
+- Found: [issue 2984](https://github.com/modelcontextprotocol/inspector/issues/2984), a small bug. The terminal interface shows text sent by a connected MCP server through Ink, and the Ink version it used (6.8.0) let bare control characters such as the bell, backspace and vertical tab through to the screen. Ink 8.0.0 strips them.
+- Fixed: [pull request 3015](https://github.com/modelcontextprotocol/inspector/pull/3015), written and merged by the maintainer on 2026-11-18, four days after I opened the issue. Its description opens with the line that closes issue 2984, and the issue was closed as completed.
+- Outcome: the claim held up when the maintainer rendered the same string on Ink 6.8.0, 7.1.1 and 8.0.0 and compared what reached the screen.
+
 <!-- profile:merged:start -->
 Latest changes merged by other maintainers, of any kind, newest first:
 
