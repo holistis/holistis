@@ -1,6 +1,6 @@
 <!-- profile:hero:start -->
 <div align="center">
-<img src="./assets/hero.svg?v=e38e1cf9" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
+<img src="./assets/hero.svg?v=d1b346f9" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
 <!-- profile:hero:end -->
 
@@ -11,7 +11,7 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 
 [596 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 563 in my own repositories, where the tools below live, and [33 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 21 projects, [10 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests).
 
-<sub>Counted from public GitHub data on 2026-11-18.</sub>
+<sub>Counted from public GitHub data on 2026-11-19.</sub>
 <!-- profile:summary:end -->
 
 ### Found, reported and fixed: three bugs in Puppeteer
