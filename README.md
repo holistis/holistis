@@ -39,6 +39,10 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 - Fixed: [pull request 3015](https://github.com/modelcontextprotocol/inspector/pull/3015), written and merged by the maintainer on 2026-11-18, four days after I opened the issue. Its description opens with the line that closes issue 2984, and the issue was closed as completed.
 - Outcome: the claim held up when the maintainer rendered the same string on Ink 6.8.0, 7.1.1 and 8.0.0 and compared what reached the screen.
 
+### Found and reported: a fail-open case in Nirium's verify Action
+
+Found a fail-open case in Nirium's verify-audit-cid Action: an unsigned hash-only receipt came back as verified. The maintainers fixed it in [pull request 396](https://github.com/nirium-protocol/nirium/pull/396) and credit me there and in [pull request 397](https://github.com/nirium-protocol/nirium/pull/397). [Test cases](https://github.com/holistis/agent-receipt-verify/tree/main/vectors/nirium-verify-audit-cid).
+
 <!-- profile:merged:start -->
 Latest changes merged by other maintainers, of any kind, newest first:
 
