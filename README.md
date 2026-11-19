@@ -41,7 +41,7 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 
 ### Found and reported: a fail-open case in Nirium's verify Action
 
-Found a fail-open case in Nirium's verify-audit-cid Action: an unsigned hash-only receipt came back as verified. The maintainers fixed it in [pull request 396](https://github.com/nirium-protocol/nirium/pull/396) and credit me there and in [pull request 397](https://github.com/nirium-protocol/nirium/pull/397). [Test cases](https://github.com/holistis/agent-receipt-verify/tree/main/vectors/nirium-verify-audit-cid).
+Found a fail-open case in Nirium's verify-audit-cid Action: an unsigned hash-only receipt came back as verified. The maintainers fixed it in [pull request 396](https://github.com/nirium-protocol/nirium/pull/396) and credit me there and in [pull request 397](https://github.com/nirium-protocol/nirium/pull/397). My 21 test cases are now part of their test suite and run in their CI on every change to the Action ([pull request 398](https://github.com/nirium-protocol/nirium/pull/398)). One of them is cited in the pull request that added an opt-in signature requirement ([pull request 399](https://github.com/nirium-protocol/nirium/pull/399)). [Test cases](https://github.com/holistis/agent-receipt-verify/tree/main/vectors/nirium-verify-audit-cid).
 
 <!-- profile:merged:start -->
 Latest changes merged by other maintainers, of any kind, newest first:
