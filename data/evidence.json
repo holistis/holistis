@@ -152,6 +152,18 @@
   },
   "projects": [
     {
+      "name": "al-yad",
+      "url": "https://github.com/holistis/al-yad",
+      "description": "Yad: a free, open-source, local-first browser agent. Chrome extension (Part A, the hand) + local Companion (Part B, the brain). Your API key is encrypted on your...",
+      "homepage": "https://yadagent.com",
+      "updated": "2026-11-21",
+      "release": {
+        "tag": "v0.1.2-companion-npm-standin",
+        "date": "2026-09-11",
+        "url": "https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin"
+      }
+    },
+    {
       "name": "agent-receipt-verify",
       "url": "https://github.com/holistis/agent-receipt-verify",
       "description": "MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'...",
@@ -205,18 +217,6 @@
         "tag": "v0.3.4",
         "date": "2026-09-29",
         "url": "https://github.com/holistis/muraqib/releases/tag/v0.3.4"
-      }
-    },
-    {
-      "name": "al-yad",
-      "url": "https://github.com/holistis/al-yad",
-      "description": "Yad: a free, open-source, local-first browser agent. Chrome extension (Part A, the hand) + local Companion (Part B, the brain). Your API key is encrypted on your...",
-      "homepage": "https://yadagent.com",
-      "updated": "2026-11-14",
-      "release": {
-        "tag": "v0.1.2-companion-npm-standin",
-        "date": "2026-09-11",
-        "url": "https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin"
       }
     },
     {
