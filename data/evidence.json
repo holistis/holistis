@@ -152,6 +152,14 @@
   },
   "projects": [
     {
+      "name": "al-mizaan-judge",
+      "url": "https://github.com/holistis/al-mizaan-judge",
+      "description": "Strict 7-gate validity judge for a smart-contract bug bounty finding, a second opinion before you spend a Sherlock/Immunefi/Cantina submission.",
+      "homepage": null,
+      "updated": "2026-11-21",
+      "release": null
+    },
+    {
       "name": "agent-receipt-verify",
       "url": "https://github.com/holistis/agent-receipt-verify",
       "description": "MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'...",
@@ -206,14 +214,6 @@
         "date": "2026-07-29",
         "url": "https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3"
       }
-    },
-    {
-      "name": "al-mizaan-judge",
-      "url": "https://github.com/holistis/al-mizaan-judge",
-      "description": "Strict 7-gate validity judge for a smart-contract bug bounty finding, a second opinion before you spend a Sherlock/Immunefi/Cantina submission.",
-      "homepage": null,
-      "updated": "2026-11-14",
-      "release": null
     },
     {
       "name": "muraqib",
