@@ -1,6 +1,6 @@
 <!-- profile:hero:start -->
 <div align="center">
-<img src="./assets/hero.svg?v=28ff4992" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
+<img src="./assets/hero.svg?v=90060c77" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
 <!-- profile:hero:end -->
 
@@ -9,7 +9,7 @@
 <!-- profile:summary:start -->
 I direct AI agents to do real engineering work: research a problem, build the fix, verify it holds, and ship it.
 
-[607 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 574 in my own repositories, where the tools below live, and [33 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 21 projects, [10 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests).
+[609 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 575 in my own repositories, where the tools below live, and [34 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 22 projects, [10 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests).
 
 <sub>Counted from public GitHub data on 2026-11-21.</sub>
 <!-- profile:summary:end -->
@@ -46,11 +46,11 @@ Found a fail-open case in Nirium's verify-audit-cid Action: an unsigned hash-onl
 <!-- profile:merged:start -->
 Latest changes merged by other maintainers, of any kind, newest first:
 
+- 2026-11-21 [accensa/x402-facilitator-stellar#654](https://github.com/accensa/x402-facilitator-stellar/pull/654) POST /settle replays a cached success for an Idempotency-Key reused with a different payTo/asset/amount
 - 2026-11-18 [paidmcp/directory#21](https://github.com/paidmcp/directory/pull/21) Add listing: Bug Bounty Intelligence, USDC, Base
 - 2026-11-17 [puppeteer/puppeteer#15802](https://github.com/puppeteer/puppeteer/pull/15802) fix: keep equals signs in the --user-data-dir value
 - 2026-11-13 [puppeteer/puppeteer#15790](https://github.com/puppeteer/puppeteer/pull/15790) fix(cdp): delete cookies from the page partition for default port pages
 - 2026-11-12 [puppeteer/puppeteer#15792](https://github.com/puppeteer/puppeteer/pull/15792) fix: reject immediately when the AbortSignal is already aborted
-- 2026-11-12 [puppeteer/puppeteer#15791](https://github.com/puppeteer/puppeteer/pull/15791) fix: use RAF polling for P selectors with pseudo classes
 <!-- profile:merged:end -->
 
 <!-- profile:fixes:start -->
@@ -79,10 +79,10 @@ Bug fixes merged by other maintainers, newest first:
 ## Projects
 
 <!-- profile:projects:start -->
+- [tokenizen](https://github.com/holistis/tokenizen): Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it... Latest release [v0.5.0](https://github.com/holistis/tokenizen/releases/tag/v0.5.0), 2026-09-06. [Website](https://tokenizen.nl). Updated 2026-11-21.
 - [agent-receipt-verify](https://github.com/holistis/agent-receipt-verify): MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'... Latest release [v0.2.1](https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1), 2026-10-17. Updated 2026-11-21.
 - [automation-guardrails](https://github.com/holistis/automation-guardrails): Two small guardrails for Playwright/Puppeteer: verify you're on the right page, and fill contenteditable/rich-text editors without the silent double-write bug Updated 2026-11-21.
 - [al-yad](https://github.com/holistis/al-yad): Yad: a free, open-source, local-first browser agent. Chrome extension (Part A, the hand) + local Companion (Part B, the brain). Your API key is encrypted on your... Latest release [v0.1.2-companion-npm-standin](https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin), 2026-09-11. [Website](https://yadagent.com). Updated 2026-11-21.
-- [tokenizen](https://github.com/holistis/tokenizen): Lets AI agents record, in a way anyone can check, whether they actually got what they paid another agent for over x402. Cites and reads the agent-economy stack it... Latest release [v0.5.0](https://github.com/holistis/tokenizen/releases/tag/v0.5.0), 2026-09-06. [Website](https://tokenizen.nl). Updated 2026-11-20.
 - [bug-bounty-intelligence-mcp](https://github.com/holistis/bug-bounty-intelligence-mcp): MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search... Latest release [v1.0.3](https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3), 2026-07-29. Updated 2026-11-16.
 - [al-mizaan-judge](https://github.com/holistis/al-mizaan-judge): Strict 7-gate validity judge for a smart-contract bug bounty finding, a second opinion before you spend a Sherlock/Immunefi/Cantina submission. Updated 2026-11-14.
 - [muraqib](https://github.com/holistis/muraqib): Nightly Playwright QA that tells you when it stops watching. npx muraqib doctor finds the silent-cancel bug in any existing setup. Claude opens the fix PR. MIT, no... Latest release [v0.3.4](https://github.com/holistis/muraqib/releases/tag/v0.3.4), 2026-09-29. [Website](https://www.npmjs.com/package/muraqib). Updated 2026-11-14.
