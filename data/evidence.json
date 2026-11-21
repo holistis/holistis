@@ -11,7 +11,7 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 606
+    "mergedPrs": 607
   },
   "upstream": {
     "mergedPrs": 33,
@@ -148,7 +148,7 @@
     ]
   },
   "ownRepos": {
-    "mergedPrs": 573
+    "mergedPrs": 574
   },
   "projects": [
     {
@@ -162,6 +162,14 @@
         "date": "2026-10-17",
         "url": "https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1"
       }
+    },
+    {
+      "name": "automation-guardrails",
+      "url": "https://github.com/holistis/automation-guardrails",
+      "description": "Two small guardrails for Playwright/Puppeteer: verify you're on the right page, and fill contenteditable/rich-text editors without the silent double-write bug",
+      "homepage": null,
+      "updated": "2026-11-21",
+      "release": null
     },
     {
       "name": "al-yad",
@@ -239,14 +247,6 @@
       "name": "muraqib-agent-watch",
       "url": "https://github.com/holistis/muraqib-agent-watch",
       "description": "Free, instant capability check for any MCP server: what can it actually do, and does it say so",
-      "homepage": null,
-      "updated": "2026-11-08",
-      "release": null
-    },
-    {
-      "name": "automation-guardrails",
-      "url": "https://github.com/holistis/automation-guardrails",
-      "description": "Two small guardrails for Playwright/Puppeteer: verify you're on the right page, and fill contenteditable/rich-text editors without the silent double-write bug",
       "homepage": null,
       "updated": "2026-11-08",
       "release": null
