@@ -110,6 +110,14 @@ Open PRs: [autogen](https://github.com/microsoft/autogen/pull/8205), [semantic-k
 
 Open issues: [mem0](https://github.com/mem0ai/mem0/issues/7260), [camel](https://github.com/camel-ai/camel/issues/4322), [goose](https://github.com/aaif-goose/goose/issues/11914), [mastra](https://github.com/mastra-ai/mastra/issues/23298), [n8n](https://github.com/n8n-io/n8n/issues/38018).
 
+## Security advisories with credit
+
+Published by the maintainers and checkable on each page. I am credited as reporter on all of them.
+
+- [nginx-ui](https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-qpxq-mr8m-wcf2): severity High, published 22 October 2026, fixed in 2.9.0. A follow-up to an earlier advisory: the one-time-password step-up was missing on the system restart, the core-upgrade websocket and the upstream socket update.
+- [langroid](https://github.com/langroid/langroid/security/advisories/GHSA-599m-2rw9-c28w): severity Low, published 21 November 2026, fixed in 0.70.3. Text from retrieved documents was re-parsed as terminal markup in debug output.
+- [pymc-marketing](https://github.com/pymc-labs/pymc-marketing/security/advisories/GHSA-72xh-gfpr-v9hx): severity High, published 10 September 2026, described above.
+
 ## Working together
 
 Open to roles and freelance work in AI agent infrastructure and orchestration, plus CI/CD supply-chain security and AI-agent hardening. The security findings above were found on my own initiative, in passing. Email info@holistischadviseur.nl.
