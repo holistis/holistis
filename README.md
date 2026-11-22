@@ -39,6 +39,14 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 - Fixed: [pull request 3015](https://github.com/modelcontextprotocol/inspector/pull/3015), written and merged by the maintainer on 2026-11-18, four days after I opened the issue. Its description opens with the line that closes issue 2984, and the issue was closed as completed.
 - Outcome: the claim held up when the maintainer rendered the same string on Ink 6.8.0, 7.1.1 and 8.0.0 and compared what reached the screen.
 
+### Found and reported: a broken UK sanctions source in Velocity
+
+[Velocity](https://github.com/AndrewCTF/velocity) is a self-hosted flight and ship tracker (158 stars on 2026-11-22). Its sanctions screen read a UK list that had been closed.
+
+- Found: [issue 119](https://github.com/AndrewCTF/velocity/issues/119), opened on 2026-11-09. The old OFSI list address answered 409, so the UK source failed on every load and 81 ships from that list were missing. I pointed to the UK Sanctions List that replaced it.
+- Fixed: [pull request 126](https://github.com/AndrewCTF/velocity/pull/126), written and merged by the maintainer on 2026-11-22. The screen reads the new list and now matches 693 ships by IMO number instead of 81.
+- Outcome: the [v1.3.0 release notes](https://github.com/AndrewCTF/velocity/releases/tag/v1.3.0) thank me for the measurement and the pointer.
+
 ### Found and reported: a fail-open case in Nirium's verify Action
 
 Found a fail-open case in Nirium's verify-audit-cid Action: an unsigned hash-only receipt came back as verified. The maintainers fixed it in [pull request 396](https://github.com/nirium-protocol/nirium/pull/396) and credit me there and in [pull request 397](https://github.com/nirium-protocol/nirium/pull/397). My 21 test cases are now part of their test suite and run in their CI on every change to the Action ([pull request 398](https://github.com/nirium-protocol/nirium/pull/398)). One of them is cited in the pull request that added an opt-in signature requirement ([pull request 399](https://github.com/nirium-protocol/nirium/pull/399)). [Test cases](https://github.com/holistis/agent-receipt-verify/tree/main/vectors/nirium-verify-audit-cid).
