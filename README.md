@@ -51,6 +51,13 @@ I direct AI agents to do real engineering work: research a problem, build the fi
 
 Found a fail-open case in Nirium's verify-audit-cid Action: an unsigned hash-only receipt came back as verified. The maintainers fixed it in [pull request 396](https://github.com/nirium-protocol/nirium/pull/396) and credit me there and in [pull request 397](https://github.com/nirium-protocol/nirium/pull/397). My 21 test cases are now part of their test suite and run in their CI on every change to the Action ([pull request 398](https://github.com/nirium-protocol/nirium/pull/398)). One of them is cited in the pull request that added an opt-in signature requirement ([pull request 399](https://github.com/nirium-protocol/nirium/pull/399)). [Test cases](https://github.com/holistis/agent-receipt-verify/tree/main/vectors/nirium-verify-audit-cid).
 
+### Found, reported and fixed: a command-injection bypass in shell-mcp
+
+[shell-mcp](https://github.com/devrelopers/shell-mcp) is an MCP server for scoped shell access (2 stars on 2026-11-25). Its default read-only allowlist includes `find **`, but `find`'s own `-exec`, `-execdir`, `-ok`, `-okdir` and `-delete` action flags run an arbitrary program per matched file, independent of any allowlist rule for `find` itself, and the `+`-terminated form of `-exec` has no semicolon for the tool's existing character check to catch.
+
+- Fixed: [pull request 1](https://github.com/devrelopers/shell-mcp/pull/1) adds those five action flags to the hard denylist checked before allowlist matching, plus three regression tests (58 lines added, 0 removed).
+- Outcome: merged by the maintainer on 2026-09-18, who wrote on the merge: "You're right: `find **` is in the default allowlist, so `-exec … +` was a zero-config bypass, and single-token entries are the right call given how the denylist matcher works. Merged."
+
 <!-- profile:merged:start -->
 Latest changes merged by other maintainers, of any kind, newest first:
 
