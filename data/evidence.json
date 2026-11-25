@@ -11,12 +11,12 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 626
+    "mergedPrs": 627
   },
   "upstream": {
-    "mergedPrs": 34,
+    "mergedPrs": 35,
     "projects": 22,
-    "bugFixes": 10,
+    "bugFixes": 11,
     "bugFixProjects": [
       "puppeteer",
       "autoharness",
@@ -27,6 +27,13 @@
       "windmill"
     ],
     "latestFixes": [
+      {
+        "repo": "puppeteer/puppeteer",
+        "number": 15804,
+        "title": "fix: honor an already aborted signal in waitForFileChooser() and waitForDevicePrompt()",
+        "url": "https://github.com/puppeteer/puppeteer/pull/15804",
+        "mergedAt": "2026-11-25"
+      },
       {
         "repo": "puppeteer/puppeteer",
         "number": 15802,
@@ -54,16 +61,16 @@
         "title": "fix: use RAF polling for P selectors with pseudo classes",
         "url": "https://github.com/puppeteer/puppeteer/pull/15791",
         "mergedAt": "2026-11-12"
-      },
-      {
-        "repo": "tigerless-labs/autoharness",
-        "number": 278,
-        "title": "fix(redact): redact bare vendor-prefixed keys and secret-named variables",
-        "url": "https://github.com/tigerless-labs/autoharness/pull/278",
-        "mergedAt": "2026-10-28"
       }
     ],
     "latestMerged": [
+      {
+        "repo": "puppeteer/puppeteer",
+        "number": 15804,
+        "title": "fix: honor an already aborted signal in waitForFileChooser() and waitForDevicePrompt()",
+        "url": "https://github.com/puppeteer/puppeteer/pull/15804",
+        "mergedAt": "2026-11-25"
+      },
       {
         "repo": "accensa/x402-facilitator-stellar",
         "number": 654,
@@ -91,17 +98,10 @@
         "title": "fix(cdp): delete cookies from the page partition for default port pages",
         "url": "https://github.com/puppeteer/puppeteer/pull/15790",
         "mergedAt": "2026-11-13"
-      },
-      {
-        "repo": "puppeteer/puppeteer",
-        "number": 15792,
-        "title": "fix: reject immediately when the AbortSignal is already aborted",
-        "url": "https://github.com/puppeteer/puppeteer/pull/15792",
-        "mergedAt": "2026-11-12"
       }
     ],
     "sent": 145,
-    "open": 57,
+    "open": 56,
     "openLatest": [
       {
         "repo": "crytic/slither",
@@ -139,11 +139,11 @@
         "openedAt": "2026-11-14"
       },
       {
-        "repo": "puppeteer/puppeteer",
-        "number": 15804,
-        "title": "fix: honor an already aborted signal in waitForFileChooser() and waitForDevicePrompt()",
-        "url": "https://github.com/puppeteer/puppeteer/pull/15804",
-        "openedAt": "2026-11-13"
+        "repo": "microsoft/promptflow",
+        "number": 4242,
+        "title": "ci: pin AliSajid/random-wait-action to a full commit SHA",
+        "url": "https://github.com/microsoft/promptflow/pull/4242",
+        "openedAt": "2026-11-12"
       }
     ]
   },

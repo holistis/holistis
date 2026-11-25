@@ -1,6 +1,6 @@
 <!-- profile:hero:start -->
 <div align="center">
-<img src="./assets/hero.svg?v=f5cd2589" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
+<img src="./assets/hero.svg?v=cd7768d1" width="100%" alt="Abdellah Ouadoudi, AI agents that ship real fixes and keep the receipts. The merged pull request counts are taken from GitHub and written out below." />
 </div>
 <!-- profile:hero:end -->
 
@@ -9,7 +9,7 @@
 <!-- profile:summary:start -->
 I direct AI agents to do real engineering work: research a problem, build the fix, verify it holds, and ship it.
 
-[626 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 592 in my own repositories, where the tools below live, and [34 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 22 projects, [10 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests).
+[627 pull requests merged](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+is%3Apublic&type=pullrequests): 592 in my own repositories, where the tools below live, and [35 in other people's projects](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+is%3Apublic&type=pullrequests) across 22 projects, [11 of them bug fixes](https://github.com/search?q=author%3Aholistis+is%3Apr+is%3Amerged+-user%3Aholistis+fix+in%3Atitle+is%3Apublic&type=pullrequests).
 
 <sub>Counted from public GitHub data on 2026-11-25.</sub>
 <!-- profile:summary:end -->
@@ -61,21 +61,21 @@ Found a fail-open case in Nirium's verify-audit-cid Action: an unsigned hash-onl
 <!-- profile:merged:start -->
 Latest changes merged by other maintainers, of any kind, newest first:
 
+- 2026-11-25 [puppeteer/puppeteer#15804](https://github.com/puppeteer/puppeteer/pull/15804) fix: honor an already aborted signal in waitForFileChooser() and waitForDevicePrompt()
 - 2026-11-21 [accensa/x402-facilitator-stellar#654](https://github.com/accensa/x402-facilitator-stellar/pull/654) POST /settle replays a cached success for an Idempotency-Key reused with a different payTo/asset/amount
 - 2026-11-18 [paidmcp/directory#21](https://github.com/paidmcp/directory/pull/21) Add listing: Bug Bounty Intelligence, USDC, Base
 - 2026-11-17 [puppeteer/puppeteer#15802](https://github.com/puppeteer/puppeteer/pull/15802) fix: keep equals signs in the --user-data-dir value
 - 2026-11-13 [puppeteer/puppeteer#15790](https://github.com/puppeteer/puppeteer/pull/15790) fix(cdp): delete cookies from the page partition for default port pages
-- 2026-11-12 [puppeteer/puppeteer#15792](https://github.com/puppeteer/puppeteer/pull/15792) fix: reject immediately when the AbortSignal is already aborted
 <!-- profile:merged:end -->
 
 <!-- profile:fixes:start -->
 Bug fixes merged by other maintainers, newest first:
 
+- 2026-11-25 [puppeteer/puppeteer#15804](https://github.com/puppeteer/puppeteer/pull/15804) fix: honor an already aborted signal in waitForFileChooser() and waitForDevicePrompt()
 - 2026-11-17 [puppeteer/puppeteer#15802](https://github.com/puppeteer/puppeteer/pull/15802) fix: keep equals signs in the --user-data-dir value
 - 2026-11-13 [puppeteer/puppeteer#15790](https://github.com/puppeteer/puppeteer/pull/15790) fix(cdp): delete cookies from the page partition for default port pages
 - 2026-11-12 [puppeteer/puppeteer#15792](https://github.com/puppeteer/puppeteer/pull/15792) fix: reject immediately when the AbortSignal is already aborted
 - 2026-11-12 [puppeteer/puppeteer#15791](https://github.com/puppeteer/puppeteer/pull/15791) fix: use RAF polling for P selectors with pseudo classes
-- 2026-10-28 [tigerless-labs/autoharness#278](https://github.com/tigerless-labs/autoharness/pull/278) fix(redact): redact bare vendor-prefixed keys and secret-named variables
 <!-- profile:fixes:end -->
 
 <sub>The numbers, the two lists above and the project list below refresh on their own from public GitHub data, see [data/evidence.json](data/evidence.json).</sub>
