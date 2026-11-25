@@ -100,9 +100,16 @@
         "mergedAt": "2026-11-12"
       }
     ],
-    "sent": 144,
-    "open": 56,
+    "sent": 145,
+    "open": 57,
     "openLatest": [
+      {
+        "repo": "crytic/slither",
+        "number": 3161,
+        "title": "fix: arbitrary-send-erc20 skips a from whose signature is checked",
+        "url": "https://github.com/crytic/slither/pull/3161",
+        "openedAt": "2026-11-25"
+      },
       {
         "repo": "QwenLM/qwen-code",
         "number": 17545,
@@ -137,13 +144,6 @@
         "title": "fix: honor an already aborted signal in waitForFileChooser() and waitForDevicePrompt()",
         "url": "https://github.com/puppeteer/puppeteer/pull/15804",
         "openedAt": "2026-11-13"
-      },
-      {
-        "repo": "microsoft/promptflow",
-        "number": 4242,
-        "title": "ci: pin AliSajid/random-wait-action to a full commit SHA",
-        "url": "https://github.com/microsoft/promptflow/pull/4242",
-        "openedAt": "2026-11-12"
       }
     ]
   },
@@ -151,6 +151,18 @@
     "mergedPrs": 588
   },
   "projects": [
+    {
+      "name": "bug-bounty-intelligence-mcp",
+      "url": "https://github.com/holistis/bug-bounty-intelligence-mcp",
+      "description": "MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search...",
+      "homepage": null,
+      "updated": "2026-11-25",
+      "release": {
+        "tag": "v1.0.3",
+        "date": "2026-07-29",
+        "url": "https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3"
+      }
+    },
     {
       "name": "agent-receipt-verify",
       "url": "https://github.com/holistis/agent-receipt-verify",
@@ -161,18 +173,6 @@
         "tag": "v0.2.1",
         "date": "2026-10-17",
         "url": "https://github.com/holistis/agent-receipt-verify/releases/tag/v0.2.1"
-      }
-    },
-    {
-      "name": "bug-bounty-intelligence-mcp",
-      "url": "https://github.com/holistis/bug-bounty-intelligence-mcp",
-      "description": "MCP server that scans Solidity repos through a 7-gate verification framework (Al-Mizaan) to cut LLM false positives, benchmarked against Slither; free pattern-search...",
-      "homepage": null,
-      "updated": "2026-11-24",
-      "release": {
-        "tag": "v1.0.3",
-        "date": "2026-07-29",
-        "url": "https://github.com/holistis/bug-bounty-intelligence-mcp/releases/tag/v1.0.3"
       }
     },
     {
