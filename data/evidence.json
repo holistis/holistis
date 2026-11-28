@@ -11,11 +11,11 @@
     "open": "author:holistis is:pr is:open -user:holistis is:public"
   },
   "totals": {
-    "mergedPrs": 635
+    "mergedPrs": 636
   },
   "upstream": {
-    "mergedPrs": 35,
-    "projects": 22,
+    "mergedPrs": 36,
+    "projects": 23,
     "bugFixes": 11,
     "bugFixProjects": [
       "puppeteer",
@@ -101,7 +101,7 @@
       }
     ],
     "sent": 146,
-    "open": 56,
+    "open": 55,
     "openLatest": [
       {
         "repo": "crytic/slither",
