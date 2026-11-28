@@ -152,6 +152,14 @@
   },
   "projects": [
     {
+      "name": "claude-memory-trim",
+      "url": "https://github.com/holistis/claude-memory-trim",
+      "description": "Keeps Claude Code session memory lean by rotating session logs between hot and cold storage. Cuts token cost at session start by 60-80%.",
+      "homepage": null,
+      "updated": "2026-11-28",
+      "release": null
+    },
+    {
       "name": "agent-receipt-verify",
       "url": "https://github.com/holistis/agent-receipt-verify",
       "description": "MCP server and library for independent verification of agent payment and outcome receipts. Written against the published specs, tested against the protocol authors'...",
@@ -226,14 +234,6 @@
         "date": "2026-09-29",
         "url": "https://github.com/holistis/muraqib/releases/tag/v0.3.4"
       }
-    },
-    {
-      "name": "claude-memory-trim",
-      "url": "https://github.com/holistis/claude-memory-trim",
-      "description": "Keeps Claude Code session memory lean by rotating session logs between hot and cold storage. Cuts token cost at session start by 60-80%.",
-      "homepage": null,
-      "updated": "2026-11-11",
-      "release": null
     },
     {
       "name": "3ilm-mcp",
