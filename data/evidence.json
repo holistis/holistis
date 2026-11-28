@@ -152,6 +152,22 @@
   },
   "projects": [
     {
+      "name": "muraqib-agent-watch",
+      "url": "https://github.com/holistis/muraqib-agent-watch",
+      "description": "Free, instant capability check for any MCP server: what can it actually do, and does it say so",
+      "homepage": null,
+      "updated": "2026-11-28",
+      "release": null
+    },
+    {
+      "name": "automation-guardrails",
+      "url": "https://github.com/holistis/automation-guardrails",
+      "description": "Two small guardrails for Playwright/Puppeteer: verify you're on the right page, and fill contenteditable/rich-text editors without the silent double-write bug",
+      "homepage": null,
+      "updated": "2026-11-28",
+      "release": null
+    },
+    {
       "name": "al-yad",
       "url": "https://github.com/holistis/al-yad",
       "description": "Yad: a free, open-source, local-first browser agent. Chrome extension (Part A, the hand) + local Companion (Part B, the brain). Your API key is encrypted on your...",
@@ -216,14 +232,6 @@
       "release": null
     },
     {
-      "name": "automation-guardrails",
-      "url": "https://github.com/holistis/automation-guardrails",
-      "description": "Two small guardrails for Playwright/Puppeteer: verify you're on the right page, and fill contenteditable/rich-text editors without the silent double-write bug",
-      "homepage": null,
-      "updated": "2026-11-21",
-      "release": null
-    },
-    {
       "name": "muraqib",
       "url": "https://github.com/holistis/muraqib",
       "description": "Nightly Playwright QA that tells you when it stops watching. npx muraqib doctor finds the silent-cancel bug in any existing setup. Claude opens the fix PR. MIT, no...",
@@ -241,14 +249,6 @@
       "description": "MCP server: 1,032 verified smart contract vulnerability findings from 10 Sherlock audit contests",
       "homepage": null,
       "updated": "2026-11-11",
-      "release": null
-    },
-    {
-      "name": "muraqib-agent-watch",
-      "url": "https://github.com/holistis/muraqib-agent-watch",
-      "description": "Free, instant capability check for any MCP server: what can it actually do, and does it say so",
-      "homepage": null,
-      "updated": "2026-11-08",
       "release": null
     },
     {
