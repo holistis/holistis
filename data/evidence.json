@@ -152,6 +152,18 @@
   },
   "projects": [
     {
+      "name": "al-yad",
+      "url": "https://github.com/holistis/al-yad",
+      "description": "Yad: a free, open-source, local-first browser agent. Chrome extension (Part A, the hand) + local Companion (Part B, the brain). Your API key is encrypted on your...",
+      "homepage": "https://yadagent.com",
+      "updated": "2026-11-28",
+      "release": {
+        "tag": "v0.1.2-companion-npm-standin",
+        "date": "2026-09-11",
+        "url": "https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin"
+      }
+    },
+    {
       "name": "claude-memory-trim",
       "url": "https://github.com/holistis/claude-memory-trim",
       "description": "Keeps Claude Code session memory lean by rotating session logs between hot and cold storage. Cuts token cost at session start by 60-80%.",
@@ -210,18 +222,6 @@
       "homepage": null,
       "updated": "2026-11-21",
       "release": null
-    },
-    {
-      "name": "al-yad",
-      "url": "https://github.com/holistis/al-yad",
-      "description": "Yad: a free, open-source, local-first browser agent. Chrome extension (Part A, the hand) + local Companion (Part B, the brain). Your API key is encrypted on your...",
-      "homepage": "https://yadagent.com",
-      "updated": "2026-11-21",
-      "release": {
-        "tag": "v0.1.2-companion-npm-standin",
-        "date": "2026-09-11",
-        "url": "https://github.com/holistis/al-yad/releases/tag/v0.1.2-companion-npm-standin"
-      }
     },
     {
       "name": "muraqib",
